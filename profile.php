@@ -6,7 +6,7 @@
 
 		<!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-            <link rel="stylesheet" type="text/css" href="">
+            <link rel="stylesheet" type="text/css" href="css/profile.css">
             
 </head>
 
@@ -14,11 +14,22 @@
 
             
 <ul class="nav nav-tabs nav-justified">
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Profile</a></li>
+  <li><a href="#">Home</a></li>
+  <li class="active"><a href="#">Profile</a></li>
+
   <li><a href="#">Messages</a></li>
 </ul>
 
 <body>
+
+
+  
+<div class="panel panel-default" id="pic_sign">
+  <div class="panel-heading">Photo</div>
+  <div class="panel-body" id="pic"></div>
+  </div>
+
+
+  
 </body>
 </html>

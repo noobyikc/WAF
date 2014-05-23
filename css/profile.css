@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+#pic_sign {
+	position:relative;
+	width:24%;
+	float:left;
+	margin-left:20px;
+}
+
+#pic {
+	height:400px;
+}
