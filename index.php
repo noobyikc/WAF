@@ -1,31 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <html lang="en" class="no-js">
 	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-    <link rel="shortcut icon" href="../favicon.ico">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+            <link rel="shortcut icon" href="../favicon.ico">
+        
+            <title>World Auto Forum</title>
+        
+            <!-- CSS -->
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="">
+            
+            <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+            <link rel="stylesheet" type="text/css" href="css/demo.css" />
+            <link rel="stylesheet" type="text/css" href="css/component.css" />
+            <link rel="stylesheet" type="text/css" href="css/content.css" />
+            <script src="js/modernizr.custom.js"></script>
+          
 
-    <title>Sign Up</title>
+	</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="C:\Users\Hada\Desktop\Testing\bootstrap.min.css" rel="stylesheet">
-    <link href="C:\Users\Hada\Desktop\Testing\carousel.css" rel="stylesheet">
-   
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/content.css" />
-		<script src="js/modernizr.custom.js"></script>
-  
-
-</head>
-<!-- NAVBAR
-================================================== -->
-  <body>
+  <body data-spy="scroll" data-target=".navbar navbar-inverse">
+	<!-- NAVBAR -->  
     <div class="navbar-wrapper">
       <div class="container">
 
