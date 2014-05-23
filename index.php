@@ -15,13 +15,11 @@
         
             <!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-            <link rel="stylesheet" type="text/css" href="">
+            <link rel="stylesheet" type="text/css" href="css/carousel.css">
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             
-            <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-            <link rel="stylesheet" type="text/css" href="css/demo.css" />
-            <link rel="stylesheet" type="text/css" href="css/component.css" />
-            <link rel="stylesheet" type="text/css" href="css/content.css" />
-            <script src="js/modernizr.custom.js"></script>
+           
           
 
 	</head>
