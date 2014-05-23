@@ -4,9 +4,38 @@
 	position:relative;
 	width:24%;
 	float:left;
+	top:20px;
 	margin-left:20px;
 }
 
 #pic {
+	height:356px;
+}
+
+#profile {
+	position:relative;
+	width:70%;
 	height:400px;
+	top:20px;
+	float:right;
+	margin-right:20px;
+	margin-bottom:75px;
+}
+
+#profile_box {
+	height:300px;
+}
+
+
+
+#label {
+	position: relative;
+	width:130px;
+	padding: 10px 5px 10px 20px;
+}
+
+#label2 {
+	position: relative;
+	width:130px;
+	padding: 10px 5px 10px 20px;
 }
