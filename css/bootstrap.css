@@ -2019,7 +2019,7 @@ select[multiple].input-lg {
 }
 .btn:hover,
 .btn:focus {
-  color: #333;
+  color: #FFF;
   text-decoration: none;
 }
 .btn:active,
