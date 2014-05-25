@@ -6,6 +6,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
             <meta name="author" content="">
+           
             <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
             <link rel="shortcut icon" href="../favicon.ico">
         
@@ -26,42 +27,40 @@
 	</head>
 
   	<body data-spy="scroll" data-target=".navbar navbar-inverse">
-	<!-- NAVBAR -->  
-    <div class="navbar-wrapper">
-      <div class="container">
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-            <div class="navbar-header">
-            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                	<span class="sr-only">Toggle navigation</span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-    			</button>
-              	<a class="navbar-brand" href="#">World Auto Forum</a>
+   <!--=============================================Navigation============================================= --> 
+    	<div class="navbar-wrapper">
+          <div class="container">
+            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">World Auto Forum</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">Sign In</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          	<div class="navbar-collapse collapse">
-            	<ul class="nav navbar-nav">
-                	<li class="active"><a href="#">Home</a></li>
-                	<li><a href="#about">Sign In</a></li>
-                	<li><a href="#contact">Contact</a></li>
-                	<li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
-                  		<ul class="dropdown-menu">
-                    		<li><a href="#">Action</a></li>
-                    		<li><a href="#">Another action</a></li>
-                    		<li><a href="#">Something else here</a></li>
-                    		<li class="divider"></li>
-                    		<li class="dropdown-header">Nav header</li>
-                    		<li><a href="#">Separated link</a></li>
-                    		<li><a href="#">One more separated link</a></li>
-                 		</ul>
-                	</li>
-              	</ul>
-          	</div>
-	    </div>
-      </div>
-    </div>
-
-
+          </div>
+        </div>
    <!--=============================================Login-Signup============================================= -->
     <section>
     	<div id="login-signup">
@@ -69,7 +68,7 @@
 			<div id="modal" class="popupContainer" style="display:none;">
 				<header class="popupHeader">
 					<span class="header_title">Enter World Auto Forum</span>
-					<span class="modal_close"><i class="fa fa-times">x</i></span>
+					<span class="modal_close"><i>x</i></span>
 				</header>
 		
 		<section class="popupBody">
@@ -77,7 +76,7 @@
 			<div class="social_login">
 				<div class="">
 					<a href="#" class="social_box fb">
-						<span class="icon"><i class="fa fa-facebook"></i></span>
+						<span class="icon"><i>ffsdfsd</i></span>
 						<span class="icon_title">Connect with Facebook</span>
 						
 					</a>
@@ -93,8 +92,8 @@
 				</div>
 
 				<div class="action_btns">
-					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+					<div class="one_half"><a href="#" id="login_form" class="btn btn_red">Login</a></div>
+					<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
 				</div>
 			</div>
 
