@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 #carousel_image1 {
-	background-image:url(../image/img1.jpg);
+	background-image:url(../image/B22.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -94,6 +94,11 @@ a.btn_red {
 	border-bottom:1px solid #DDD; 
 	font-weight:bold;
 }
+
+.popupHeader .header_title:hover {
+	color:#FFF;
+}
+
 .popupHeader .modal_close {
 	position: absolute;
 	right: 0;
