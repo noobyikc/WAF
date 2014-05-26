@@ -7,7 +7,10 @@
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+	position:relative;
+	top:120px;
+	left:0px;
+	z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
@@ -23,23 +26,7 @@
   height: 500px;
 }
 
-#carousel_image1 {
-	background-image:url(../image/B22.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
 
-#carousel_image2 {
-	background-image:url(../image/img2.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-
-#carousel_image3 {
-	background-image:url(../image/img3.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;	
-}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

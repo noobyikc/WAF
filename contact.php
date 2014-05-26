@@ -13,6 +13,7 @@
                 <script src="js/modernizr.custom.js"></script>
 	         	<script src="js/classie.js"></script>
 				<script src="js/uisearch.js"></script>
+                
 
 </head>
 
@@ -71,5 +72,39 @@
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
         
+        <!--Google Maps-->
+    <div style="position:relative;" id="contact">
+    	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script>
+			function initialize()
+			{
+				var latval = '28.54596';
+				var longval = '77.272666';
+				var myLatlng = new google.maps.LatLng(28.54597,77.272666);
+				var centerlatling = new google.maps.LatLng(28.54596,77.2837047); 
+				var mapProp = {center: centerlatling,
+							   zoom:15,
+							   minZoom:13,
+							   scrollwheel:false,
+							   maxZoom:17,
+							   mapTypeId:google.maps.MapTypeId.ROADMAP};
+				var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				var marker = new google.maps.Marker({ position: myLatlng,
+													  map: map,
+													  animation: google.maps.Animation.DROP,
+													  title: 'Indraprastha Institute of Information Technology, Delhi'});
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+        <div id="googleMap" style="width:100%;height:530px;"></div>
+        <div class="panel" style="position:absolute;left:850px;width:464px;top:80px;">
+        	<div class="panel-heading">Contact Us</div>
+            <div class="panel-body">
+            
+			</div>
+        </div>
+         
+	</div>
+
 </body>
 </html>

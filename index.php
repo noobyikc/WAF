@@ -271,14 +271,18 @@
           
           <div class="container">
             <div class="carousel-caption">
-                          </div>
+            	<h1>Join Us,</h1>
+                <p>It takes only 30 seconds of your precious time</p>
+            </div>
           </div>
         </div>
         <div class="item" id="carousel_image2" >
           <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide">
           <div class="container">
             <div class="carousel-caption">
-                          </div>
+            	<h1>Finding Manufacturers</h1>
+                <p> Hasn't been this easy since ages</p>
+            </div>
           </div>
         </div>
         <div class="item" id="carousel_image3">

@@ -135,6 +135,9 @@
   </a>
   </div>
 </div>
+<div id="button1">
+  <button type="button" class="btn btn-primary " style width="200px">Edit Profile Picture</button>
+</div>
 
 
 <div class="panel panel-default" id="profile">
@@ -220,9 +223,7 @@
 </div>
 </div>
   
-<div class="btn-group" id="button">
-  <button type="button" class="btn btn-primary" style width="100%">Edit Profile Picture</button>
-</div>
+
 
   
 </body>

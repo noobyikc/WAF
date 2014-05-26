@@ -443,7 +443,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 86px;
 }
 h2,
 .h2 {
@@ -3132,7 +3132,6 @@ input[type="button"].btn-block {
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  display: inline-block;
   vertical-align: middle;
 }
 .btn-group > .btn,

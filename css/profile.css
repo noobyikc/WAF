@@ -44,9 +44,8 @@
 	padding: 10px 5px 10px 20px;
 }
 
-#button {
+#button1 {
 	position:relative;
-	width:300px;
-	margin-left:48px;
-	margin-top:20px;	
+	
+	margin:auto;
 }
