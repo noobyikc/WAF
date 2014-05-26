@@ -61,9 +61,8 @@
 			  $flag = 0;
 			  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
 			 while($rows = mysql_fetch_array($ldetail)){
-			echo "<script> alert(".$rows['username'].");</script>";
-			$_SESSION['username'] = $rows['username'];
-			$_SESSION['userid'] = $rows['U_id'];
+			$_SESSION['sessemail'] = $rows['email'];
+			$_SESSION['sesspassword'] = $rows['password'];
 			$flag=1;
 	}
 	if($flag==1)
