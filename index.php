@@ -16,12 +16,15 @@
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
             <link rel="stylesheet" type="text/css" href="css/carousel.css" />
             <link rel="stylesheet" type="text/css" href="css/index.css" />
+			<link rel="stylesheet" type="text/css" href="css/search.css" />
 
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-         
-           
+            <script src="js/modernizr.custom.js"></script>
+         	<script src="js/classie.js"></script>
+			<script src="js/uisearch.js"></script>
+		   
           
 
 	</head>
@@ -56,11 +59,29 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
+                        <li>
+                        <div class="main clearfix">
+						<!-- Optional columns for small components -->
+							<div class="column">
+								<div id="sb-search" class="sb-search">
+									<form>
+										<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+										<input class="sb-search-submit" type="submit" value="">
+										<span class="sb-icon-search"></span>
+									</form>
+								</div>
+							</div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
           </div>
         </div>
+        <script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+        
    <!--=============================================Login-Signup============================================= -->
     <section>
     	<div id="login-signup">
@@ -76,7 +97,7 @@
 			<div class="social_login">
 				<div class="">
 					<a href="#" class="social_box fb">
-						<span class="icon"><i>ffsdfsd</i></span>
+						<span class="icon"><i></i></span>
 						<span class="icon_title">Connect with Facebook</span>
 						
 					</a>
@@ -160,6 +181,7 @@
 		$("#login_form").click(function(){
 			$(".social_login").hide();
 			$(".user_login").show();
+			$(".header_title").text('Login');
 			return false;
 		});
 
@@ -176,7 +198,7 @@
 			$(".user_login").hide();
 			$(".user_register").hide();
 			$(".social_login").show();
-			$(".header_title").text('Login');
+			$(".header_title").text('Enter World Auto Forum');
 			return false;
 		});
 

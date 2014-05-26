@@ -56,7 +56,7 @@
 
 .btn {
 	padding:10px 20px;
-	background: #F4F4F2;
+	background: #ED6347;
 }
 
 .btn_red {
@@ -155,13 +155,28 @@ a.btn_red {
 	background: #E4E4E2;
 	}
 
-.centeredText {text-align: center; margin: 20px 0; clear: both; overflow: hidden; text-transform: uppercase;}
+.centeredText {
+	text-align: center; 
+	margin: 20px 0; 
+	clear: both; 
+	overflow: hidden; 
+	text-transform: uppercase;
+}
 
-.action_btns {clear:both; overflow: hidden;}
-.action_btns a {display: block;}
+.action_btns {
+	clear:both; 
+	overflow: hidden;
+}
+
+.action_btns a {
+	display: block;
+}
 
 /* User Login Form */
-.user_login {display: none;}
+.user_login {
+	display: none;
+}
+
 .user_login label {display: block; margin-bottom:5px;}
 .user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
 .user_login input[type="checkbox"] {float:left; margin-right:5px;}
@@ -178,3 +193,49 @@ a.btn_red {
 .user_register input[type="checkbox"]+label {float:left;}
 
 .user_register .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
+
+
+/* Search Box css*/
+.clearfix:before, .clearfix:after {
+	 content: " ";
+	 display: table;
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+
+/* Main Content */
+.main {
+	max-width: 79em;
+}
+
+.column {
+	float: left;
+	min-height: 50px;
+	position: relative;
+}
+
+.column:nth-child(2) {
+	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+}
+
+.column p {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	line-height: 1.5;
+}
+
+.column a {
+	border: 3px solid #b4c7da;
+	padding: 0 15px;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.column a:hover {
+	border-color: #fff;
+}
