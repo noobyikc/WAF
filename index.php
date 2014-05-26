@@ -91,7 +91,27 @@
 					<span class="header_title">Enter World Auto Forum</span>
 					<span class="modal_close"><i>x</i></span>
 				</header>
-		
+		<!-- for alert box -->
+        <div class="hide">
+        <?php
+		$success = $_GET['success'];
+		if($success == '1')
+		{
+			echo "<script type='text/javascript'>\n";
+			echo "alert('You have registered successfully')";
+			echo "</script>";
+			header('location:profile.php');
+		}
+		else
+			if($success == '0')
+		{
+			echo "<script type='text/javascript'>\n";
+			echo "alert('Registration was unsuccessful. Please try again')";
+			echo "</script>";
+		}
+		?>
+        </div>
+        
 		<section class="popupBody">
 			<!-- Social Login -->
 			<div class="social_login">
@@ -120,13 +140,13 @@
 
 			<!-- Username & Password Login form -->
 			<div class="user_login">
-				<form>
+				<form name="login" method="post" action="code/login.php">
 					<label>Email / Username</label>
-					<input type="text" />
+					<input type="text" name="email" />
 					<br />
 
 					<label>Password</label>
-					<input type="password" />
+					<input type="password" name="password" />
 					<br />
 
 					<div class="checkbox">
@@ -145,21 +165,21 @@
 
 			<!-- Register Form -->
 			<div class="user_register">
-				<form>
+				<form name="signup" method="post" action="code/signup.php">
 					<label>Full Name</label>
-					<input type="text" />
+					<input type="text" name="name" />
 					<br />
 
 					<label>Email Address</label>
-					<input type="email" />
+					<input type="email" name="email" />
 					<br />
 
 					<label>Password</label>
-					<input type="password" />
+					<input type="password" name="password" />
 					<br />
 
 					<div class="checkbox">
-						<input id="send_updates" type="checkbox" />
+						<input id="send_updates" type="checkbox" name="updates" />
 						<label for="send_updates">Send me occasional email updates</label>
 					</div>
 
