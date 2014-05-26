@@ -24,6 +24,57 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
+            
+            <?php
+		   include('includes/variables.php');
+		   include('includes/connection.php');
+		   ?>
+          <?php
+		  if(isset($_POST['registerbtn']))
+		  {
+					$result = mysql_query("INSERT INTO register(name, email, password, sendupdates)VALUES('$name', '$email', '$password','$updates')")or die(mysql_error());
+
+					/* sending email for confirmation 
+					$to = $email;
+					$headers = "MIME-Version: 1.0\r\n";
+					$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+					$subject = "Successful registration with World Auto Forum.";
+					$message = '<html><body>';
+					$message.= '<img src= "http://localhost/waf_test/images/waf_header.jpg" width="800" height="152"/>\n';
+					$message.='Hello'.$name.'\n\n';
+					$message.='Thank you for joining the most powerful networking hub of the globl auto industry - WORLD AUTO FORUM';
+					$message.='Click the following link and enter your information below to login:\n\n';
+					$message.='http://www.worldautoforum.com/login.php \n\n';
+					$message.='Username: '.$email.'\n';
+					$message.='Password: '.$password.'\n\n\n';
+					$message.='Best Regards \n\n World Auto Forum';
+					$message.='</body></html>';
+					mail($to,$subject,$message,$headers); */
+					if($result)
+					echo "<script> alert('registration successful.');</script>";
+					else
+					die(mysql_error());
+		} ?>
+		  <?php
+		  if(isset($_POST['loginbtn']))
+		  {
+			  $flag = 0;
+			  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
+			 while($rows = mysql_fetch_array($ldetail)){
+			echo "<script> alert(".$rows['username'].");</script>";
+			$_SESSION['username'] = $rows['username'];
+			$_SESSION['userid'] = $rows['U_id'];
+			$flag=1;
+	}
+	if($flag==1)
+		echo "<script>window.location = 'profile.php';</script>";
+	else
+		
+		echo "<script>window.location = 'index.php';</script>";
+			
+			
+			}
+		  ?>
 		   
           
 
@@ -91,26 +142,6 @@
 					<span class="header_title">Enter World Auto Forum</span>
 					<span class="modal_close"><i>x</i></span>
 				</header>
-		<!-- for alert box -->
-        <div class="hide">
-        <?php
-		$success = $_GET['success'];
-		if($success == '1')
-		{
-			echo "<script type='text/javascript'>\n";
-			echo "alert('You have registered successfully')";
-			echo "</script>";
-			header('location:profile.php');
-		}
-		else
-			if($success == '0')
-		{
-			echo "<script type='text/javascript'>\n";
-			echo "alert('Registration was unsuccessful. Please try again')";
-			echo "</script>";
-		}
-		?>
-        </div>
         
 		<section class="popupBody">
 			<!-- Social Login -->
@@ -140,7 +171,7 @@
 
 			<!-- Username & Password Login form -->
 			<div class="user_login">
-				<form name="login" method="post" action="code/login.php">
+				<form name="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 					<label>Email / Username</label>
 					<input type="text" name="email" />
 					<br />
@@ -156,7 +187,7 @@
 
 					<div class="action_btns">
 						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-						<div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+						<div class="one_half last"><input class="btn btn_red" type="submit" value="Login" name="loginbtn"/></div>
 					</div>
 				</form>
 
@@ -165,7 +196,7 @@
 
 			<!-- Register Form -->
 			<div class="user_register">
-				<form name="signup" method="post" action="code/signup.php">
+				<form name="signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
 					<label>Full Name</label>
 					<input type="text" name="name" />
 					<br />
@@ -185,7 +216,7 @@
 
 					<div class="action_btns">
 						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+						<div class="one_half last"> <input name="registerbtn" class="btn btn_red" type="submit" value="Register" /></div>
 					</div>
 				</form>
 			</div>
