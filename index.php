@@ -17,6 +17,7 @@
             <link rel="stylesheet" type="text/css" href="css/carousel.css" />
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
+            <link rel="stylesheet" href="http://i.icomoon.io/public/temp/dbb98a92e3/UntitledProject1/style.css">
 
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -24,39 +25,41 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-            
-            <?php
-		   include('includes/variables.php');
-		   include('includes/connection.php');
-		   ?>
-          <?php
-		  if(isset($_POST['registerbtn']))
-		  {
-					$result = mysql_query("INSERT INTO register(name, email, password, sendupdates)VALUES('$name', '$email', '$password','$updates')")or die(mysql_error());
+   </head>
 
-					/* sending email for confirmation 
-					$to = $email;
-					$headers = "MIME-Version: 1.0\r\n";
-					$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-					$subject = "Successful registration with World Auto Forum.";
-					$message = '<html><body>';
-					$message.= '<img src= "http://localhost/waf_test/images/waf_header.jpg" width="800" height="152"/>\n';
-					$message.='Hello'.$name.'\n\n';
-					$message.='Thank you for joining the most powerful networking hub of the globl auto industry - WORLD AUTO FORUM';
-					$message.='Click the following link and enter your information below to login:\n\n';
-					$message.='http://www.worldautoforum.com/login.php \n\n';
-					$message.='Username: '.$email.'\n';
-					$message.='Password: '.$password.'\n\n\n';
-					$message.='Best Regards \n\n World Auto Forum';
-					$message.='</body></html>';
-					mail($to,$subject,$message,$headers); */
-					if($result)
-					echo "<script> alert('registration successful.');</script>";
-					else
-					die(mysql_error());
-		} ?>
-		  <?php
-		  if(isset($_POST['loginbtn']))
+<?php
+   include('includes/variables.php');
+   include('includes/connection.php');
+?>
+
+<?php
+	if(isset($_POST['registerbtn'])) {
+		$result = mysql_query("INSERT INTO register(name, email, password, sendupdates)VALUES('$name', '$email', '$password','$updates')")or die(mysql_error());
+	  	/* sending email for confirmation 
+	  	$to = $email;
+		$headers = "MIME-Version: 1.0\r\n";
+		$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+		$subject = "Successful registration with World Auto Forum.";
+		$message = '<html><body>';
+		$message.= '<img src= "http://localhost/waf_test/images/waf_header.jpg" width="800" height="152"/>\n';
+	  	$message.='Hello'.$name.'\n\n';
+	  	$message.='Thank you for joining the most powerful networking hub of the globl auto industry - WORLD AUTO FORUM';
+	  	$message.='Click the following link and enter your information below to login:\n\n';
+	  	$message.='http://www.worldautoforum.com/login.php \n\n';
+	  	$message.='Username: '.$email.'\n';
+	  	$message.='Password: '.$password.'\n\n\n';
+	  	$message.='Best Regards \n\n World Auto Forum';
+	  	$message.='</body></html>';
+	  	mail($to,$subject,$message,$headers); */
+	  	if($result)
+	  		echo "<script> alert('registration successful.');</script>";
+	  	else
+	  		die(mysql_error());
+}
+?>
+
+<?php
+	if(isset($_POST['loginbtn']))
 		  {
 			  $flag = 0;
 			  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
@@ -77,7 +80,7 @@
 		   
           
 
-	</head>
+	
 
   	<body data-spy="scroll" data-target=".navbar navbar-inverse">
    <!--=============================================Navigation============================================= --> 
