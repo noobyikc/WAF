@@ -1,10 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
+#tabs {
+	position:relative;
+	top:90px;
+}
 #pic_sign {
 	position:relative;
 	width:24%;
 	float:left;
-	top:20px;
+	top:100px;
 	margin-left:20px;
 }
 
@@ -16,7 +20,7 @@
 	position:relative;
 	width:70%;
 	height:400px;
-	top:20px;
+	top:100px;
 	float:right;
 	margin-right:20px;
 	margin-bottom:20px;
@@ -42,7 +46,7 @@
 
 #button {
 	position:relative;
-	width:280px;
+	width:300px;
 	margin-left:48px;
 	margin-top:20px;	
 }
