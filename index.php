@@ -214,7 +214,7 @@
 					</div>
 
 					<div class="action_btns">
-						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
 						<div class="one_half last"> <input name="registerbtn" class="btn btn_red" type="submit" value="Register" /></div>
 					</div>
 				</form>
@@ -271,7 +271,7 @@
           <div class="container">
             <div class="carousel-caption">
             	<h1>Join Us,</h1>
-                <p>It takes only 30 seconds of your precious time</p>
+                <p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
             </div>
           </div>
         </div>
@@ -279,8 +279,8 @@
           <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide">
           <div class="container">
             <div class="carousel-caption">
-            	<h1>Finding Manufacturers</h1>
-                <p> Hasn't been this easy since ages</p>
+            	<h1>Buy stuff</h1>
+                <p>Auto Components & Parts Makers Love WAF!</p>
             </div>
           </div>
         </div>
@@ -288,6 +288,8 @@
           <img data-src="holder.js/900x500/auto/#555:#5a5a5a/">
           <div class="container">
             <div class="carousel-caption">
+            	<h1>Auto Dealers</h1>
+                <p>From around the world are on WAF!</p>
             </div>
           </div>
         </div>
