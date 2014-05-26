@@ -71,158 +71,166 @@
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
  
-<div id="tabs">
-    <ul class="nav nav-tabs nav-justified">
-      <li><a href="#">Home</a></li>
-      <li class="active"><a href="#">Profile</a></li>
-      <li><a href="#">Messages</a></li>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Help</a></li>
-    </ul>
-</div>
-
-
-<div class="panel panel-default" id="profile">
-  <div class="panel-heading">Personal Details</div>
-  <div class="panel-body" id="profile_box">
-		<table>
-        	<tr> 
-            	<td id="label">Name : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Father's Name : </td>
-                <td><input type="text" name="name_f" value="" /></td>
-                <td id="label">Mother's Name : </td>
-                <td><input type="text" name="name_m" value="" /></td>
-            </tr>
-            <tr> 
-            	<td id="label">Date of Birth (DD/MM/YYYY) : </td>
-                <td><input type="text" name="date" value="" /></td>
+ 
+<div class="container"> 
+    <div id="tabs">
+        <ul class="nav nav-tabs nav-justified">
+          <li><a href="#">Home</a></li>
+          <li class="active"><a href="#">Profile</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Promotion Offers</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="panel panel-default" id="profile">
+      <div class="panel-heading">Personal Details</div>
+      <div class="panel-body" id="profile_box">
+            <table>
+                <tr> 
+                    <td id="label">Name : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Father's Name : </td>
+                    <td><input type="text" name="name_f" value="" /></td>
+                    <td id="label">Mother's Name : </td>
+                    <td><input type="text" name="name_m" value="" /></td>
+                </tr>
+                <tr> 
+                    <td id="label">Date of Birth (DD/MM/YYYY) : </td>
+                    <td><input type="text" name="date" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Nationality : </td>
+                    <td><input type="text" name="nationality" value="" /></td>
+                </tr>
                 
-            </tr>
-            <tr> 
-            	<td id="label">Nationality : </td>
-                <td><input type="text" name="nationality" value="" /></td>
-            </tr>
-            
-            <tr> 
-            	<td id="label">Sex : </td>
-                <td >
-                <input type="radio" name="sex" class="radio" value="" style="position:relative;top:10px;" />
-                <span style="position:relative; padding-left:18px;top:-10px; padding-right:5px;">Male</span>
-                <input type="radio" name="sex" class="radio" value="" style="position:relative;top:10px;"/>
-                <span style="position:relative; padding-left:18px;top:-10px; padding-right:5px;">Female</span>
-                </td>
+                <tr> 
+                    <td id="label">Sex : </td>
+                    <td >
+                    <input type="radio" name="sex" class="radio" value="" style="position:relative;top:10px;" />
+                    <span style="position:relative; padding-left:18px;top:-10px; padding-right:5px;">Male</span>
+                    <input type="radio" name="sex" class="radio" value="" style="position:relative;top:10px;"/>
+                    <span style="position:relative; padding-left:18px;top:-10px; padding-right:5px;">Female</span>
+                    </td>
+                    
+                </tr>
                 
-            </tr>
-            
-            <tr> 
-            	<td id="label">Mobile Number : </td>
-                <td><input type="text" name="m_no" value="" /></td>
-            </tr> 
-         </table>
 
-  </div>
+                <tr> 
+                    <td id="label">Mobile Number : </td>
+                    <td><input type="text" name="m_no" value="" /></td>
+                </tr> 
+             </table>
+    
+      </div>
+    </div>
+    
+    <div class="panel panel-default" id="pic_sign">
+      <div class="panel-heading">Photo</div>
+      <div class="panel-body" id="pic">
+      <a href="#" class="thumbnail">
+      <img src="Images/ramukaka5.jpg" />
+      </a>
+      </div>
+    </div>
+    
+    
+    <div class="panel panel-default" id="profile">
+      <div class="panel-heading">Education and Current Affairs </div>
+      <div class="panel-body" id="profile_box">
+      <table>
+                <tr> 
+                    <td id="label">What did you study? : </td>
+                    <td><input type="text" name="degree" value="" /></td>
+                    
+                </tr>
+                
+                <tr> 
+                    <td id="label">Where did you study? : </td>
+                    <td><input type="text" name="location" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Company : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Location : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Number(Office) : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Email-id: </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                
+      </table>
+                 
+    </div>
+    </div>
+    
+    
+    <div class="panel panel-default" id="profile">
+      <div class="panel-heading">Work Experience </div>
+      <div class="panel-body" id="profile_box">
+      <table>
+                <tr> 
+                    <td id="label">What did you study? : </td>
+                    <td><input type="text" name="degree" value="" /></td>
+                    
+                </tr>
+                
+                <tr> 
+                    <td id="label">Where did you study? : </td>
+                    <td><input type="text" name="location" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Company : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Location : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Number(Office) : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Email-id: </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                
+      </table>
+                 
+    </div>
+    </div>
+      
+    <div class="btn-group" id="button">
+      
+      <button type="button" class="btn btn-primary">Change Profile Photo</button>
+    </div>
 </div>
 
-<div class="panel panel-default" id="pic_sign">
-  <div class="panel-heading">Photo</div>
-  <div class="panel-body" id="pic">
-  <a href="#" class="thumbnail">
-  <img src="Images/ramukaka5.jpg" />
-  </a>
-  </div>
-</div>
-<div id="button1">
-  <button type="button" class="btn btn-primary " style width="200px">Edit Profile Picture</button>
-</div>
-
-
-<div class="panel panel-default" id="profile">
-  <div class="panel-heading">Education and Current Affairs </div>
-  <div class="panel-body" id="profile_box">
-  <table>
-			<tr> 
-            	<td id="label">What did you study? : </td>
-            	<td><input type="text" name="degree" value="" /></td>
-            	
-            </tr>
-            
-        	<tr> 
-            	<td id="label">Where did you study? : </td>
-            	<td><input type="text" name="location" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Company : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Location : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Contact Number(Office) : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Contact Email-id: </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            
-  </table>
-             
-</div>
-</div>
-
-
-<div class="panel panel-default" id="profile">
-  <div class="panel-heading">Work Experience </div>
-  <div class="panel-body" id="profile_box">
-  <table>
-			<tr> 
-            	<td id="label">What did you study? : </td>
-            	<td><input type="text" name="degree" value="" /></td>
-            	
-            </tr>
-            
-        	<tr> 
-            	<td id="label">Where did you study? : </td>
-            	<td><input type="text" name="location" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Company : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Location : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Contact Number(Office) : </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            <tr> 
-            	<td id="label">Contact Email-id: </td>
-            	<td><input type="text" name="name" value="" /></td>
-            	
-            </tr>
-            
-  </table>
-             
-</div>
-</div>
-  
 
 
   
