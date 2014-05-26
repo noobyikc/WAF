@@ -178,3 +178,5 @@ a.btn_red {
 .user_register input[type="checkbox"]+label {float:left;}
 
 .user_register .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
+
+.hide{ visibility:hidden;}
