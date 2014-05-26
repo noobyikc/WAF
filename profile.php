@@ -198,6 +198,11 @@
 </div>
 </div>
   
+<div class="btn-group" id="button">
+  <button type="button" class="btn btn-primary">Edit Profile</button>
+  <button type="button" class="btn btn-primary">View as</button>
+  <button type="button" class="btn btn-primary">Save Profile</button>
+</div>
 
   
 </body>
