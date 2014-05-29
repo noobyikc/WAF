@@ -16,10 +16,21 @@
 	height:356px;
 }
 
+
+#profile1 {
+	position:relative;
+	width:70%;
+	height:350px;
+	top:100px;
+	float:right;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
 #profile {
 	position:relative;
 	width:70%;
-	height:400px;
+	height:450px;
 	top:100px;
 	float:right;
 	margin-right:20px;
@@ -29,8 +40,6 @@
 #profile_box {
 	height:300px;
 }
-
-
 
 #label {
 	position: relative;
@@ -46,9 +55,24 @@
 
 #button1 {
 	position:relative;
+	width:290px;
+	bottom:8px;
+	margin-left:30px;
 
-	width:200px;
-	margin-left:76px;	
-=======
+}
 
+#button2 {
+	top:10px;
+	left:500px;
+	position:relative;
+	width:290px;
+	bottom:8px;
+}
+
+#button3 {
+	top:100px;
+	left:800px;
+	position:relative;
+	width:290px;
+	margin-bottom:150px;
 }

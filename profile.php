@@ -78,6 +78,7 @@
           <li><a href="#">Home</a></li>
           <li class="active"><a href="#">Profile</a></li>
           <li><a href="#">Messages</a></li>
+          <li><a href="#">Discussion Forums</a></li>
           <li><a href="#">Notifications</a></li>
           <li><a href="#">Settings</a></li>
           <li><a href="#">Help</a></li>
@@ -86,7 +87,8 @@
     </div>
     
     
-    <div class="panel panel-default" id="profile">
+
+    <div class="panel panel-default" id="profile1">
       <div class="panel-heading">Personal Details</div>
       <div class="panel-body" id="profile_box">
             <table>
@@ -96,7 +98,7 @@
                     
                 </tr>
                 <tr> 
-                    <td id="label">Date of Birth (DD/MM/YYYY) : </td>
+                    <td id="label">Date of Birth (MM/DD/YYYY) : </td>
                     <td><!--<input type="text" name="date" value="" /> -->
                     <select>
                     <option value="month">Month</option>
@@ -113,7 +115,9 @@
                     <option value="nov">Nov</option>
                     <option value="dec">Dec</option>
                     </select>
+                    
                     <!-- ===selecting date=== -->
+                    
                     <select>
                     <option value="day">day</option>
                     <option value="1">1</option>
@@ -148,7 +152,9 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                     </select>
+                    
                     <!-- Selecting Year -->
+                    
                     <select>
                     <option value="0" selected="1">Year</option>
                     <option value="2014">2014</option>
@@ -286,12 +292,17 @@
                     
                 </tr>
                 
-
                 <tr> 
                     <td id="label">Mobile Number : </td>
                     <td><input type="text" name="m_no" value="" /></td>
                 </tr> 
              </table>
+             
+    <div class="btn-group" id="button2">
+      
+      <button type="button" class="btn btn-primary">Edit</button>
+      <button type="button" class="btn btn-primary">Save Changes</button>
+    </div>
     
       </div>
     </div>
@@ -303,6 +314,13 @@
       <img src="Images/ramukaka5.jpg" />
       </a>
       </div>
+    
+        <div class="btn-group" id="button1">
+      
+      <button type="button" class="btn btn-primary">Profile Photo</button>
+      <button type="button" class="btn btn-primary">Cover Photo</button>
+    </div>
+    
     </div>
     
     
@@ -343,13 +361,17 @@
                 </tr>
                 
       </table>
-                 
+        <div class="btn-group" id="button2">
+      
+      <button type="button" class="btn btn-primary">Edit</button>
+      <button type="button" class="btn btn-primary">Save Changes</button>
+    	</div>       
     </div>
     </div>
     
     
-    <div class="panel panel-default" id="profile">
-      <div class="panel-heading">Work Experience </div>
+    <div class="panel panel-default" id="profile" style="margin-bottom:120px">
+      <div class="panel-heading" >Work Experience </div>
       <div class="panel-body" id="profile_box">
       <table>
                 <tr> 
@@ -385,14 +407,14 @@
                 </tr>
                 
       </table>
-                 
+      <div class="btn-group" id="button2">
+      
+      <button type="button" class="btn btn-primary">Edit</button>
+      <button type="button" class="btn btn-primary">Save Changes</button>
+      </div>       
     </div>
     </div>
       
-    <div class="btn-group" id="button">
-      
-      <button type="button" class="btn btn-primary">Change Profile Photo</button>
-    </div>
 </div>
 
 
