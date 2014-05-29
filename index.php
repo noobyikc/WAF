@@ -17,7 +17,6 @@
             <link rel="stylesheet" type="text/css" href="css/carousel.css" />
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
-            <link rel="stylesheet" href="http://i.icomoon.io/public/temp/dbb98a92e3/UntitledProject1/style.css">
 
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -120,7 +119,7 @@
 									<form>
 										<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
 										<input class="sb-search-submit" type="submit" value="">
-										<span class="sb-icon-search"></span>
+										<span class="sb-icon-search" id="search-img"><img src="image/icons/sprites.png"/></span>
 									</form>
 								</div>
 							</div>

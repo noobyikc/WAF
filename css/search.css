@@ -90,9 +90,13 @@
 }
 
 .sb-icon-search:before {
-	content: "\e600";
 }
 
+#search-img{
+	position:relative;
+	float:right;
+	padding:1px;
+}
 /* Open state */
 .sb-search.sb-search-open,
 .no-js .sb-search {
