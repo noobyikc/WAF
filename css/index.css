@@ -18,6 +18,11 @@
 	background-size:cover;	
 }
 
+#login-reg_button {
+	background-color:transparent;
+	border:#ED6347;
+}
+
 #login-signup {
 	position:relative;
 	z-index:300;
@@ -37,7 +42,7 @@
 
 .popupContainer{
 	position:absolute;
-	width:330px;
+	width:350px;
 	height: auto;
 	left:45%;
 	top:80px;
@@ -59,6 +64,10 @@
 	background: #ED6347;
 }
 
+.btn:hover {
+	background: #C12B05;
+}
+
 .btn_red {
 	background: #ED6347;
 	color: #FFF;
@@ -70,7 +79,7 @@
 }
 
 a.btn {
-	color:#666;
+	color:#FFF;
 	text-align: center;
 	text-decoration: none;
 }
@@ -79,8 +88,13 @@ a.btn_red {
 	color: #FFF;
 }
 
-.one_half {width:50%; display: block; float:left;}
-.one_half.last {width:45%; margin-left:5%;}
+.one_half {
+	width:100%;
+}
+.one_half.last {
+	width:100%; 
+	margin-top:5%;
+}
 
 /* Popup Styles*/
 .popupHeader {
@@ -194,8 +208,6 @@ a.btn_red {
 
 .user_register .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
 
-<<<<<<< HEAD
-
 /* Search Box css*/
 .clearfix:before, .clearfix:after {
 	 content: " ";
@@ -242,4 +254,3 @@ a.btn_red {
 }
 =======
 .hide{ visibility:hidden;}
->>>>>>> 3d0b453b1b40f5d8cd5b1ebd5f47ea71f8ea536a
