@@ -194,20 +194,18 @@ a.btn_red {
 
 .user_register .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
 
-<<<<<<< HEAD
-
 /* Search Box css*/
 .clearfix:before, .clearfix:after {
 	 content: " ";
-	 display: table;
-}
-
 .clearfix:after { 
 	clear: both; 
 }
 
 /* Main Content */
 .main {
+	 display: table;
+}
+
 	max-width: 79em;
 }
 
@@ -240,6 +238,3 @@ a.btn_red {
 .column a:hover {
 	border-color: #fff;
 }
-=======
-.hide{ visibility:hidden;}
->>>>>>> 3d0b453b1b40f5d8cd5b1ebd5f47ea71f8ea536a
