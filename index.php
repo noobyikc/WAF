@@ -187,8 +187,8 @@
 					</div>
 
 					<div class="action_btns">
-						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-						<div class="one_half last"><input class="btn btn_red" type="submit" value="Login" name="loginbtn"/></div>
+						<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
+						<div class="one_half last"><a class="btn btn_red"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
 					</div>
 				</form>
 
@@ -217,7 +217,7 @@
 
 					<div class="action_btns">
 						<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-						<div class="one_half last"> <input name="registerbtn" class="btn btn_red" type="submit" value="Register" /></div>
+						<div class="one_half last"><a class="btn btn_red"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>
 					</div>
 				</form>
 			</div>
