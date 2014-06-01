@@ -252,11 +252,11 @@
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     	<!-- Indicators -->
-		<ol class="carousel-indicators">
+		<!--<ol class="carousel-indicators">
         	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 	        <li data-target="#myCarousel" data-slide-to="1"></li>
     	    <li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
+		</ol>-->
 		<div class="carousel-inner">
         	<div class="item active" id="carousel_image1">
           		<div class="container">
@@ -289,10 +289,16 @@
     
 	<!--=============================================Heading============================================= -->
 
-	<div id="company"> 
-		W<font style="font-size:50px">ORLD</font>
-        A<font style="font-size:50px">UTO</font>
-        F<font style="font-size:50px">ORUM</font>
+	<div class="box shadow">
+    	<div id="company"> 
+			W<font style="font-size:50px">ORLD &nbsp;&nbsp; </font>
+        	A<font style="font-size:50px">UTO &nbsp;&nbsp; </font>
+        	F<font style="font-size:50px">ORUM</font>
+    	</div>
+    </div>
+    
+    <div class="content1 shadow">
+    bls
     </div>
   
 

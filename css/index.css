@@ -315,17 +315,56 @@ a.btn_red {
   text-decoration:none;
 }
 
+.box {
+	position:relative;
+	top:-8em;
+	width:70%;
+    background:#9595FF;
+    margin:65px auto 0px;
+	border-top-left-radius:250px;
+	border-top-right-radius:250px;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+}
 
+.shadow{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    		box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
 	
-
-
+.content1 {
+	position:relative;
+	top:-4em;
+	width:90%;
+    background:#FFF;
+    margin:25px auto 0px;
+    border-radius:2px;
+	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+}
 
 
 #company {
-	position:relative;
-	top:-0.55em;
+	color:#FFF;
 	text-align:center;
-	font-size:86px;
+	font-size:80px;
 	width:100%;
-	height:auto;
 }
