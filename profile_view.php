@@ -73,19 +73,7 @@
  
  
 <div class="container"> 
-    <div id="tabs">
-        <ul class="nav nav-tabs nav-justified">
-          <li><a href="#">Home</a></li>
-          <li class="active"><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">Discussion Forums</a></li>
-          <li><a href="#">Notifications</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Promotion Offers</a></li>
-        </ul>
-    </div>
-    
+
     
 
     <div class="panel panel-default" id="profile1">
@@ -222,11 +210,30 @@
       </table>
 </div>                 
     </div>
+    
+    <div class="panel panel-default" id="friends">
+          <div class="panel-heading">Connections</div>
+          <div class="panel-body" id="pic">
+          <div class="btn-group" id="button3">
+          <button type="button" class="btn btn-primary">View All</button>
+            </div>
+        </div>
+        
+       
+   </div>
+	<div class="panel panel-default" id="friends">
+          <div class="panel-heading">Discussion Forums</div>
+          <div class="panel-body" id="pic">
+          <div class="btn-group" id="button3">
+          <button type="button" class="btn btn-primary">View All</button>
+            </div>
+        </div>
     </div>
-    <div class="btn-group" id="button3" style="bottom:20px;">
+    <div class="btn-group" id="button4" >
       
       <button type="button" class="btn btn-primary">View as friend</button>
       <button type="button" class="btn btn-primary">View as from public</button>
+      <button type="button" class="btn btn-primary">Edit</button>
     </div>
 
   

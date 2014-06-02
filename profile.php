@@ -85,18 +85,7 @@
  
  
 <div class="container"> 
-    <div id="tabs">
-        <ul class="nav nav-tabs nav-justified">
-          <li><a href="#">Home</a></li>
-          <li class="active"><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">Discussion Forums</a></li>
-          <li><a href="#">Notifications</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Promotion Offers</a></li>
-        </ul>
-    </div>
+    
     
     
 
