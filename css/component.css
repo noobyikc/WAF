@@ -7,7 +7,15 @@
 		url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
 	font-weight: normal;
 	font-style: normal;
-} /* Made with http://icomoon.io/ */
+} 
+div.share{
+	
+	float:right;
+	height:30px;
+	width:130px;
+
+}
+
 
 .cbp_tmtimeline {
 	margin: 30px 0 0 0;
@@ -136,7 +144,7 @@
 	content: "\e003";
 }
 
-/* Example Media Queries */
+
 @media screen and (max-width: 65.375em) {
 
 	.cbp_tmtimeline > li .cbp_tmtime span:last-child {

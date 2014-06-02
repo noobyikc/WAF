@@ -14,7 +14,15 @@
 			<link rel="stylesheet" type="text/css" href="css/default.css" />
 			<link rel="stylesheet" type="text/css" href="css/component.css" />
 
-            
+			<SCRIPT language=JavaScript>
+			function reload(form)
+			{
+				var val=form.cat.options[form.cat.options.selectedIndex].value;
+				self.location='new 22.php?cat=' + val ;
+			}
+
+			</script>
+
           
 
 	</head>
@@ -74,40 +82,64 @@
 		</script>
 			<!--=============================================List============================================= --> 
    
+		<?php
+
+		require 'config.php';  // Database connection
+
+		?>
 		<div class="search">
 			<span><h1>Search for People, Places & Opportunities...</h1></span>
-			<select name="cat1" id="category" placeholder="-Category-" style="width:220px;color:black;" onchange="FillSubcaregosies(50, 58, this.value);>
-					<option value="Accessories Vendor" >Accessories Vendor</option>														
-					<option value="Alternate Fuel Technology" >Alternate Fuel Technology</option>																	
-					<option value="Auto Component Dealer/ Distributors" >Auto Component Dealer/ Distributors</option>
-					<option value="Auto Components Manufacturers " >Auto Components Manufacturers </option>
-					<option value="Auto Industry Alumni" >Auto Industry Alumni</option>
-					<option value="Auto Industry Aspirant" >Auto Industry Aspirant</option>
-					<option value="Auto Lubricants &amp; Consumables" >Auto Lubricants &amp; Consumables</option>
-					<option value="Auto Parts Distributor/Dealer" >Auto Parts Distributor/Dealer</option>
-					<option value="Auto Parts Manufacturers" >Auto Parts Manufacturers</option>
-					<option value="Automobile Associations / Bodies" >Automobile Associations / Bodies</option>
-					<option value="Automobile Dealer Aspirant" >Automobile Dealer Aspirant</option>
-					<option value="Automobile Dealers" >Automobile Dealers</option>
-					<option value="Automobile Manufacturers" >Automobile Manufacturers</option>
-					<option value="Business Research" >Business Research</option>
-					<option value="Motor Racing" >Motor Racing</option>
-					<option value="Multi Brand Bike Service Network" >Multi Brand Bike Service Network</option>
-					<option value="Multi Brand Car Service Network" >Multi Brand Car Service Network</option>
-					<option value="Used/Pre Owned Car Business" >Used/Pre Owned Car Business</option>
-					<option value="Vehicle Equipment" >Vehicle Equipment</option>
-					<option value="Vehicle Testing" >Vehicle Testing</option>
-					<option value="Vehicle Tools" >Vehicle Tools</option>
+		<?Php
 
-			</select>
-			<select name="subcategory" style="width:220px;color:black;" id="subcategory">
-					<option value=''>Sub Category</option>								
-			</select><br><br>
-			<button type="submit" style="color:black;" value="Submit">Seacrch</button><br>
-			
-			
-			<span><h1></h1></span>
+		@$cat=$_GET['cat']; 
+		if(strlen($cat) > 0 and !is_numeric($cat)){ 
+		echo "Data Error";
+		exit;
+		}
+
+
+
+
+		$quer2="SELECT DISTINCT category,cat_id FROM category order by category"; 
+
+
+		///second/// 
+		if(isset($cat) and strlen($cat) > 0){
+		$quer="SELECT DISTINCT subcategory FROM subcategory where cat_id=$cat order by subcategory"; 
+		}else{$quer="SELECT DISTINCT subcategory FROM subcategory order by subcategory"; } 
+
+
+		echo "<form method=post name=f1 action='new 22.php'>";
+
+
+		echo "<select name='cat' placeholder='-Category-' style='width:220px;color:black;' onchange=\"reload(this.form)\"><option value=''>Select one</option>";
+		foreach ($dbo->query($quer2) as $noticia2) {
+		if($noticia2['cat_id']==@$cat){echo "<option selected value='$noticia2[cat_id]'>$noticia2[category]</option>"."<BR>";}
+		else{echo  "<option value='$noticia2[cat_id]'>$noticia2[category]</option>";}
+		}
+		echo "</select>";
+
+
+
+		echo "<select name='subcat' placeholder='-Category-' style='width:220px;color:black;'><option value=''>Select one</option>";
+		foreach ($dbo->query($quer) as $noticia) {
+		echo  "<option value='$noticia[subcategory]'>$noticia[subcategory]</option>";
+		}
+		echo "</select>";
+		?>
+		<br>
+		<?php
+
+
+		echo "<input type=submit value=Submit style='color:black;'>";
+		echo "</form>";
+		?>
+		
+		
+		
+		<span><h1></h1></span>
 		</div>
+
 		
 		<!--=============================================Timeline============================================= --> 
    
@@ -124,6 +156,12 @@
 						<time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
 						<div class="cbp_tmicon cbp_tmicon-phone"></div>
 						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="images/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
 							<h2><a href="#">SOMETHING</a></h2>
 							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
 						</div>
@@ -132,6 +170,12 @@
 						<time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span> <span>12:04</span></time>
 						<div class="cbp_tmicon cbp_tmicon-screen"></div>
 						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="images/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
 							<h2><a href="#">SOMETHING</a></h2>
 							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
 						</div>
@@ -140,6 +184,12 @@
 						<time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>4/13/13</span> <span>05:36</span></time>
 						<div class="cbp_tmicon cbp_tmicon-mail"></div>
 						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="images/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
 							<h2><a href="#">SOMETHING</a></h2>
 							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
 						</div>
@@ -148,6 +198,12 @@
 						<time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>4/15/13</span> <span>13:15</span></time>
 						<div class="cbp_tmicon cbp_tmicon-phone"></div>
 						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="images/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
 							<h2><a href="#">SOMETHING</a></h2>
 							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
 						</div>
@@ -156,6 +212,12 @@
 						<time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>4/16/13</span> <span>21:30</span></time>
 						<div class="cbp_tmicon cbp_tmicon-earth"></div>
 						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="images/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="images/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
 							<h2><a href="#">SOMETHING</a></h2>
 							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
 						</div>
