@@ -21,6 +21,7 @@
 #login-reg_button {
 	background-color:transparent;
 	border:#ED6347;
+	width:100%;
 }
 
 #login-signup {
@@ -251,5 +252,124 @@ a.btn_red {
 
 .column a:hover {
 	border-color: #fff;
+<<<<<<< HEAD
 
 }
+=======
+}
+
+#loader {
+	background-color:#FFF;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 2000;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px;
+}
+
+#image-loader {
+	width:20%;
+	position:relative;
+	top:30%;
+	left:40%;
+}
+
+/* Footer CSS*/
+.footer{
+	position:static;
+	bottom:0;
+  	height: 80px;
+	padding-top:10px;
+	width: 100%;
+  	background: #000000;
+  	color: #333333;
+  	transition: all 0.2s ease-out;
+}
+
+.links {
+	width:80%;
+	margin:auto;	
+}
+
+.links > tr >td{
+	width:20%;
+}
+/*
+.links > td > a {
+		text-align:center;
+}*/
+
+.copyright {
+	width:100%;
+	text-align:right;
+	padding-right:15px;
+}
+
+
+.footer > ul > a {
+	color:#333333;
+}
+
+
+.footer:hover{
+  color: #ffffff;
+  text-decoration:none;
+}
+
+.box {
+	position:relative;
+	top:-8em;
+	width:70%;
+    background:#9595FF;
+    margin:65px auto 0px;
+	border-top-left-radius:250px;
+	border-top-right-radius:250px;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+}
+
+.shadow{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    		box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+	
+.content1 {
+	position:relative;
+	top:-4em;
+	width:90%;
+    background:#FFF;
+    margin:25px auto 0px;
+    border-radius:2px;
+	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+}
+
+
+#company {
+	color:#FFF;
+	text-align:center;
+	font-size:80px;
+	width:100%;
+}
+>>>>>>> 2e1d7e62a1d42cb671a49ea6b7ee8dae5ec420d5
