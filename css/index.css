@@ -321,9 +321,10 @@ a.btn_red {
 
 .box {
 	position:relative;
-	top:-8em;
-	width:70%;
-    background:#9595FF;
+	top:-7em;
+	width:80%;
+	background:	-moz-linear-gradient(top, #222 0%, #919AEC 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(100%,#919AEC));
     margin:65px auto 0px;
 	border-top-left-radius:250px;
 	border-top-right-radius:250px;
@@ -340,7 +341,6 @@ a.btn_red {
 }
 
 .shadow:after{
-    content:"";
     position:absolute;
     z-index:-1;
     -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
@@ -356,20 +356,26 @@ a.btn_red {
 	
 .content1 {
 	position:relative;
-	top:-4em;
-	width:90%;
-    background:#FFF;
+	background:#FFF;
+	height:400px;
+	top:-11.5em;
+	width:95%;
+	z-index:-11;
     margin:25px auto 0px;
-    border-radius:2px;
-	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
-            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-color:#222;
+	border-width:thick;
+	-webkit-box-shadow:2px 5px 58px #222;
+            box-shadow:2px 5px 58px #222;
 }
 
 
 #company {
 	color:#FFF;
 	text-align:center;
-	font-size:80px;
+	font-size:70px;
+	font-weight:800;
 	width:100%;
 }
 >>>>>>> 2e1d7e62a1d42cb671a49ea6b7ee8dae5ec420d5
