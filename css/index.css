@@ -386,7 +386,16 @@ a.btn_red {
 	padding-bottom:5px;
 }
 .body-content {
-	padding-right:80px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+.icon-content {
+	max-width:80px;
+	max-height:80px;
+	position:relative;
+	float:right;
+	right:0;
 }
 
 

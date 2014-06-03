@@ -264,7 +264,7 @@
 		                <p>Auto Components & Parts Makers Love WAF!</p>
 		            </div>
         		</div>
-				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.9em"></div>
+				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
 	        </div>
     	    <div class="item" id="carousel_image3">
 				<div class="container">
@@ -296,7 +296,9 @@
             	<td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Create</div>
-                        <div class="panel-body body-content">Create your professional profile online and be seen by the top Professionals from around the world.
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+                        	Create your professional profile online and be seen by the top Professionals from around the world.
                         </div>
                     </div>
                     
@@ -304,14 +306,18 @@
                 <td>
                		<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Converse</div>
-                        <div class="panel-body body-content">Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+                        <div class="panel-body body-content">
+                            <img class="icon-content" src="" />
+                        	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
                         </div>
                     </div>
                 </td>
                 <td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Connect</div>
-                        <div class="panel-body body-content">Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+                        	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
                         </div>
                     </div>
                 </td>
@@ -319,7 +325,9 @@
             	<td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Grow</div>
-                        <div class="panel-body body-content">Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+							Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
                         </div>
                     </div>
                     
@@ -327,14 +335,18 @@
                 <td>
                		<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Buy/Sell</div>
-                        <div class="panel-body body-content">Use our Marketplace to sell your products or services and gain international exposure and high profits.
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+                        	Use our Marketplace to sell your products or services and gain international exposure and high profits.
                         </div>
                     </div>
                 </td>
                 <td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Speak out</div>
-                        <div class="panel-body body-content">Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+	                        Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
                         </div>
                     </div>
                 </td>
@@ -342,7 +354,8 @@
             	<td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Be Updated</div>
-                        <div class="panel-body body-content">Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+                        <div class="panel-body body-content">
+                        Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
                         </div>
                     </div>
                     
