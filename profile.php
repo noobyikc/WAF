@@ -4,6 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
+<<<<<<< HEAD
+		<!-- CSS -->
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/profile.css">
+   			<link rel="stylesheet" type="text/css" href="css/search.css" />
+
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+            <script src="js/modernizr.custom.js"></script>
+         	<script src="js/classie.js"></script>
+			<script src="js/uisearch.js"></script>
+
+            
+=======
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
@@ -14,6 +28,7 @@
 <script src="js/modernizr.custom.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/uisearch.js"></script>
+>>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
 </head>
 <?php
 	 include('includes/connection.php');
@@ -98,6 +113,32 @@
 </div>
 <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
+<<<<<<< HEAD
+		</script>
+ 
+ 
+<div class="container"> 
+    <div class="panel panel-default" id="profile1">
+      <div class="panel-heading">Personal Details</div>
+      <div class="panel-body" id="profile_box">
+            <table>
+                <tr> 
+                    <td id="label">Name : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Date of Birth (MM/DD/YYYY) : </td>
+                    <td><input type="date" name="date" value="" />
+                    
+                    </td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Country : </td>
+                    <td><!-- <input type="text" name="nationality" value="" />-->
+                   	<?php
+=======
 		</script> 
 <div class="container">
 <div class="panel panel-default" id="profile1">
@@ -117,6 +158,7 @@
         <td><!-- <input type="text" name="nationality" value="" />-->
           
           <?php
+>>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
 								$sql = 'select name from countries';
 								$result = mysql_query($sql);
 								echo "<select country = 'name'>";
@@ -148,6 +190,64 @@
         <input type="submit" class="btn btn-primary" value="Save Changes" name="saveprofile"/>
       </form>
     </div>
+<<<<<<< HEAD
+    
+    <div class="panel panel-default" id="pic_sign">
+      	<div class="panel-heading">Photo</div>
+          <div class="panel-body" id="pic">
+          <a href="#" class="thumbnail">
+          <img src="Images/ramukaka5.jpg" />
+          </a>
+          </div>
+        
+            <div class="btn-group" id="button1">
+          
+          <button type="button" class="btn btn-primary">Profile Photo</button>
+          <button type="button" class="btn btn-primary">Cover Photo</button>
+    	</div>    
+    </div>
+    
+    
+    
+    <div class="panel panel-default" id="profile">
+      <div class="panel-heading">Education and Current Affairs </div>
+      <div class="panel-body" id="profile_box">
+      <table>
+                <tr> 
+                    <td id="label">What did you study? : </td>
+                    <td><input type="text" name="degree" value="" /></td>
+                </tr>
+                
+                <tr> 
+                    <td id="label">Where did you study? : </td>
+                    <td><input type="text" name="location" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Company : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Location : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Number(Office) : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                <tr> 
+                    <td id="label">Contact Email-id: </td>
+                    <td><input type="text" name="name" value="" /></td>
+                    
+                </tr>
+                
+      </table>
+        <div class="btn-group" id="button2">
+      
+=======
   </div>
 </div>
 <div class="panel panel-default" id="pic_sign">
@@ -188,9 +288,51 @@
       </tr>
     </table>
     <div class="btn-group" id="button2">
+>>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-primary">Save Changes</button>
     </div>
+<<<<<<< HEAD
+    
+    
+    <div class="panel panel-default" id="profile" style="margin-bottom:120px">
+      <div class="panel-heading" >Work Experience </div>
+      <div class="panel-body" id="profile_box">
+      <table>
+                <tr> 
+                    <td id="label">What did you study? : </td>
+                    <td><input type="text" name="degree" value="" /></td>      
+                </tr>
+                
+                <tr> 
+                    <td id="label">Where did you study? : </td>
+                    <td><input type="text" name="location" value="" /></td>
+                </tr>
+                
+                <tr> 
+                    <td id="label">Company : </td>
+                    <td><input type="text" name="name" value="" /></td>
+			    </tr>
+                
+                <tr> 
+                    <td id="label">Location : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                </tr>
+                
+                <tr> 
+                    <td id="label">Contact Number(Office) : </td>
+                    <td><input type="text" name="name" value="" /></td>
+                </tr>
+                
+                <tr> 
+                    <td id="label">Contact Email-id: </td>
+                    <td><input type="text" name="name" value="" /></td>
+                </tr>
+                
+      </table>
+
+      <div class="btn-group" id="button2">
+=======
   </div>
 </div>
 <div class="panel panel-default" id="profile">
@@ -223,6 +365,7 @@
       </tr>
     </table>
     <div class="btn-group" id="button2">
+>>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-primary">Save Changes</button>
     </div>
@@ -234,6 +377,30 @@
     <div class="btn-group" id="button3">
       <button type="button" class="btn btn-primary">View All</button>
     </div>
+<<<<<<< HEAD
+    
+	<div class="panel panel-default" id="friends">
+          <div class="panel-heading">Connections</div>
+          <div class="panel-body" id="pic">
+          <div class="btn-group" id="button3">
+          <button type="button" class="btn btn-primary">View All</button>
+            </div>
+        </div>
+   </div>
+
+	<div class="panel panel-default" id="friends">
+          <div class="panel-heading">Discussion Forums</div>
+          <div class="panel-body" id="pic">
+          <div class="btn-group" id="button3">
+          <button type="button" class="btn btn-primary">View All</button>
+            </div>
+        </div>
+    </div>
+	
+</div>
+
+  
+=======
   </div>
 </div>
 <div class="panel panel-default" id="friends">
@@ -245,5 +412,6 @@
   </div>
 </div>
 </div>
+>>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
 </body>
 </html>
