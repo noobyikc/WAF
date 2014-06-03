@@ -9,7 +9,6 @@
             <link rel="stylesheet" type="text/css" href="css/profile.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
 
-            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
             <script src="js/modernizr.custom.js"></script>
@@ -85,10 +84,6 @@
  
  
 <div class="container"> 
-    
-    
-    
-
     <div class="panel panel-default" id="profile1">
       <div class="panel-heading">Personal Details</div>
       <div class="panel-body" id="profile_box">
@@ -178,7 +173,6 @@
                 <tr> 
                     <td id="label">What did you study? : </td>
                     <td><input type="text" name="degree" value="" /></td>
-                    
                 </tr>
                 
                 <tr> 
@@ -223,39 +217,37 @@
       <table>
                 <tr> 
                     <td id="label">What did you study? : </td>
-                    <td><input type="text" name="degree" value="" /></td>
-                    
+                    <td><input type="text" name="degree" value="" /></td>      
                 </tr>
                 
                 <tr> 
                     <td id="label">Where did you study? : </td>
                     <td><input type="text" name="location" value="" /></td>
-                    
                 </tr>
+                
                 <tr> 
                     <td id="label">Company : </td>
                     <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
+			    </tr>
+                
                 <tr> 
                     <td id="label">Location : </td>
                     <td><input type="text" name="name" value="" /></td>
-                    
                 </tr>
+                
                 <tr> 
                     <td id="label">Contact Number(Office) : </td>
                     <td><input type="text" name="name" value="" /></td>
-                    
                 </tr>
+                
                 <tr> 
                     <td id="label">Contact Email-id: </td>
                     <td><input type="text" name="name" value="" /></td>
-                    
                 </tr>
                 
       </table>
+
       <div class="btn-group" id="button2">
-      
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-primary">Save Changes</button>
       </div>       
@@ -269,9 +261,8 @@
           <button type="button" class="btn btn-primary">View All</button>
             </div>
         </div>
-        
-       
    </div>
+
 	<div class="panel panel-default" id="friends">
           <div class="panel-heading">Discussion Forums</div>
           <div class="panel-body" id="pic">
@@ -279,10 +270,9 @@
           <button type="button" class="btn btn-primary">View All</button>
             </div>
         </div>
-    
+    </div>
+	
 </div>
-
-
 
   
 </body>

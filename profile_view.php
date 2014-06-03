@@ -56,7 +56,7 @@
 									<form>
 										<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
 										<input class="sb-search-submit" type="submit" value="">
-										<span class="sb-icon-search"></span>
+										<span class="sb-icon-search" id="search-img"><img src="image/icons/sprites.png"/></span>
 									</form>
 								</div>
 							</div>
@@ -208,7 +208,7 @@
                 </tr>
                 
       </table>
-</div>                 
+	</div>                 
     </div>
     
     <div class="panel panel-default" id="friends">
@@ -218,10 +218,9 @@
           <button type="button" class="btn btn-primary">View All</button>
             </div>
         </div>
-        
-       
    </div>
-	<div class="panel panel-default" id="friends">
+	
+    <div class="panel panel-default" id="friends">
           <div class="panel-heading">Discussion Forums</div>
           <div class="panel-body" id="pic">
           <div class="btn-group" id="button3">
@@ -229,8 +228,8 @@
             </div>
         </div>
     </div>
-    <div class="btn-group" id="button4" >
-      
+    
+    <div class="btn-group" id="button4" >  
       <button type="button" class="btn btn-primary">View as friend</button>
       <button type="button" class="btn btn-primary">View as from public</button>
       <button type="button" class="btn btn-primary">Edit</button>
