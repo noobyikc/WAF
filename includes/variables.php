@@ -10,9 +10,10 @@ else
 {	$updates='false';
 }
 //--------- profile edit page----------
+if(isset($_SESSION['sessemail'])){$mail = $_SESSION['sessemail'];}
 if(isset($_POST['pname'])){$pname = $_POST['pname'];}
 if(isset($_POST['dob'])){$dob = $_POST['dob'];}
-if(isset($_POST['name'])){$country = $_POST['name'];}
+if(isset($_POST['country'])){$country = $_POST['country'];}//for country
 if(isset($_POST['m_no'])){$mobile = $_POST['m_no'];}
-if(isset($_SESSION['sessmail'])){$mail = $_SESSION['sessmail'];}
+if(isset($_POST['gender'])){$gender = $_POST['gender'];}
 ?>

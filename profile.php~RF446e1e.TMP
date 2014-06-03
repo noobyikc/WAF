@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/search.css" />
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
@@ -27,11 +27,9 @@
 		$sql = mysql_query("select count(*) from profile where email = '$mail'") or die(mysql_error);
 		$data = mysql_fetch_assoc($sql);
 		$res = $data['count(*)'];
-		echo $res;
 		if($res == '1')
 		{			
 				$result = mysql_query("update register,profile set register.name =  '$pname', profile.dob = '$dob', profile.country = '$country', profile.mobile = '$mobile' where register.email = '$mail' and profile.email = '$mail'") or die(mysql_error);
-				echo $result;
 			
 			/*if($result)
 				echo "<script>window.location = 'profile_view.php';</script>";

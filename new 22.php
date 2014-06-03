@@ -112,7 +112,7 @@
 		echo "<form method=post name=f1 action='new 22.php'>";
 
 
-		echo "<select name='cat' placeholder='-Category-' style='width:220px;color:black;' onchange=\"reload(this.form)\"><option value=''>Select one</option>";
+		echo "<select name='cat' placeholder='-Category-' style='width:320px;color:black;' onchange=\"reload(this.form)\"><option value=''>Select one</option>";
 		foreach ($dbo->query($quer2) as $noticia2) {
 		if($noticia2['cat_id']==@$cat){echo "<option selected value='$noticia2[cat_id]'>$noticia2[category]</option>"."<BR>";}
 		else{echo  "<option value='$noticia2[cat_id]'>$noticia2[category]</option>";}
@@ -121,7 +121,7 @@
 
 
 
-		echo "<select name='subcat' placeholder='-Category-' style='width:220px;color:black;'><option value=''>Select one</option>";
+		echo "<select name='subcat' placeholder='-Category-' style='width:320px;color:black;'><option value=''>Select one</option>";
 		foreach ($dbo->query($quer) as $noticia) {
 		echo  "<option value='$noticia[subcategory]'>$noticia[subcategory]</option>";
 		}
