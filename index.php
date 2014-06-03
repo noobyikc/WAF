@@ -240,28 +240,36 @@
   <!--=============================================Carousel============================================= -->
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    	<!-- Indicators -->
+		<!--<ol class="carousel-indicators">
+        	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+    	    <li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>-->
 		<div class="carousel-inner">
         	<div class="item active" id="carousel_image1">
-		         <div class="carousel-caption">
-        		  	<h1>Join Us,</h1>
-                	<p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
-		        </div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
-                
+          		<div class="container">
+		            <div class="carousel-caption">
+        		    	<h1>Join Us,</h1>
+                		<p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
+		            </div>
+        		</div>
 			</div>
 			<div class="item" id="carousel_image2" >
-				<div class="carousel-caption">
-		           	<h1>Buy stuff</h1>
-		            <p>Auto Components & Parts Makers Love WAF!</p>
-		        </div>
-        		<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
+				<div class="container">
+        	    	<div class="carousel-caption">
+		            	<h1>Buy stuff</h1>
+		                <p>Auto Components & Parts Makers Love WAF!</p>
+		            </div>
+        		</div>
 	        </div>
     	    <div class="item" id="carousel_image3">
-		        <div class="carousel-caption">
-		          	<h1>Auto Dealers</h1>
-		            <p>From around the world are on WAF!</p>
-		        </div>
-				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
+				<div class="container">
+		            <div class="carousel-caption">
+		            	<h1>Auto Dealers</h1>
+		                <p>From around the world are on WAF!</p>
+		            </div>
+				</div>
 	        </div>
     	</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
