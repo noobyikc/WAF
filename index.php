@@ -18,7 +18,7 @@
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
 
-            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
             <script src="js/modernizr.custom.js"></script>
@@ -90,7 +90,7 @@
 			  $("#loader").fadeOut([1000]);
 			});
 		</script>	
-		<div id="loader">
+		<div id="loader" style="height:100%">
         	<img id="image-loader"src="image/icons/gear.gif" alt="Loading..." />
         </div>
     
@@ -254,6 +254,7 @@
                 		<p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
 		            </div>
         		</div>
+                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
 			</div>
 			<div class="item" id="carousel_image2" >
 				<div class="container">
@@ -262,6 +263,7 @@
 		                <p>Auto Components & Parts Makers Love WAF!</p>
 		            </div>
         		</div>
+				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.9em"></div>
 	        </div>
     	    <div class="item" id="carousel_image3">
 				<div class="container">
@@ -270,6 +272,7 @@
 		                <p>From around the world are on WAF!</p>
 		            </div>
 				</div>
+                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
 	        </div>
     	</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -287,21 +290,76 @@
     </div>
     
     <div class="content1 shadow">
-    	<table>
+    	<table class="details">
         	<tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-            	<td></td>
-                <td></td>
-                <td></td>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Create</div>
+                        <div class="panel-body body-content">Create your professional profile online and be seen by the top Professionals from around the world.
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Converse</div>
+                        <div class="panel-body body-content">Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Connect</div>
+                        <div class="panel-body body-content">Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+                        </div>
+                    </div>
+                </td>
+            </tr><tr>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Grow</div>
+                        <div class="panel-body body-content">Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Buy/Sell</div>
+                        <div class="panel-body body-content">Use our Marketplace to sell your products or services and gain international exposure and high profits.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Speak out</div>
+                        <div class="panel-body body-content">Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+                        </div>
+                    </div>
+                </td>
+            </tr><tr>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Be Updated</div>
+                        <div class="panel-body body-content">Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Gain Insight</div>
+                        <div class="panel-body body-content">Access WAF ......... and gain new insights about ..... any topic related to the auto industry.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Make a Difference</div>
+                        <div class="panel-body body-content">Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+                        </div>
+                    </div>
+                </td>
             </tr>
         </table>
     </div>
