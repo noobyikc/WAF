@@ -27,8 +27,9 @@
    </head>
 
 <?php
-   include('includes/variables.php');
-   include('includes/connection.php');
+ 		include('includes/connection.php');
+	    include('includes/variables.php');
+ 
 ?>
 
 <?php
@@ -51,7 +52,7 @@
 	  	$message.='</body></html>';
 	  	mail($to,$subject,$message,$headers); */
 	  	if($result)
-	  		echo "<script> alert('registration successful.');</script>";
+	  		echo "<script> windows.location = 'profile_view.php';</script>";
 	  	else
 	  		die(mysql_error());
 }
