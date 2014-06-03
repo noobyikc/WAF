@@ -27,11 +27,9 @@
 		$sql = mysql_query("select count(*) from profile where email = '$mail'") or die(mysql_error);
 		$data = mysql_fetch_assoc($sql);
 		$res = $data['count(*)'];
-		echo $res;
 		if($res == '1')
 		{			
 				$result = mysql_query("update register,profile set register.name =  '$pname', profile.dob = '$dob', profile.country = '$country', profile.mobile = '$mobile' where register.email = '$mail' and profile.email = '$mail'") or die(mysql_error);
-				echo $result;
 			
 			/*if($result)
 				echo "<script>window.location = 'profile_view.php';</script>";

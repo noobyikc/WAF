@@ -27,8 +27,9 @@
    </head>
 
 <?php
-   include('includes/variables.php');
-   include('includes/connection.php');
+ 		include('includes/connection.php');
+	    include('includes/variables.php');
+ 
 ?>
 
 <?php
@@ -51,7 +52,7 @@
 	  	$message.='</body></html>';
 	  	mail($to,$subject,$message,$headers); */
 	  	if($result)
-	  		echo "<script> alert('registration successful.');</script>";
+	  		echo "<script> windows.location = 'profile_view.php';</script>";
 	  	else
 	  		die(mysql_error());
 }
@@ -158,17 +159,6 @@
             	<section class="popupBody">
 					<!-- Social Login -->
 					<div class="social_login">
-							<a href="#" class="social_box fb">
-								<span class="icon"><i></i></span>
-								<span class="icon_title">Continue with Facebook</span>
-							</a>
-                            <a href="#" class="social_box google">
-								<span class="icon"><i class="fa fa-google-plus"></i></span>
-								<span class="icon_title">Continue with Google</span>
-							</a>
-						<div class="centeredText">
-							<span>Or use your Email address</span>
-						</div>
 						<div class="action_btns">
 							<div class="one_half"><a href="#" id="login_form" class="btn btn_red">Login</a></div>
 							<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
@@ -298,7 +288,23 @@
     </div>
     
     <div class="content1 shadow">
-    bls
+    	<table>
+        	<tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
   
 
