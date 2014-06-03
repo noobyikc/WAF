@@ -252,6 +252,10 @@ a.btn_red {
 
 .column a:hover {
 	border-color: #fff;
+<<<<<<< HEAD
+
+}
+=======
 }
 
 #loader {
@@ -374,3 +378,4 @@ a.btn_red {
 	font-weight:800;
 	width:100%;
 }
+>>>>>>> 2e1d7e62a1d42cb671a49ea6b7ee8dae5ec420d5
