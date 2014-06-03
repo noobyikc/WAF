@@ -252,10 +252,6 @@ a.btn_red {
 
 .column a:hover {
 	border-color: #fff;
-<<<<<<< HEAD
-
-}
-=======
 }
 
 #loader {
@@ -321,12 +317,15 @@ a.btn_red {
 
 .box {
 	position:relative;
-	top:-8em;
-	width:70%;
-    background:#9595FF;
+	top:-7em;
+	width:80%;
+	z-index:100;
+	background:	-moz-linear-gradient(top, #222 0%, #919AEC 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(100%,#919AEC));
     margin:65px auto 0px;
 	border-top-left-radius:250px;
 	border-top-right-radius:250px;
+	border-bottom-width:thick;
 	border-bottom-left-radius:50px;
 	border-bottom-right-radius:50px;
 	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
@@ -335,14 +334,13 @@ a.btn_red {
 
 .shadow{
     position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
-    		box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+	z-index:100;
+	box-shadow:1px 5px 40px rgba(0, 0, 0, 0.8);
 }
 
 .shadow:after{
-    content:"";
     position:absolute;
-    z-index:-1;
+    z-index:100;
     -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
     box-shadow:0 0 40px rgba(0,0,0,0.8);
     bottom:0px;
@@ -356,20 +354,46 @@ a.btn_red {
 	
 .content1 {
 	position:relative;
-	top:-4em;
-	width:90%;
-    background:#FFF;
+	background:#FFF;
+	height:100%;
+	top:-11.5em;
+	width:95%;
+	z-index:-11;
+	padding-top:5em;
     margin:25px auto 0px;
-    border-radius:2px;
-	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
-            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-color:#222;
+	border-width:thick;
+	-webkit-box-shadow:2px 5px 58px #222;
+            box-shadow:2px 5px 58px #222;
+}
+
+.content1 > .details {
+	width:90%;
+	position:relative;
+	left:7.5%;
+}
+
+.panel-content {
+	width:85%;
+}
+
+.heading-content {
+	text-align:center;
+	font-weight:300;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.body-content {
+	padding-right:80px;
 }
 
 
 #company {
 	color:#FFF;
 	text-align:center;
-	font-size:80px;
+	font-size:70px;
+	font-weight:800;
 	width:100%;
 }
->>>>>>> 2e1d7e62a1d42cb671a49ea6b7ee8dae5ec420d5
