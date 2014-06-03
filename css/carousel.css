@@ -19,6 +19,10 @@
   background-color: #777;
   
 }
+
+.carousel-inner {
+	height:550px;
+}
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
