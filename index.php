@@ -316,7 +316,7 @@
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Connect</div>
                         <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
+                        	<img class="icon-content" src="image/icons/connect.jpg" />
                         	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
                         </div>
                     </div>
@@ -326,7 +326,7 @@
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Grow</div>
                         <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
+                        	<img class="icon-content" src="image/icons/grow.png" />
 							Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                		<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Buy/Sell</div>
                         <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
+                        	<img class="icon-content" src="image/icons/buysell.png" />
                         	Use our Marketplace to sell your products or services and gain international exposure and high profits.
                         </div>
                     </div>
@@ -345,7 +345,7 @@
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Speak out</div>
                         <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
+                        	<img class="icon-content" src="image/icons/speak.jpg" />
 	                        Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
                         </div>
                     </div>
@@ -355,7 +355,8 @@
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Be Updated</div>
                         <div class="panel-body body-content">
-                        Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+                        	<img class="icon-content" src="image/icons/updated.png" />
+                        	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
                         </div>
                     </div>
                     
@@ -363,14 +364,18 @@
                 <td>
                		<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Gain Insight</div>
-                        <div class="panel-body body-content">Access WAF ......... and gain new insights about ..... any topic related to the auto industry.
+                        <div class="panel-body body-content">
+	                       	<img class="icon-content" src="image/icons/insight.png" />
+                            Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
                         </div>
                     </div>
                 </td>
                 <td>
                 	<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Make a Difference</div>
-                        <div class="panel-body body-content">Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+                        <div class="panel-body body-content">
+                            <img class="icon-content" src="image/icons/difference.png" />
+							Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
                         </div>
                     </div>
                 </td>
