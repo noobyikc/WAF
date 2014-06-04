@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
-<<<<<<< HEAD
 		<!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
             <link rel="stylesheet" type="text/css" href="css/profile.css">
@@ -28,7 +27,6 @@
 <script src="js/modernizr.custom.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/uisearch.js"></script>
->>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
 </head>
 <?php
 	 include('includes/connection.php');
@@ -113,7 +111,6 @@
 </div>
 <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
-<<<<<<< HEAD
 		</script>
  
  
@@ -137,8 +134,6 @@
                 <tr> 
                     <td id="label">Country : </td>
                     <td><!-- <input type="text" name="nationality" value="" />-->
-                   	<?php
-=======
 		</script> 
 <div class="container">
 <div class="panel panel-default" id="profile1">
@@ -155,10 +150,9 @@
       </tr>
       <tr>
         <td id="label">Country : </td>
-        <td><!-- <input type="text" name="nationality" value="" />-->
+        <td>
           
           <?php
->>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
 								$sql = 'select name from countries';
 								$result = mysql_query($sql);
 								echo "<select country = 'name'>";
@@ -246,8 +240,6 @@
                 
       </table>
         <div class="btn-group" id="button2">
-      
-=======
   </div>
 </div>
 <div class="panel panel-default" id="pic_sign">
@@ -288,12 +280,9 @@
       </tr>
     </table>
     <div class="btn-group" id="button2">
->>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-primary">Save Changes</button>
-    </div>
-<<<<<<< HEAD
-    
+    </div>    
     
     <div class="panel panel-default" id="profile" style="margin-bottom:120px">
       <div class="panel-heading" >Work Experience </div>
@@ -332,7 +321,7 @@
       </table>
 
       <div class="btn-group" id="button2">
-=======
+
   </div>
 </div>
 <div class="panel panel-default" id="profile">
@@ -365,7 +354,7 @@
       </tr>
     </table>
     <div class="btn-group" id="button2">
->>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
+
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-primary">Save Changes</button>
     </div>
@@ -377,7 +366,7 @@
     <div class="btn-group" id="button3">
       <button type="button" class="btn btn-primary">View All</button>
     </div>
-<<<<<<< HEAD
+
     
 	<div class="panel panel-default" id="friends">
           <div class="panel-heading">Connections</div>
@@ -400,7 +389,7 @@
 </div>
 
   
-=======
+
   </div>
 </div>
 <div class="panel panel-default" id="friends">
@@ -412,6 +401,6 @@
   </div>
 </div>
 </div>
->>>>>>> 6b26ae352e0b03868e1c5d495ecab6783ad7e607
+
 </body>
 </html>
