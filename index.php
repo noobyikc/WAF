@@ -183,7 +183,7 @@
 								<div class="one_half last"><a class="btn btn_red" style="padding:1px 1px;"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
 							</div>
 						</form>
-						<a href="#" class="forgot_password">Forgot password?</a>
+						<a href="forgot_password.php" class="forgot_password">Forgot password?</a>
 					</div>
 					<!-- Register Form -->
 					<div class="user_register">
@@ -387,7 +387,6 @@
 
 	<!--=============================================Footer============================================= -->
     
-    <!---->
 
     <div class="footer">
 		<table class="links">
