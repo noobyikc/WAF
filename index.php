@@ -83,7 +83,7 @@
 
 	
 
-  	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
+  	<body data-spy="scroll" data-target=".navbar navbar-inverse">
     
    <!--=============================================Loader============================================= -->  
 		<script>
