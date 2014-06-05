@@ -24,6 +24,13 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
+            
+            <script type="text/javascript" src="js/jssor.core.js"></script>
+			<script type="text/javascript" src="js/jssor.utils.js"></script>
+            <script type="text/javascript" src="js/jssor.slider.js"></script>
+                       
+            
+            
    </head>
 
 <?php
@@ -381,8 +388,101 @@
                 </td>
             </tr>
         </table>
+        
+        <!---slider--->  
+
+
+        
     </div>
   
+  
+
+<script>
+				jQuery(document).ready(function ($) {
+					var options = {
+						$AutoPlay: true,
+						$AutoPlaySteps: 1,                                  
+						$AutoPlayInterval: 0,                            
+						$PauseOnHover: 1,                           
+		
+						$ArrowKeyNavigation: true,   			    
+						$SlideEasing: $JssorEasing$.$EaseLinear,    
+						$SlideDuration: 3000,                       
+						$MinDragOffsetToSlide: 20,                  
+						$SlideWidth: 140,                           
+						$SlideSpacing: 0, 					        
+						$DisplayPieces: 7,                          
+						$ParkingPosition: 0,                        
+						$UISearchMode: 1,                           
+						$PlayOrientation: 1,                        
+						$DragOrientation: 1                         
+					};
+		
+					var jssor_slider1 = new $JssorSlider$("company_slider", options);
+		
+					
+					function ScaleSlider() {
+						var bodyWidth = document.body.clientWidth;
+						if (bodyWidth)
+							jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 1080));
+						else
+							window.setTimeout(ScaleSlider, 30);
+					}
+		
+					ScaleSlider();
+		
+					if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+						$(window).bind('resize', ScaleSlider);
+					}
+		
+				});
+			</script>
+<div id="company_slider" >
+
+        
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: relative; left: 50px; bottom:20px; top: 0px; width: 1080px; height: 100px; overflow: hidden;">
+        
+        <!-- Loading Screen -->
+        <div u="loading" style="position:relative; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: relative; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+        
+        
+            <div><img u="image" alt="amazon" src="image/logo/amazon.jpg" /></div>
+            <div><img u="image" alt="android" src="image/logo/android.jpg" /></div>
+            <div><img u="image" alt="bitly" src="image/logo/bitly.jpg" /></div>
+            <div><img u="image" alt="blogger" src="image/logo/blogger.jpg" /></div>
+            <div><img u="image" alt="dnn" src="image/logo/dnn.jpg" /></div>
+            <div><img u="image" alt="drupal" src="image/logo/drupal.jpg" /></div>
+            <div><img u="image" alt="ebay" src="image/logo/ebay.jpg" /></div>
+            <div><img u="image" alt="facebook" src="image/logo/facebook.jpg" /></div>
+            <div><img u="image" alt="google" src="image/logo/google.jpg" /></div>
+            <div><img u="image" alt="ibm" src="image/logo/ibm.jpg" /></div>
+            <div><img u="image" alt="ios" src="image/logo/ios.jpg" /></div>
+            <div><img u="image" alt="joomla" src="image/logo/joomla.jpg" /></div>
+            <div><img u="image" alt="linkedin" src="image/logo/linkedin.jpg" /></div>
+            <div><img u="image" alt="mac" src="image/logo/mac.jpg" /></div>
+            <div><img u="image" alt="magento" src="image/logo/magento.jpg" /></div>
+            <div><img u="image" alt="pinterest" src="image/logo/pinterest.jpg" /></div>
+            <div><img u="image" alt="samsung" src="image/logo/samsung.jpg" /></div>
+            <div><img u="image" alt="twitter" src="image/logo/twitter.jpg" /></div>
+            <div><img u="image" alt="windows" src="image/logo/windows.jpg" /></div>
+            <div><img u="image" alt="wordpress" src="image/logo/wordpress.jpg" /></div>
+            <div><img u="image" alt="youtube" src="image/logo/youtube.jpg" /></div>
+        </div>
+        <a style="display: none" href="http://www.jssor.com">html slider</a>
+    </div>
+        
+        
+        
+        
+
 
 	<!--=============================================Footer============================================= -->
     

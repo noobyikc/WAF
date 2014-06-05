@@ -406,3 +406,12 @@ a.btn_red {
 	font-weight:800;
 	width:100%;
 }
+
+#company_slider {
+	position:relative;
+	
+	width:1080px;
+	margin:auto;
+	height:100px;
+	overflow:hidden;
+}
