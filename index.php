@@ -24,6 +24,7 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
+                        
    </head>
 
 <?php
@@ -82,7 +83,7 @@
 
 	
 
-  	<body data-spy="scroll" data-target=".navbar navbar-inverse">
+  	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
     
    <!--=============================================Loader============================================= -->  
 		<script>
@@ -307,7 +308,7 @@
                		<div class="panel panel-primary panel-content">
                     	<div class="panel-heading heading-content">Converse</div>
                         <div class="panel-body body-content">
-                            <img class="icon-content" src="" />
+                            <img class="icon-content" src="image/icons/converse.png" />
                         	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
                         </div>
                     </div>
