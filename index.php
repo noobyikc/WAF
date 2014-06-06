@@ -21,10 +21,12 @@
             <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+            <script type="text/javascript" src="js/smoothscroll.js"></script>
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-<<<<<<< HEAD
+            
+
             
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
@@ -32,9 +34,6 @@
                        
             
             
-=======
-                        
->>>>>>> 0a2a555db63a5736d8df42af161a425ec1a8d703
    </head>
 
 <?php
@@ -95,6 +94,34 @@
 
   	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
     
+    	<!-- ========================== scroll down ========================= -->
+    <div class="image-pos1" id="image-view1">
+   			<a href="#image-view1"><img src="image/icons/down.png" /></a>
+	</div>
+    <!--============================================Scroll Up========================================== -->
+    <script>
+	jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.image-pos2').fadeIn(duration);
+        } else {
+            jQuery('.image-pos2').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.image-pos2').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+	</script>
+    <div class="image-pos2" id="image-view2">
+    	<a href="#"><img src="image/icons/up.png" /></a>
+    </div>
+    
    <!--=============================================Loader============================================= -->  
 		<script>
 			$(window).load(function() {
@@ -107,7 +134,7 @@
         </div>
     
    <!--=============================================Navigation============================================= --> 
-    	<div class="navbar-wrapper">
+        <div class="navbar-wrapper">
           <div class="container">
             <div class="navbar navbar-inverse navbar-static-top" role="navigation">
                 <div class="navbar-header">
@@ -248,7 +275,8 @@
 			})
 		</script>
     </section>
-	
+
+    
   <!--=============================================Carousel============================================= -->
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -290,6 +318,7 @@
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
+    
     
 	<!--=============================================Heading============================================= -->
 

@@ -415,3 +415,23 @@ a.btn_red {
 	height:100px;
 	overflow:hidden;
 }
+
+.image-pos1
+{
+	position:fixed;
+	right:0;
+	bottom:5px;
+	width:60px;
+	height:60px;	
+	z-index:1;
+	
+}
+.image-pos2
+{
+	position:fixed;
+	left:0;
+	bottom:0px;
+	width:60px;
+	height:60px;
+	z-index:1;
+}
