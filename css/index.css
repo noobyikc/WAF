@@ -407,6 +407,37 @@ a.btn_red {
 	width:100%;
 }
 
+<<<<<<< HEAD
 
 .cmp_logo {
 	width:200px;}
+=======
+#company_slider {
+	position:relative;
+	
+	width:1080px;
+	margin:auto;
+	height:100px;
+	overflow:hidden;
+}
+
+.image-pos1
+{
+	position:fixed;
+	right:0;
+	bottom:5px;
+	width:60px;
+	height:60px;	
+	z-index:1;
+	
+}
+.image-pos2
+{
+	position:fixed;
+	left:0;
+	bottom:0px;
+	width:60px;
+	height:60px;
+	z-index:1;
+}
+>>>>>>> d1be78f9c6a6eb7836f6b0bfa6353f8755c603af
