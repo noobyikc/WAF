@@ -25,23 +25,11 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-<<<<<<< HEAD
-=======
-            
 
->>>>>>> d1be78f9c6a6eb7836f6b0bfa6353f8755c603af
-            
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
             <script type="text/javascript" src="js/jssor.slider.js"></script>
-                       
-            
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> d1be78f9c6a6eb7836f6b0bfa6353f8755c603af
-   </head>
+</head>
 
 <?php
  		include('includes/connection.php');
