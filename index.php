@@ -24,17 +24,13 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-<<<<<<< HEAD
             
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
             <script type="text/javascript" src="js/jssor.slider.js"></script>
                        
             
-            
-=======
-                        
->>>>>>> 0a2a555db63a5736d8df42af161a425ec1a8d703
+
    </head>
 
 <?php
@@ -393,97 +389,114 @@
             </tr>
         </table>
         
-        <!---slider--->  
-
-
         
-    </div>
-  
-  
+        <div class="panel panel-primary panel-content" style="margin:auto">
+        	<div class="panel-heading heading-content" style="width:1000px; margin:auto;">People from these countries are here. Are you?</div>
+        </div>
+        <!---slider--->  
+        
 
 <script>
-				jQuery(document).ready(function ($) {
-					var options = {
-						$AutoPlay: true,
-						$AutoPlaySteps: 1,                                  
-						$AutoPlayInterval: 0,                            
-						$PauseOnHover: 1,                           
-		
-						$ArrowKeyNavigation: true,   			    
-						$SlideEasing: $JssorEasing$.$EaseLinear,    
-						$SlideDuration: 3000,                       
-						$MinDragOffsetToSlide: 20,                  
-						$SlideWidth: 140,                           
-						$SlideSpacing: 0, 					        
-						$DisplayPieces: 7,                          
-						$ParkingPosition: 0,                        
-						$UISearchMode: 1,                           
-						$PlayOrientation: 1,                        
-						$DragOrientation: 1                         
-					};
-		
-					var jssor_slider1 = new $JssorSlider$("company_slider", options);
-		
-					
-					function ScaleSlider() {
-						var bodyWidth = document.body.clientWidth;
-						if (bodyWidth)
-							jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 1080));
-						else
-							window.setTimeout(ScaleSlider, 30);
-					}
-		
-					ScaleSlider();
-		
-					if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-						$(window).bind('resize', ScaleSlider);
-					}
-		
-				});
-			</script>
-<div id="company_slider" >
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 0,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
 
-        
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: relative; left: 50px; bottom:20px; top: 0px; width: 1080px; height: 100px; overflow: hidden;">
-        
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideEasing: $JssorEasing$.$EaseLinear,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                $SlideDuration: 3000,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                $SlideWidth: 140,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 100,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 7,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 980));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
+
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 1080px; bottom: 50px; height: 100px; overflow: hidden; ">
+
         <!-- Loading Screen -->
-        <div u="loading" style="position:relative; top: 0px; left: 0px;">
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: relative; display: block; background: url(../img/loading.gif) no-repeat center center;
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
-        
-        
-            <div><img u="image" alt="amazon" src="image/logo/amazon.jpg" /></div>
-            <div><img u="image" alt="android" src="image/logo/android.jpg" /></div>
-            <div><img u="image" alt="bitly" src="image/logo/bitly.jpg" /></div>
-            <div><img u="image" alt="blogger" src="image/logo/blogger.jpg" /></div>
-            <div><img u="image" alt="dnn" src="image/logo/dnn.jpg" /></div>
-            <div><img u="image" alt="drupal" src="image/logo/drupal.jpg" /></div>
-            <div><img u="image" alt="ebay" src="image/logo/ebay.jpg" /></div>
-            <div><img u="image" alt="facebook" src="image/logo/facebook.jpg" /></div>
-            <div><img u="image" alt="google" src="image/logo/google.jpg" /></div>
-            <div><img u="image" alt="ibm" src="image/logo/ibm.jpg" /></div>
-            <div><img u="image" alt="ios" src="image/logo/ios.jpg" /></div>
-            <div><img u="image" alt="joomla" src="image/logo/joomla.jpg" /></div>
-            <div><img u="image" alt="linkedin" src="image/logo/linkedin.jpg" /></div>
-            <div><img u="image" alt="mac" src="image/logo/mac.jpg" /></div>
-            <div><img u="image" alt="magento" src="image/logo/magento.jpg" /></div>
-            <div><img u="image" alt="pinterest" src="image/logo/pinterest.jpg" /></div>
-            <div><img u="image" alt="samsung" src="image/logo/samsung.jpg" /></div>
-            <div><img u="image" alt="twitter" src="image/logo/twitter.jpg" /></div>
-            <div><img u="image" alt="windows" src="image/logo/windows.jpg" /></div>
-            <div><img u="image" alt="wordpress" src="image/logo/wordpress.jpg" /></div>
-            <div><img u="image" alt="youtube" src="image/logo/youtube.jpg" /></div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: relative; left: 0px; top: 0px; width: 1080px;bottom:50px; height: 100px; overflow: hidden;">
+            <div><img u="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></div>
+            <div><img u="image" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></div>
+            <div><img u="image" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></div>
+            <div><img u="image" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></div>
+            <div><img u="image" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></div>
+            <div><img u="image" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></div>
+            <div><img u="image" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></div>
+            <div><img u="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></div>
+            <div><img u="image" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></div>
+            <div><img u="image" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></div>
+            <div><img u="image" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></div>
+            <div><img u="image" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></div>
+            <div><img u="image" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></div>
+            <div><img u="image" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></div>
+            <div><img u="image" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></div>
+            <div><img u="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></div>
+			<div><img u="image" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></div>
+			<div><img u="image" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></div>
+            <div><img u="image" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></div>
+            <div><img u="image" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></div>
+            <div><img u="image" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></div>
+            <div><img u="image" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></div>
+            <div><img u="image" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></div>
+            <div><img u="image" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></div>
+            <div><img u="image" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></div>
+            <div><img u="image" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></div>
+            <div><img u="image" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></div>
+            <div><img u="image" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></div>
+            <div><img u="image" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></div>
+            <div><img u="image" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></div>
+            <div><img u="image" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></div>
+            <div><img u="image" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></div>
         </div>
         <a style="display: none" href="http://www.jssor.com">html slider</a>
     </div>
+    <!-- Jssor Slider End -->
         
-        
+    </div> 
         
         
 

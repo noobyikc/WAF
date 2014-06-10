@@ -8,7 +8,7 @@
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
             <link rel="stylesheet" type="text/css" href="css/profile.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
-
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
             <script src="js/modernizr.custom.js"></script>
@@ -114,8 +114,13 @@
             
                     </script>
  
- 
+
+
+
+<!------ MAIN CONTENT BAR ------> 
 <div class="container"> 
+
+	<!------first panel ------->
     <div class="panel panel-default" id="profile1">
       <div class="panel-heading">Personal Details</div>
       <div class="panel-body" id="profile_box">
@@ -277,7 +282,29 @@
 </div>
 
 	
-      
+        <div class="footer" style="position:relative">
+		<table class="links">
+        	<tr>
+            	<td><a href="#">Sitemap</a></td>
+                <td><a href="#">Terms</a></td>
+                <td><a href="#">Privacy</a></td>
+                <td><a href="#">Jobs</a></td>
+            	<td><a href="#">Marketplace</a></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td><a href="#">Forum/Discussion</a></td>
+                <td><a href="#">Events</a></td>
+                <td><a href="#">Create Advt.</a></td>
+                <td><a href="#">Create Pages</a></td>
+                <td></td>
+        </table>
+        <div class="copyright">
+            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+        </div>
+      </div>
+    </div><!-- /.container -->
+</div>
 
   
 </body>

@@ -1,3 +1,8 @@
+<?php
+
+$url = "image/bg2.jpg";
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,9 +21,30 @@
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
 
+<style type="text/css">
+#back1
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+    background-image:url('<?php echo $url ?>');
+	background-repeat: no-repeat;
+	background-position:top;
+}
+</style>
             
 </head>
 <body data-spy="scroll" data-target=".navbar navbar-inverse">
+
+<div id="back1">
+
+
+</div>
+
+
+
+
+
    <!--=============================================Navigation============================================= --> 
     	<div class="navbar-wrapper">
           <div class="container">
