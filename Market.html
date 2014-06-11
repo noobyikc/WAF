@@ -17,7 +17,8 @@
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/market.css" />
-
+			<link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+			
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
@@ -79,9 +80,13 @@
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
 		<div class="market">
-		<div id='cssmenu'>
+			<div id="hovmenu">
+				<a href="#" class="myButton">Categories</a>
+			</div>
+			
+			<div id='cssmenu'>
 			<ul>
-				<li class='has-sub'><a href='#'><span>Category 1</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
@@ -99,149 +104,85 @@
 						
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 2</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 					<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 					</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 3</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 4</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 5</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 6</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 7</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 8</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 9</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 10</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
-				<li class='has-sub'><a href='#'><span>Category 11</span></a>
-				<ul>
-						<li class='active'><a href='#'><span>Product 1</span></a></li>
-						<li class='active'><a href='#'><span>Product 2</span></a></li>
-				</ul>
-				</li>
-				<li class='has-sub'><a href='#'><span>Category 12</span></a>
-				<ul>
-						<li class='active'><a href='#'><span>Product 1</span></a></li>
-						<li class='active'><a href='#'><span>Product 2</span></a></li>
-				</ul>
-				</li>
-				<li class='has-sub'><a href='#'><span>Category 13</span></a>
+				<li class='has-sub'><a href='#'><span>Category</span></a>
 				<ul>
 						<li class='active'><a href='#'><span>Product 1</span></a></li>
 						<li class='active'><a href='#'><span>Product 2</span></a></li>
 				</ul>
 				</li>
 				
-				
-				
-				<li><a href='#'><span>About</span></a></li>
-				<li class='last'><a href='#'><span>Contact</span></a></li>
 			</ul>
 		</div>
-		<div class="cont-slide">
-				<div class="slideshow">SlideShow
-				</div>
-				<div class="adds">Adds
-				</div>
-		
+		<div class="postadd">
+			<div class="sell">
+			</div>
+			<div class="buy-clas">
+			</div>
 		</div>
-
-
-		</div>
-		<div class="catagory">
-			<div class="basecat">
-				<div class="headcat">Catagory-Name
-				</div>
-				<div class="First">Product
-				</div>
-				<div class="first">Product
-				</div>
-			
-				<div class="first">Product
-				</div>
-				<div class="first">Product
-				</div>
-			</div>
-			<div class="basecat">
-				<div class="headcat">
-				</div>
-				<div class="First">
-				</div>
-				<div class="first">
-				</div>
-			
-				<div class="first">
-				</div>
-				<div class="first">
-				</div>
-			</div>
-			<div class="basecat">
-				<div class="headcat">
-				</div>
-				<div class="First">
-				</div>
-				<div class="first">
-				</div>
-			
-				<div class="first">
-				</div>
-				<div class="first">
-				</div>
-			</div>
-			<div class="basecat">
-				<div class="headcat">
-				</div>
-				<div class="First">
-				</div>
-				<div class="first">
-				</div>
-			
-				<div class="first">
-				</div>
-				<div class="first">
-				</div>
-			</div>
-			
-			
+		<div class="slider">
 		</div>
 		
+		
+		</div>
+		<div class="product">
+		</div>
+		<div class="product">
+		</div>
+		<div class="product">
+		</div>
+		<div class="product">
+		</div>
