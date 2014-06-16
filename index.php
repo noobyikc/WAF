@@ -38,6 +38,22 @@
 ?>
 
 <?php
+		if(isset($_COOKIE['cookmail']) && isset($_COOKIE['cookpass']))
+		{
+				$cook = $_COOKIE['cookmail'];
+				$res = mysql_query("select * from register where email = '$cook'") or die(mysql_error());
+				while($rows = mysql_fetch_array($res))
+				{
+					if($_COOKIE['cookpass'] == md5($rows['paasword']))
+					{
+						$_SESSION['sessemail'] = $_COOKIE['cookmail'];
+	  					$_SESSION['sesspassword'] = $rows['password'];
+					}
+				}
+				
+		}
+?>
+<?php
 	if(isset($_POST['registerbtn'])) {
 		$result = mysql_query("INSERT INTO register(name, email, password, sendupdates)VALUES('$name', '$email', '$password','$updates')")or die(mysql_error());
 	  	/* sending email for confirmation 
@@ -56,8 +72,12 @@
 	  	$message.='Best Regards \n\n World Auto Forum';
 	  	$message.='</body></html>';
 	  	mail($to,$subject,$message,$headers); */
-	  	if($result)
-	  		echo "<script> windows.location = 'profile_view.php';</script>";
+	  	if($result)//cookie set at time of registration
+		{
+			setcookie("regmail", $email, time()+60*60*24*100, "/");
+    		setcookie("regpass", md5($password), time()+60*60*24*100, "/");
+	  		echo "<script> windows.location = 'profile_view.php';</script>";	
+		}
 	  	else
 	  		die(mysql_error());
 }
@@ -65,23 +85,27 @@
 
 <?php
 	if(isset($_POST['loginbtn']))
-		  {
-			  $flag = 0;
-			  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
-			 while($rows = mysql_fetch_array($ldetail)){
-			$_SESSION['sessemail'] = $rows['email'];
-			$_SESSION['sesspassword'] = $rows['password'];
+{
+	  $flag = 0;
+	  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
+	  while($rows = mysql_fetch_array($ldetail))
+	  {		$_SESSION['sessemail'] = $rows['email'];
+	  		$_SESSION['sesspassword'] = $rows['password'];
 			$flag=1;
-	}
-	if($flag==1)
-		echo "<script>window.location = 'profile.php';</script>";
-	else
-		
-		echo "<script>window.location = 'index.php';</script>";
-			
-			
+	  }
+		if($flag==1)
+	{
+		if(isset($_POST['remember']))//cookie at time of login
+			{
+				setcookie("cookmail", $_SESSION['sessemail'], time()+60*60*24*100, "/");
+      			setcookie("cookpass", md5($_SESSION['sesspassword']), time()+60*60*24*100, "/");	
 			}
-		  ?>
+		echo "<script>window.location = 'profile.php';</script>";
+	}
+	else
+		echo "<script>window.location = 'index.php';</script>";		
+}
+?>
 		   
           
 
@@ -207,7 +231,7 @@
 							<input type="password" name="password" />
 							<br />
 							<div class="checkbox">
-								<input id="remember" type="checkbox" />
+								<input id="remember" type="checkbox" name="remember" />
 								<label for="remember">Remember me on this computer</label>
 							</div>
 							<div class="action_btns">
