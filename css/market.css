@@ -304,3 +304,160 @@ div.product{
 	border-radius: 7px;
 
 }
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+div.pro-category{
+	width:934px;
+	height:806px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left:310px;
+	padding: 0px;
+	//float: left;
+	//text-align:center;
+		
+}
+div.product1{
+	width:457px;
+	height:246px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left:0px;
+	padding: 0px;
+	float: left;
+	color:black;
+		/* gradients */
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0%,  #E8E8E8), color-stop(15%,#E8E8E8 ), color-stop(100%, #E8E8E8)); 
+	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+	/* rounded corners */
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 7px; 
+	border-radius: 7px;
+}
+div.pic{
+	width:144px;
+	height:156px;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left:15px;
+	padding: 0px;
+	float: left;
+	//text-align:center;
+	
+	color:black;
+		/* gradients */
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0%,  #E8E8E8), color-stop(15%,#E8E8E8 ), color-stop(100%, #E8E8E8)); 
+	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+	/* rounded corners */
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 7px; 
+	border-radius: 7px;
+
+}
+div.sharing{
+	width:144px;
+	height:50px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left:15px;
+	padding: 0px;
+	float: left;
+	//text-align:center;
+	color:black;
+		/* gradients */
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0%,  #E8E8E8), color-stop(15%,#E8E8E8 ), color-stop(100%, #E8E8E8)); 
+	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+	/* rounded corners */
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 7px; 
+	border-radius: 7px;
+
+}
+div.enquiry{
+	width:275px;
+	height:50px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left:15px;
+	padding: 0px;
+	float: left;
+	
+	color:black;
+		/* gradients */
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0%,  #E8E8E8), color-stop(15%,#E8E8E8 ), color-stop(100%, #E8E8E8)); 
+	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+	/* rounded corners */
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 7px; 
+	border-radius: 7px;
+
+}
+
+div.info{
+	width:275px;
+	height:156px;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left:15px;
+	padding: 0px;
+	float: left;
+	color:black;
+	font-family: 'x	fontawesome';
+	color:black;
+		/* gradients */
+	background: -webkit-gradient(linear, left top, left bottom, 
+	color-stop(0%,  #E8E8E8), color-stop(15%,#E8E8E8 ), color-stop(100%, #E8E8E8)); 
+	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+	/* rounded corners */
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 7px; 
+	border-radius: 7px;
+
+}
