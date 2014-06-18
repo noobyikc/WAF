@@ -80,7 +80,7 @@
 }
 
 #button3 {
-	top:300px;
+	
 	left:220px;
 	position:relative;
 	width:290px;
@@ -95,5 +95,14 @@
 	width:400px;
 	float:right;
 	bottom:5px;
+}
+
+#button5 {
+	top:450px;
+	left:250px;
+	position:relative;
+	width:290px;
+	float:right;
+	bottom:105px;
 }
 

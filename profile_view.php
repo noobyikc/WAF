@@ -1,3 +1,4 @@
+<!--------Background image------->
 <?php
 
 $url = "image/bg2.jpg";
@@ -5,6 +6,7 @@ $url = "image/bg2.jpg";
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
@@ -13,7 +15,10 @@ $url = "image/bg2.jpg";
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
             <link rel="stylesheet" type="text/css" href="css/profile.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
-
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
+            
+            <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
@@ -37,8 +42,6 @@ $url = "image/bg2.jpg";
 <body data-spy="scroll" data-target=".navbar navbar-inverse">
 
 <div id="back1">
-
-
 </div>
 
 
@@ -238,22 +241,23 @@ $url = "image/bg2.jpg";
     </div>
     
     <div class="panel panel-default" id="friends">
-          <div class="panel-heading">Connections</div>
-          <div class="panel-body" id="pic">
-          <div class="btn-group" id="button3">
-          <button type="button" class="btn btn-primary">View All</button>
-            </div>
-        </div>
-   </div>
-	
-    <div class="panel panel-default" id="friends">
-          <div class="panel-heading">Discussion Forums</div>
-          <div class="panel-body" id="pic">
-          <div class="btn-group" id="button3">
-          <button type="button" class="btn btn-primary">View All</button>
-            </div>
-        </div>
-    </div>
+                                  <div class="panel-heading">Connections</div>
+                                          <div class="panel-body" id="pic">
+                                          <div class="btn-group" id="button3">
+                                  <button type="button" class="btn btn-primary">View All</button>
+                            			</div>
+                                        </div>
+                        </div>
+                        	
+                                <div class="panel panel-default" id="friends">
+                                          <div class="panel-heading">Discussion Forums</div>
+                                          <div class="panel-body" id="pic">
+                                          <div class="btn-group" id="button3">
+                                          <button type="button" class="btn btn-primary">View All</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
     
     <div class="btn-group" id="button4" >  
       <button type="button" class="btn btn-primary">View as friend</button>
@@ -261,6 +265,33 @@ $url = "image/bg2.jpg";
       <button type="button" class="btn btn-primary">Edit</button>
     </div>
 
+
+<!--=============================================Footer============================================= -->
+    
+
+    <div class="footer">
+		<table class="links">
+        	<tr>
+            	<td><a href="#">Sitemap</a></td>
+                <td><a href="#">Terms</a></td>
+                <td><a href="#">Privacy</a></td>
+                <td><a href="#">Jobs</a></td>
+            	<td><a href="#">Marketplace</a></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td><a href="#">Forum/Discussion</a></td>
+                <td><a href="#">Events</a></td>
+                <td><a href="#">Create Advt.</a></td>
+                <td><a href="#">Create Pages</a></td>
+                <td></td>
+        	</tr>
+        </table>
+        <div class="copyright">
+            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+        </div>
+      </div>
+	</div>
   
 </body>
 </html>	

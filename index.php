@@ -479,7 +479,7 @@
                 if (bodyWidth)
                     jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 980));
                 else
-                    window.setTimeout(ScaleSlider, 30);
+                    window.setTimeout(ScaleSlider, 330);
             }
 
             ScaleSlider();
@@ -511,14 +511,13 @@
 
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: relative; left: 0px; top: 0px; width: 1080px;bottom:50px; height: 100px; overflow: hidden;">
-            <div><img u="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></div>
+            <div><img u="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg"  /></div>
             <div><img u="image" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></div>
             <div><img u="image" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></div>
             <div><img u="image" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></div>
             <div><img u="image" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></div>
             <div><img u="image" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></div>
             <div><img u="image" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></div>
-            <div><img u="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></div>
             <div><img u="image" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></div>
             <div><img u="image" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></div>
             <div><img u="image" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></div>
@@ -526,8 +525,9 @@
             <div><img u="image" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></div>
             <div><img u="image" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></div>
             <div><img u="image" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></div>
-            <div><img u="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></div>
+            <div><img u="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" style="left:500px"/></div>
 			<div><img u="image" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></div>
+            <div><img u="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></div>
 			<div><img u="image" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></div>
             <div><img u="image" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></div>
             <div><img u="image" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></div>

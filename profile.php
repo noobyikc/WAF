@@ -1,3 +1,9 @@
+<?php
+
+$url = "image/bg2.jpg";
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,6 +20,7 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
+            <script src="tagcanvas.min.js" type="text/javascript"></script>
 
         <!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -26,7 +33,52 @@
             <script src="js/classie.js"></script>
             <script src="js/uisearch.js"></script>
 
+
+<!-----Background Image---->
+<style type="text/css">
+#back1
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+    background-image:url('<?php echo $url ?>');
+	background-repeat: no-repeat;
+	background-position:top;
+}
+</style>
+<!-----Background Image---->
+
+<!-----tag canvas---->
+<script src="js/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          TagCanvas.Start('myCanvas','tags',{ 
+		  	shape: "sphere",
+            textColour: '#ff0000',
+            outlineColour: '#ff00ff',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05
+          });
+        } catch(e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+<!-----tag canvas----> 
+
+           
 </head>
+
+
+<body data-spy="scroll" data-target=".navbar navbar-inverse">
+<div id="back1">
+</div>
+
+
+
 <?php
 	 include('includes/connection.php');
 	 include('includes/variables.php');
@@ -120,10 +172,25 @@
 <!------ MAIN CONTENT BAR ------> 
 <div class="container"> 
 
+<script type="text/javascript">
+												 $(document).ready(function() {
+												   if( ! $('#myCanvas').tagcanvas({
+													 textColour : '#ffffff',
+													 outlineThickness : 1,
+													 maxSpeed : 0.03,
+													 depth : 0.75
+												   })) {
+													 // TagCanvas failed to load
+													 $('#myCanvasContainer').hide();
+												   }
+												   // your other jQuery stuff here...
+												 });
+												 </script>
+
 	<!------first panel ------->
     <div class="panel panel-default" id="profile1">
-      <div class="panel-heading">Personal Details</div>
-      <div class="panel-body" id="profile_box">
+      	<div class="panel-heading">Personal Details</div>
+      	<div class="panel-body" id="profile_box">
             <table>
                 <tr> 
                     <td id="label">Name : </td>
@@ -192,97 +259,131 @@
                     </div>    
                 </div>
       
-<div class="panel panel-default" id="profile">
-      <div class="panel-heading">Education and Current Affairs </div>
-      <div class="panel-body" id="profile_box">
-      <table>
-                <tr> 
-                    <td id="label">What did you study? : </td>
-                    <td><input type="text" name="degree" value="" /></td>
-                </tr>
-                
-                <tr> 
-                    <td id="label">Where did you study? : </td>
-                    <td><input type="text" name="location" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Company : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Location : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Number(Office) : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Email-id: </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                
-      </table>
-        <div class="btn-group" id="button2">
-              <button type="button" class="btn btn-primary">Edit</button>
-              <button type="button" class="btn btn-primary">Save Changes</button>
+        <div class="panel panel-default" id="profile">
+              <div class="panel-heading">Education and Current Affairs </div>
+              <div class="panel-body" id="profile_box">
+              <table>
+                        <tr> 
+                            <td id="label">What did you study? : </td>
+                            <td><input type="text" name="degree" value="" /></td>
+                        </tr>
+                        
+                        <tr> 
+                            <td id="label">Where did you study? : </td>
+                            <td><input type="text" name="location" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Company : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Location : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Contact Number(Office) : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Contact Email-id: </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        
+              </table>
+                <div class="btn-group" id="button2">
+                      <button type="button" class="btn btn-primary">Edit</button>
+                      <button type="button" class="btn btn-primary">Save Changes</button>
+                </div>
+                </div>   
+		
         </div>
-         </div>   
-		</div>
             
              
-            <div class="panel panel-default" id="profile">
-              <div class="panel-heading" >Work Experience </div>
-              <div class="panel-body" id="profile_box">
-                <table>
-                  <tr>
-                    <td id="label">What did you study? : </td>
-                    <td><input type="text" name="degree" value="" /></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Where did you study? : </td>
-                    <td><input type="text" name="location" value="" /></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Company : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Location : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Contact Number(Office) : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Contact Email-id: </td>
-                    <td><input type="text" name="name" value="" /></td>
-                  </tr>
-                </table>
-                <div class="btn-group" id="button2">
-                  <button type="button" class="btn btn-primary">Edit</button>
-                  <button type="button" class="btn btn-primary">Save Changes</button>
-            </div>
-		 </div>
-</div>
+	          <div class="panel panel-default" id="profile" style="margin-bottom:150px">
+                          <div class="panel-heading" >Work Experience </div>
+                          <div class="panel-body" id="profile_box">
+                            <table>
+                              <tr>
+                                <td id="label">What did you study? : </td>
+                                <td><input type="text" name="degree" value="" /></td>
+                              </tr>
+                              <tr>
+                                <td id="label">Where did you study? : </td>
+                                <td><input type="text" name="location" value="" /></td>
+                              </tr>
+                              <tr>
+                                <td id="label">Company : </td>
+                                <td><input type="text" name="name" value="" /></td>
+                              </tr>
+                              <tr>
+                                <td id="label">Location : </td>
+                                <td><input type="text" name="name" value="" /></td>
+                              </tr>
+                              <tr>
+                                <td id="label">Contact Number(Office) : </td>
+                                <td><input type="text" name="name" value="" /></td>
+                              </tr>
+                              <tr>
+                                <td id="label">Contact Email-id: </td>
+                                <td><input type="text" name="name" value="" /></td>
+                              </tr>
+                            </table>
+                            <div class="btn-group" id="button2">
+                              <button type="button" class="btn btn-primary">Edit</button>
+                              <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                     </div>
+                    </div>
     
-            <div class="panel panel-default" id="friends">
-                  <div class="panel-heading">Connections</div>
-                  <div class="panel-body" id="pic">
-                  <div class="btn-group" id="button3">
-                  <button type="button" class="btn btn-primary">View All</button>
-            </div>
-        </div>
-</div>
+                            <div class="panel panel-default" id="friends">
+                                  <div class="panel-heading">Connections</div>
+                                  		
+                                          <div class="panel-body" id="pic">
+                                           <div id="myCanvasContainer2">
+                                                  <canvas width="250" height="300" id="myCanvas" >
+                                                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                                                  </canvas>
+                                                </div>
+                                                <div id="tags">
+                                                  <ul>
+                                                    <li><a href="http://www.google.com" target="_blank">Google</a></li>
+                                                    <li><a href="/fish">Fish</a></li>
+                                                    <li><a href="/chips">Chips</a></li>
+                                                    <li><a href="/salt">Salt</a></li>
+                                                    <li><a href="/vinegar">Vinegar</a></li>
+                                                  </ul>
+                                                </div>
+                                          <div class="btn-group" id="button3">
+                                  <button type="button" class="btn btn-primary">View All</button>
+                            			</div>
+                                        </div>
+                        </div>
+                        	
+                                <div class="panel panel-default" id="friends">
+                                          <div class="panel-heading">Discussion Forums</div>
+                                          
+                                          <div class="panel-body" id="pic">
+                                          			
+                                          <div class="btn-group" id="button3">
+                                          <button type="button" class="btn btn-primary">View All</button>
+                                          
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+
 
 	
-        <div class="footer" style="position:relative">
+        <!--=============================================Footer============================================= -->
+    
+
+    <div class="footer" >
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>
@@ -299,13 +400,14 @@
                 <td><a href="#">Create Pages</a></td>
                 <td></td>
         </table>
+        
         <div class="copyright">
             <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
         </div>
       </div>
-    </div><!-- /.container -->
-</div>
-
+    </div>
+    <!-- /.container -->
   
+</div>
 </body>
 </html>
