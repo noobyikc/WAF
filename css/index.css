@@ -18,6 +18,79 @@
 	background-size:cover;	
 }
 
+/*  Connect with FB, Google Buttons*/
+.btn-fb-login {
+	position:relative;
+	width: 20%;
+	top:-3.5em;
+	float:right;
+	right:13em;
+	height: 50px;
+  	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	background-color: #3B5998;
+	box-shadow: inset 0 1px 3px rgba(255,255,255,0.2);
+	cursor: pointer;
+}
+.btn-g-login {;
+ 	position:relative;
+	width: 20%;
+	height: 50px;
+	float:left;
+	left:13em;
+	top:-3.5em;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+  	background-color: #E34429;
+  	box-shadow: inset 0 1px 3px rgba(255,255,255,0.2);
+  	cursor: pointer;
+}
+
+.btn-fb-login .icon {
+	z-index:10000;
+    width: 5px;
+    height: 30px;
+    margin: 0px 0px;
+ }
+ .btn-fb-login .title {
+	font-size:18px;
+	width:85%;
+    color: #fff;
+    line-height: 30px;
+    float: right;
+    padding: 10px 10px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: -1px 0 0 rgba(255,255,255,0.1) ;
+    border-left: 1px solid rgba(0,0,0,0.3);
+ }
+ .btn-fb-login:hover {
+ 	box-shadow: 2px 2px 3px #444;
+ }
+
+ .btn-g-login .icon {  
+    background: url('images/g+.png') no-repeat;
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin: 4px 6px;
+ }
+ .btn-g-login .title {
+	 font-size:18px;
+	 width:85%;
+    color: #fff;
+    line-height: 30px;
+    float: right;
+    padding: 10px 10px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: -1px 0 0 rgba(255,255,255,0.1) ;
+    border-left: 1px solid rgba(0,0,0,0.3);
+ }
+ .btn-g-login:hover {
+ 	box-shadow: 2px 2px 3px #444;
+ }
+
 #login-reg_button {
 	background-color:transparent;
 	border:#ED6347;
@@ -27,8 +100,7 @@
 #login-signup {
 	position:relative;
 	z-index:300;
-	top:430px;
-	height:0px;
+	top:1.2em;
 }
 #lean_overlay {
     position: fixed;
@@ -56,8 +128,13 @@
 	height:50px;
 	font-size:18px;
 	background-color: #000;
-	width:150px;
+	width:22%;
 	display:block;
+
+}
+
+#modal_trigger:hover{
+ 	box-shadow: 2px 2px 3px #444;
 }
 
 .btn {
@@ -67,6 +144,9 @@
 
 .btn:hover {
 	background: #C12B05;
+}
+.btn > .back_btn{
+	padding-top:10px;
 }
 
 .btn_red {
@@ -104,6 +184,7 @@ a.btn_red {
 }
 .popupHeader {
 	background:#000; 
+	color:#FFF;
 	position:relative; 
 	padding:10px 20px; 
 	border-bottom:1px solid #DDD; 
@@ -128,7 +209,9 @@ a.btn_red {
 
 
 /* Social Login Form */
-.social_login {}
+.social_login {
+	z-index:200;
+}
 
 .social_login .social_box {
 	display:block;
@@ -150,14 +233,6 @@ a.btn_red {
 	text-align: center;
 }
  
-.social_login .fb .icon {
-	background:#3B5998;
-}
-
-.social_login .google .icon {
-	background:#DD4B39;
-}
-
 .social_login .icon_title {
 	display:block;
 	 padding:5px 0; 
@@ -187,15 +262,10 @@ a.btn_red {
 	display: block;
 }
 
-/* User Login Form */
-.user_login {
-	display: none;
-}
-
-.user_login label {display: block; margin-bottom:5px;}
-.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
-.user_login input[type="checkbox"] {float:left; margin-right:5px;}
-.user_login input[type="checkbox"]+label {float:left;}
+.social_login label {display: block; margin-bottom:5px;}
+.social_login input[type="text"], .social_login input[type="email"], .social_login input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
+.social_login input[type="checkbox"] {float:left; margin-right:5px;}
+.social_login input[type="checkbox"]+label {float:left;}
 
 .user_login .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
 .forgot_password {display:block; margin: 20px 0 10px; clear: both; overflow: hidden; text-decoration: none; color:#ED6347;}
@@ -260,10 +330,6 @@ a.btn_red {
 	height: 100%;
 	position: fixed;
 	z-index: 2000;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px; /* future proofing */
-	-khtml-border-radius: 10px;
 }
 
 #image-loader {
@@ -317,26 +383,17 @@ a.btn_red {
 
 .box {
 	position:relative;
-	top:-7em;
-	width:80%;
-	z-index:100;
-	background:	-moz-linear-gradient(top, #222 0%, #919AEC 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(100%,#919AEC));
+	top:-4.7em;
+	width:100%;
+	z-index:10;
+	min-height:6.7em;
+	background:	white;
     margin:65px auto 0px;
-	border-top-left-radius:250px;
-	border-top-right-radius:250px;
-	border-bottom-width:thick;
-	border-bottom-left-radius:50px;
-	border-bottom-right-radius:50px;
-	-webkit-box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
-            box-shadow:2px 5px 38px rgba(0, 0, 0, 0.4);
 }
 
 .shadow{
     position:relative;
-	z-index:100;
-	box-shadow:1px 5px 40px rgba(0, 0, 0, 0.8);
-}
+	z-index:100;}
 
 .shadow:after{
     position:absolute;
@@ -356,7 +413,6 @@ a.btn_red {
 	position:relative;
 	background:#FFF;
 	height:700px;
-	top:-11.5em;
 	width:95%;
 	z-index:-11;
 	padding-top:5em;
@@ -412,20 +468,19 @@ a.btn_red {
 
 .image-pos1
 {
+
 	position:fixed;
-	right:0;
+	left:0;
 	bottom:5px;
-	width:60px;
-	height:60px;	
+	width:10%
+	height:10%;	
 	z-index:1;
 	
 }
-.image-pos2
-{
+.image-pos2 {
+	display:none;
 	position:fixed;
-	left:0;
-	bottom:0px;
-	width:60px;
-	height:60px;
+	right:0.5em;
+	bottom:2em;
 	z-index:1;
 }

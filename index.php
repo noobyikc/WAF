@@ -21,7 +21,6 @@
             <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-            <script type="text/javascript" src="js/smoothscroll.js"></script>
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
@@ -113,15 +112,15 @@
 
   	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
     
-    	<!-- ========================== scroll down ========================= -->
+    <!-- ========================== scroll down ========================= -->
     <div class="image-pos1" id="image-view1">
-   			<a href="#image-view1"><img src="image/icons/down.png" /></a>
+   			<a href="#image-view1"><img src="image/icons/down.jpg" /></a>
 	</div>
     <!--============================================Scroll Up========================================== -->
     <script>
 	jQuery(document).ready(function() {
-    var offset = 220;
-    var duration = 500;
+    var offset = 630;
+    var duration = 300;
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.image-pos2').fadeIn(duration);
@@ -138,7 +137,7 @@
 });
 	</script>
     <div class="image-pos2" id="image-view2">
-    	<a href="#"><img src="image/icons/up.png" /></a>
+    	<a href="#"><img src="image/icons/up.jpg" /></a>
     </div>
     
    <!--=============================================Loader============================================= -->  
@@ -203,99 +202,7 @@
         <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
-        
-   <!--=============================================Login-Signup============================================= -->
-        <section>
-            <div id="login-signup">
-                <a id="modal_trigger" href="#modal" class="btn">Login / Signup</a>
-                <div id="modal" class="popupContainer" style="display:none;">
-                    <header class="popupHeader">
-                        <span class="header_title">Enter World Auto Forum</span>
-                        <span class="modal_close"><i>x</i></span>
-                    </header>
-            	<section class="popupBody">
-					<!-- Social Login -->
-					<div class="social_login">
-						<div class="action_btns">
-							<div class="one_half"><a href="#" id="login_form" class="btn btn_red">Login</a></div>
-							<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
-						</div>
-					</div>
-					<!-- Username & Password Login form -->
-					<div class="user_login">
-						<form name="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-							<label>Email / Username</label>
-							<input type="text" name="email" />
-							<br />
-							<label>Password</label>
-							<input type="password" name="password" />
-							<br />
-							<div class="checkbox">
-								<input id="remember" type="checkbox" name="remember" />
-								<label for="remember">Remember me on this computer</label>
-							</div>
-							<div class="action_btns">
-								<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-								<div class="one_half last"><a class="btn btn_red" style="padding:1px 1px;"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
-							</div>
-						</form>
-						<a href="forgot_password.php" class="forgot_password">Forgot password?</a>
-					</div>
-					<!-- Register Form -->
-					<div class="user_register">
-						<form name="signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-							<label>Full Name</label>
-							<input type="text" name="name" />
-							<br />
-							<label>Email Address</label>
-							<input type="email" name="email" />
-							<br />
-							<label>Password</label>
-							<input type="password" name="password" />
-							<br />
-							<div class="checkbox">
-								<input id="send_updates" type="checkbox" name="updates" />
-								<label for="send_updates">Send me occasional email updates</label>
-							</div>
-							<div class="action_btns">
-								<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-								<div class="one_half last"><a class="btn btn_red" style="padding:1px 1px;"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>
-							</div>
-						</form>
-					</div>
-				</section>
-			</div>
-		</div>
-		<script type="text/javascript">
-			$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
-			$(function(){
-			// Calling Login Form
-				$("#login_form").click(function(){
-					$(".social_login").hide();
-					$(".user_login").show();
-					$(".header_title").text('Login');
-					return false;
-				});
-			// Calling Register Form
-				$("#register_form").click(function(){
-					$(".social_login").hide();
-					$(".user_register").show();
-					$(".header_title").text('Register');
-					return false;
-				});
-			// Going back to Social Forms
-				$(".back_btn").click(function(){
-					$(".user_login").hide();
-					$(".user_register").hide();
-					$(".social_login").show();
-					$(".header_title").text('Enter World Auto Forum');
-					return false;
-				});
-			})
-		</script>
-    </section>
-
-    
+  
   <!--=============================================Carousel============================================= -->
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -322,7 +229,7 @@
 		                <p>Auto Components & Parts Makers Love WAF!</p>
 		            </div>
         		</div>
-				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
+				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	    <div class="item" id="carousel_image3">
 				<div class="container">
@@ -331,25 +238,113 @@
 		                <p>From around the world are on WAF!</p>
 		            </div>
 				</div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
+                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-    
-    
-	<!--=============================================Heading============================================= -->
+            
+   <!--=============================================Login-Signup============================================= -->
+		<div class="box">
+        <section >
+    	    
+            <div id="login-signup">
+                <a id="modal_trigger" href="#modal" class="btn">Login | Signup</a>
+                <div id="lean_overlay"></div>
+                <div id="modal" class="popupContainer" style="display:none;">
+                    <header class="popupHeader">
+                        <span class="header_title">Enter World Auto Forum</span>
+                        <span class="modal_close"><i>x</i></span>
+                    </header>
+                    <section class="popupBody">
+                        <!-- Login Form -->
+                        <div class="social_login">
+                        <form name="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                <label>Email / Username</label>
+                                <input type="text" name="email" />
+                                <br />
+                                <label>Password</label>
+                                <input type="password" name="password" />
+                                <br />
+                                <div class="checkbox">
+                                    <input id="remember" type="checkbox" name="remember" />
+                                    <label for="remember">Remember me on this computer</label>
+                                </div>
+                                <div class="action_btns">
+                                    <div class="one_half"><a class="btn btn_red" style="padding:1px 1px;"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
+								<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
+							</div>
+						</form>
+                        <div class="user_login">
+							<a href="forgot_password.php" class="forgot_password">Forgot password?</a>
+						</div>
+					</div>
+					<!-- Register Form -->
+					<div class="user_register">
+						<form name="signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+							<label>Full Name</label>
+							<input type="text" name="name" />
+							<br />
+							<label>Email Address</label>
+							<input type="email" name="email" />
+							<br />
+							<label>Password</label>
+							<input type="password" name="password" />
+							<br />
+							<div class="checkbox">
+								<input id="send_updates" type="checkbox" name="updates" />
+								<label for="send_updates">Agree to <span style="text-decoration:underline">Terms of Service</span></label>
+							</div>
+							<div class="action_btns">
+								<div class="one_half"><a class="btn btn_red" style="padding:1px 1px;"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>
+   								<div class="one_half  last"><a href="#" class="btn back_btn">Back to Login</a></div>
+							</div>
+						</form>
+					</div>
+				</section>
+			</div>
+            <div class="btn-fb-login">
+                <div class="title">
+                	Continue With Facebook
+                </div>
+			</div>
+            <div class="btn-g-login">
+            	<div class="title">Continue with Google</div>
+            </div>
+		</div>
+		<script type="text/javascript">
+			$("#modal_trigger").leanModal({top : 150, overlay : 0.7, closeButton: ".modal_close" });
+			$(function(){
+			// Calling Register Form
+				$("#register_form").click(function(){
+					$(".social_login").hide();
+					$(".user_register").show();
+					$(".header_title").text('Register for W.A.F');
+					return false;
+				});
+			// Going back to Social Forms
+				$(".back_btn").click(function(){
+					$(".user_register").hide();
+					$(".social_login").show();
+					$(".header_title").text('Login to W.A.F');
+					return false;
+				});
+			})
+		</script>
+    </section>
 
-	<div class="box shadow">
-    	<div id="company"> 
-			W<font style="font-size:50px">ORLD &nbsp;&nbsp; </font>
-        	A<font style="font-size:50px">UTO &nbsp;&nbsp; </font>
-        	F<font style="font-size:50px">ORUM</font>
+  <div id="company"> 
+			
     	</div>
     </div>
     
-    <div class="content1 shadow">
+	<!--=============================================Heading============================================= -->
+
+	
+    	
+    
+    <div class="content1">
     	<table class="details">
         	<tr>
             	<td>
