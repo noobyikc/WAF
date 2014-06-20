@@ -120,7 +120,7 @@
     <script>
 	jQuery(document).ready(function() {
     var offset = 630;
-    var duration = 300;
+    var duration = 600;
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.image-pos2').fadeIn(duration);
@@ -339,13 +339,37 @@
     	</div>
     </div>
     
-	<!--=============================================Heading============================================= -->
-
-	
-    	
-    
+	<!--=============================================Pane - 1 ============================================= -->
     <div class="content1">
-    	<table class="details">
+		<div class="details1">
+        	<div id="heading1">
+            	<h1>CREATE</h1>
+            </div>
+            <div id="info1">
+            	Create your professional profile online and be seen by the top Professionals from around the world.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>  
+    </div>
+    <div class="content2">
+    </div>
+    <div class="content3">
+    </div>
+    <div class="content4">
+    </div>
+    <div class="content5">
+    </div>
+    <div class="content6">
+    </div>
+    <div class="content7">
+    </div>
+    <div class="content8">
+    </div>
+    <div class="content9">
+    </div>
+    
+    	<!--<table class="details">
         	<tr>
             	<td>
                 	<div class="panel panel-primary panel-content">
@@ -543,7 +567,7 @@
     </div>
     <!-- Jssor Slider End -->
         
-    </div> 
+    </div> -->
         
         
 

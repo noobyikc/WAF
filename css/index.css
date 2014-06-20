@@ -385,9 +385,8 @@ a.btn_red {
 	position:relative;
 	top:-4.7em;
 	width:100%;
-	z-index:10;
 	min-height:6.7em;
-	background:	white;
+	background:	#FFF;
     margin:65px auto 0px;
 }
 
@@ -411,25 +410,40 @@ a.btn_red {
 	
 .content1 {
 	position:relative;
-	background:#FFF;
-	height:700px;
-	width:95%;
-	z-index:-11;
-	padding-top:5em;
-    margin:25px auto 0px;
-	border-top-left-radius:20px;
-	border-top-right-radius:20px;
-	border-color:#222;
-	border-width:thick;
-	-webkit-box-shadow:2px 5px 58px #222;
-            box-shadow:2px 5px 58px #222;
+	top:-4.6em;
+	background:#06F;
+	min-height:100vh;
+	width:100%;
+	-webkit-box-shadow:0px 0px 58px #222;
+            box-shadow:0px 0px 58px #222;
 }
 
-.content1 > .details {
-	width:90%;
+.content1 > .details1 {
 	position:relative;
-	left:7.5%;
+	top:8em;
+	width:40%;
+	left:10%;
 }
+
+#heading1 {
+	padding-top:2em;
+	color:#FFF;
+}
+.content1 > .details1 > #info1 {
+	padding-top:2em;
+	font-size:30px;
+	color:white;
+}
+.content2 {
+	position:relative;
+	top:-4.6em;
+	background:#0F3;
+	min-height:100vh;
+	width:100%;
+	-webkit-box-shadow:0px 5px 58px #222;
+            box-shadow:0px 5px 58px #222;
+}
+
 
 .panel-content {
 	width:85%;
