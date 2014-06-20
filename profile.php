@@ -69,6 +69,7 @@ $url = "image/bg2.jpg";
     </script>
 <!-----tag canvas----> 
 
+
            
 </head>
 
