@@ -352,21 +352,117 @@
         <div class="image1">
         </div>  
     </div>
+    
+	<!--=============================================Pane - 2 ============================================= -->    
     <div class="content2">
+    	<div class="details2">
+        	<div id="heading2">
+            	<h1>CONVERSE</h1>
+            </div>
+            <div id="info2">
+            	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>  
     </div>
+    
+	<!--=============================================Pane - 3 ============================================= -->        
     <div class="content3">
+    	<div class="details3">
+        	<div id="heading3">
+            	<h1>CONNECT</h1>
+            </div>
+            <div id="info3">
+            	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 4 ============================================= -->
     <div class="content4">
+    	<div class="details4">
+        	<div id="heading4">
+            	<h1>GROW</h1>
+            </div>
+            <div id="info4">
+            	Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 5 ============================================= -->
     <div class="content5">
+		<div class="details5">
+        	<div id="heading5">
+            	<h1>BUY/SELL</h1>
+            </div>
+            <div id="info5">
+            	Use our Marketplace to sell your products or services and gain international exposure and high profits.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 6 ============================================= -->
     <div class="content6">
+		<div class="details6">
+        	<div id="heading6">
+            	<h1>SPEAK OUT</h1>
+            </div>
+            <div id="info6">
+            	Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 7 ============================================= -->
     <div class="content7">
+    	<div class="details7">
+        	<div id="heading7">
+            	<h1>BE UPDATED</h1>
+            </div>
+            <div id="info7">
+            	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 8 ============================================= -->
     <div class="content8">
+    	<div class="details8">
+        	<div id="heading8">
+            	<h1>GAIN INSIGHT</h1>
+            </div>
+            <div id="info8">
+            	Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
+    
+    <!--=============================================Pane - 9 ============================================= -->
     <div class="content9">
+    	<div class="details9">
+        	<div id="heading9">
+            	<h1>MAKE A DIFFERENCE</h1>
+            </div>
+            <div id="info9">
+            	Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
     </div>
     
     	<!--<table class="details">
