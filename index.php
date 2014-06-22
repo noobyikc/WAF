@@ -24,7 +24,7 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-
+            
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
             <script type="text/javascript" src="js/jssor.slider.js"></script>
@@ -111,7 +111,6 @@
 	
 
   	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
-    
     <!-- ========================== scroll down ========================= -->
     <div class="image-pos1" id="image-view1">
    			<a href="#image-view1"><img src="image/icons/down.jpg" /></a>
@@ -120,7 +119,7 @@
     <script>
 	jQuery(document).ready(function() {
     var offset = 630;
-    var duration = 600;
+    var duration = 1000;
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.image-pos2').fadeIn(duration);
@@ -220,7 +219,7 @@
                 		<p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
 		            </div>
         		</div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
+                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.3em"></div>
 			</div>
 			<div class="item" id="carousel_image2" >
 				<div class="container">
@@ -229,7 +228,7 @@
 		                <p>Auto Components & Parts Makers Love WAF!</p>
 		            </div>
         		</div>
-				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.7em"></div>
+				<div style="background:#000;height:650px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	    <div class="item" id="carousel_image3">
 				<div class="container">
@@ -238,13 +237,12 @@
 		                <p>From around the world are on WAF!</p>
 		            </div>
 				</div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.7em"></div>
+                <div style="background:#000;height:650px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-            
    <!--=============================================Login-Signup============================================= -->
 		<div class="box">
         <section >
@@ -339,9 +337,10 @@
     	</div>
     </div>
     
-	<!--=============================================Pane - 1 ============================================= -->
+
+    <!--=============================================Pane - 1 ============================================= -->
     <div class="content1">
-		<div class="details1">
+		<div class="details1" data-700="top:100%;" data-800="top:0%;" data-900="display:block;" data-1000="top:-100%;display:none;" >
         	<div id="heading1">
             	<h1>CREATE</h1>
             </div>
@@ -352,6 +351,7 @@
         <div class="image1">
         </div>  
     </div>
+    
     
 	<!--=============================================Pane - 2 ============================================= -->    
     <div class="content2">
@@ -452,6 +452,7 @@
     </div>
     
     <!--=============================================Pane - 9 ============================================= -->
+    
     <div class="content9">
     	<div class="details9">
         	<div id="heading9">
@@ -464,7 +465,20 @@
         <div class="image1">
         </div>
     </div>
-    
+   <script src="js/skrollr.js"></script>
+<!--   	<script type="text/javascript">
+			( function( $ ) {
+			// Init Skrollr
+			var s = skrollr.init({
+				render: function(data) {
+					//Debugging - Log the current scroll position.
+					console.log(data.curTop);
+				}
+			});
+			} )( jQuery );
+			</script>-->
+			<script>$(window).load(function($){ var s = skrollr.init(); });</script>
+
     	<!--<table class="details">
         	<tr>
             	<td>
@@ -693,5 +707,6 @@
         </div>
       </div>
     </div><!-- /.container -->
+
   </body>
 </html>
