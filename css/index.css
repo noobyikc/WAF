@@ -343,7 +343,7 @@ a.btn_red {
 .footer{
 	position:static;
 	bottom:0;
-  	height: 80px;
+  	height: 10em;
 	padding-top:10px;
 	width: 100%;
   	background: #000000;
@@ -410,9 +410,8 @@ a.btn_red {
 	
 .content1 {
 	position:relative;
-	top:-4.6em;
 	background:#06F;
-	min-height:200vh;
+	min-height:100vh;
 	width:100%;
 	-webkit-box-shadow:0px 0px 58px #222;
             box-shadow:0px 0px 58px #222;
@@ -424,7 +423,7 @@ a.btn_red {
 .content1 > .details1 {
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	left:10%;
 }
 .content1 > .details1 > #info1 {
@@ -435,7 +434,6 @@ a.btn_red {
 
 .content2 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -450,7 +448,7 @@ a.btn_red {
 	float:right;
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	right:10%;
 }
 .content2 > .details2 > #info2 {
@@ -461,7 +459,6 @@ a.btn_red {
 
 .content3 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -475,7 +472,7 @@ a.btn_red {
 .content3 > .details3 {
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	left:10%;
 }
 .content3 > .details3 > #info3 {
@@ -486,7 +483,6 @@ a.btn_red {
 
 .content4 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -501,7 +497,7 @@ a.btn_red {
 	float:right;
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	right:10%;
 }
 .content4 > .details4 > #info4 {
@@ -512,7 +508,6 @@ a.btn_red {
 
 .content5 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -526,7 +521,7 @@ a.btn_red {
 .content5 > .details5 {
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	left:10%;
 }
 .content5 > .details5 > #info5 {
@@ -537,7 +532,6 @@ a.btn_red {
 
 .content6 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -552,7 +546,7 @@ a.btn_red {
 	float:right;
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	right:10%;
 }
 .content6 > .details6 > #info6 {
@@ -562,7 +556,6 @@ a.btn_red {
 }
 .content7 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -576,7 +569,7 @@ a.btn_red {
 .content7 > .details7 {
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	left:10%;
 }
 .content7 > .details7 > #info7 {
@@ -587,7 +580,6 @@ a.btn_red {
 
 .content8 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -602,7 +594,7 @@ a.btn_red {
 	float:right;
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	right:10%;
 }
 .content8 > .details8 > #info8 {
@@ -613,7 +605,6 @@ a.btn_red {
 
 .content9 {
 	position:relative;
-	top:-4.6em;
 	background:#0F3;
 	min-height:100vh;
 	width:100%;
@@ -627,7 +618,7 @@ a.btn_red {
 .content9 > .details9 {
 	position:relative;
 	top:8em;
-	width:40%;
+	width:50%;
 	left:10%;
 }
 .content9 > .details9 > #info9 {
@@ -636,6 +627,49 @@ a.btn_red {
 	color:white;
 }
 
+.content10 {
+	position:relative;
+	background:#FFF;
+	min-height:100vh;
+	width:100%;
+	-webkit-box-shadow:0px 5px 58px #222;
+            box-shadow:0px 5px 58px #222;
+}
+
+/*-----------------------Logo ScrollBar start--------------------------*/
+#port {
+	overflow: hidden;
+    position: relative;
+	top:5em;
+    width: 96%;
+	margin:auto;
+	height: 20vh;
+}
+.img_thumb {
+    width: 240px;
+	height:100px;
+	padding:3px;
+    /*-webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);*/
+    }
+.parallax-layer {
+    position: absolute;
+}
+/* Horizontal lists of inline-blocks, with image backgrounds as thumbnails */
+/* Tested in Safari 4 | FF 3.5 | Opera 9.6 | IE7 */ 
+.thumbs_index {
+	padding: 0 20px;
+    /* initial position */
+    left: 0;
+    /* Put all the thumbs on one line. */
+    white-space: nowrap;
+}
+.thumbs_index > li {
+    display: inline;
+    margin-right: 10px;
+}
+/*-----------------------Logo ScrollBar end----------------------------*/
 .panel-content {
 	width:85%;
 }
@@ -676,7 +710,7 @@ a.btn_red {
 
 	position:fixed;
 	left:0;
-	bottom:5px;
+	bottom:2em;
 	width:10%
 	height:10%;	
 	z-index:1;
@@ -690,15 +724,9 @@ a.btn_red {
 	z-index:1;
 }
 
-/* Skrollr mster*/
-.skrollable {
-	/*
-	 * First-level skrollables are positioned relative to window
-	 */
-	position:fixed;
 
-	/*
-	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
-	 */
-	z-index:100;
-}
+
+	
+	
+    
+    

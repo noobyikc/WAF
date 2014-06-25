@@ -24,6 +24,8 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
+            <script src="js/jquery.parallax.js"></script>
+
             
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
@@ -340,7 +342,7 @@
 
     <!--=============================================Pane - 1 ============================================= -->
     <div class="content1">
-		<div class="details1" data-700="top:100%;" data-800="top:0%;" data-900="display:block;" data-1000="top:-100%;display:none;" >
+		<div class="details1">
         	<div id="heading1">
             	<h1>CREATE</h1>
             </div>
@@ -351,8 +353,6 @@
         <div class="image1">
         </div>  
     </div>
-    
-    
 	<!--=============================================Pane - 2 ============================================= -->    
     <div class="content2">
     	<div class="details2">
@@ -366,7 +366,6 @@
         <div class="image1">
         </div>  
     </div>
-    
 	<!--=============================================Pane - 3 ============================================= -->        
     <div class="content3">
     	<div class="details3">
@@ -380,7 +379,6 @@
         <div class="image1">
         </div>
     </div>
-    
     <!--=============================================Pane - 4 ============================================= -->
     <div class="content4">
     	<div class="details4">
@@ -394,7 +392,6 @@
         <div class="image1">
         </div>
     </div>
-    
     <!--=============================================Pane - 5 ============================================= -->
     <div class="content5">
 		<div class="details5">
@@ -408,7 +405,6 @@
         <div class="image1">
         </div>
     </div>
-    
     <!--=============================================Pane - 6 ============================================= -->
     <div class="content6">
 		<div class="details6">
@@ -422,7 +418,6 @@
         <div class="image1">
         </div>
     </div>
-    
     <!--=============================================Pane - 7 ============================================= -->
     <div class="content7">
     	<div class="details7">
@@ -435,8 +430,7 @@
         </div>  
         <div class="image1">
         </div>
-    </div>
-    
+    </div>  
     <!--=============================================Pane - 8 ============================================= -->
     <div class="content8">
     	<div class="details8">
@@ -449,10 +443,8 @@
         </div>  
         <div class="image1">
         </div>
-    </div>
-    
+    </div>    
     <!--=============================================Pane - 9 ============================================= -->
-    
     <div class="content9">
     	<div class="details9">
         	<div id="heading9">
@@ -465,19 +457,56 @@
         <div class="image1">
         </div>
     </div>
-   <script src="js/skrollr.js"></script>
-<!--   	<script type="text/javascript">
-			( function( $ ) {
-			// Init Skrollr
-			var s = skrollr.init({
-				render: function(data) {
-					//Debugging - Log the current scroll position.
-					console.log(data.curTop);
-				}
+    <!--=============================================Pane - 10 ============================================= -->
+    <div class="content10">
+    	<div id="port">
+        	<!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE -->
+	        <ul class="thumbs_index index parallax-layer">
+                <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
+                <li><img class="img_thumb thumb" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
+                <li><img class="img_thumb thumb" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
+                <li><img class="img_thumb thumb" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
+                <li><img class="img_thumb thumb" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
+               	<li><img class="img_thumb thumb" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
+				<li><img class="img_thumb thumb" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
+	      	</ul>
+	    </div>
+    	<div class="image1">    </div>
+    </div>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		// Declare parallax on layers
+			jQuery('.parallax-layer').parallax({
+				mouseport: jQuery("#port"),
+				yparallax: false
 			});
-			} )( jQuery );
-			</script>-->
-			<script>$(window).load(function($){ var s = skrollr.init(); });</script>
+		});
+    </script>
 
     	<!--<table class="details">
         	<tr>
@@ -574,110 +603,11 @@
         <div class="panel panel-primary panel-content" style="margin:auto">
         	<div class="panel-heading heading-content" style="width:1000px; margin:auto;">People from these countries are here. Are you?</div>
         </div>
-        <!---slider--->  
-        
+        <!---slider---> 
 
-<script>
-        jQuery(document).ready(function ($) {
-            var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 0,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
-
-                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                $SlideEasing: $JssorEasing$.$EaseLinear,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-                $SlideDuration: 3000,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                $SlideWidth: 140,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                //$SlideHeight: 100,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-                $DisplayPieces: 7,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                $ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
-                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-            };
-
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 980));
-                else
-                    window.setTimeout(ScaleSlider, 330);
-            }
-
-            ScaleSlider();
-
-            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                $(window).bind('resize', ScaleSlider);
-            }
-
-
-            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-            //    $(window).bind("orientationchange", ScaleSlider);
-            //}
-            //responsive code end
-        });
-    </script>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 1080px; bottom: 50px; height: 100px; overflow: hidden; ">
-
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
         </div>
 
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: relative; left: 0px; top: 0px; width: 1080px;bottom:50px; height: 100px; overflow: hidden;">
-            <div><img u="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg"  /></div>
-            <div><img u="image" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></div>
-            <div><img u="image" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></div>
-            <div><img u="image" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></div>
-            <div><img u="image" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></div>
-            <div><img u="image" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></div>
-            <div><img u="image" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></div>
-            <div><img u="image" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></div>
-            <div><img u="image" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></div>
-            <div><img u="image" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></div>
-            <div><img u="image" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></div>
-            <div><img u="image" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></div>
-            <div><img u="image" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></div>
-            <div><img u="image" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></div>
-            <div><img u="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" style="left:500px"/></div>
-			<div><img u="image" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></div>
-            <div><img u="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></div>
-			<div><img u="image" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></div>
-            <div><img u="image" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></div>
-            <div><img u="image" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></div>
-            <div><img u="image" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></div>
-            <div><img u="image" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></div>
-            <div><img u="image" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></div>
-            <div><img u="image" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></div>
-            <div><img u="image" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></div>
-            <div><img u="image" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></div>
-            <div><img u="image" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></div>
-            <div><img u="image" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></div>
-            <div><img u="image" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></div>
-            <div><img u="image" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></div>
-            <div><img u="image" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></div>
-            <div><img u="image" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></div>
-        </div>
-        <a style="display: none" href="http://www.jssor.com">html slider</a>
     </div>
-    <!-- Jssor Slider End -->
-        
-    </div> -->
         
         
 
