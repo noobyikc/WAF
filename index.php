@@ -24,8 +24,13 @@
             <script src="js/modernizr.custom.js"></script>
          	<script src="js/classie.js"></script>
 			<script src="js/uisearch.js"></script>
-                        
-   </head>
+            <script src="js/jquery.parallax.js"></script>
+
+            
+            <script type="text/javascript" src="js/jssor.core.js"></script>
+			<script type="text/javascript" src="js/jssor.utils.js"></script>
+            <script type="text/javascript" src="js/jssor.slider.js"></script>
+</head>
 
 <?php
  		include('includes/connection.php');
@@ -33,6 +38,22 @@
  
 ?>
 
+<?php
+		if(isset($_COOKIE['cookmail']) && isset($_COOKIE['cookpass']))
+		{
+				$cook = $_COOKIE['cookmail'];
+				$res = mysql_query("select * from register where email = '$cook'") or die(mysql_error());
+				while($rows = mysql_fetch_array($res))
+				{
+					if($_COOKIE['cookpass'] == md5($rows['paasword']))
+					{
+						$_SESSION['sessemail'] = $_COOKIE['cookmail'];
+	  					$_SESSION['sesspassword'] = $rows['password'];
+					}
+				}
+				
+		}
+?>
 <?php
 	if(isset($_POST['registerbtn'])) {
 		$result = mysql_query("INSERT INTO register(name, email, password, sendupdates)VALUES('$name', '$email', '$password','$updates')")or die(mysql_error());
@@ -52,8 +73,12 @@
 	  	$message.='Best Regards \n\n World Auto Forum';
 	  	$message.='</body></html>';
 	  	mail($to,$subject,$message,$headers); */
-	  	if($result)
-	  		echo "<script> windows.location = 'profile_view.php';</script>";
+	  	if($result)//cookie set at time of registration
+		{
+			setcookie("regmail", $email, time()+60*60*24*100, "/");
+    		setcookie("regpass", md5($password), time()+60*60*24*100, "/");
+	  		echo "<script> windows.location = 'profile_view.php';</script>";	
+		}
 	  	else
 	  		die(mysql_error());
 }
@@ -61,29 +86,60 @@
 
 <?php
 	if(isset($_POST['loginbtn']))
-		  {
-			  $flag = 0;
-			  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
-			 while($rows = mysql_fetch_array($ldetail)){
-			$_SESSION['sessemail'] = $rows['email'];
-			$_SESSION['sesspassword'] = $rows['password'];
+{
+	  $flag = 0;
+	  $ldetail = mysql_query("SELECT * from register WHERE email = '$email' and password = '$password';") or die(mysql_error());
+	  while($rows = mysql_fetch_array($ldetail))
+	  {		$_SESSION['sessemail'] = $rows['email'];
+	  		$_SESSION['sesspassword'] = $rows['password'];
 			$flag=1;
-	}
-	if($flag==1)
-		echo "<script>window.location = 'profile.php';</script>";
-	else
-		
-		echo "<script>window.location = 'index.php';</script>";
-			
-			
+	  }
+		if($flag==1)
+	{
+		if(isset($_POST['remember']))//cookie at time of login
+			{
+				setcookie("cookmail", $_SESSION['sessemail'], time()+60*60*24*100, "/");
+      			setcookie("cookpass", md5($_SESSION['sesspassword']), time()+60*60*24*100, "/");	
 			}
-		  ?>
+		echo "<script>window.location = 'profile.php';</script>";
+	}
+	else
+		echo "<script>window.location = 'index.php';</script>";		
+}
+?>
 		   
           
 
 	
 
-  	<body data-spy="scroll" data-target=".navbar navbar-inverse">
+  	<body data-spy="scroll" data-target=".navbar navbar-inverse" style="">
+    <!-- ========================== scroll down ========================= -->
+    <div class="image-pos1" id="image-view1">
+   			<a href="#image-view1"><img src="image/icons/down.jpg" /></a>
+	</div>
+    <!--============================================Scroll Up========================================== -->
+    <script>
+	jQuery(document).ready(function() {
+    var offset = 630;
+    var duration = 1000;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.image-pos2').fadeIn(duration);
+        } else {
+            jQuery('.image-pos2').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.image-pos2').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+	</script>
+    <div class="image-pos2" id="image-view2">
+    	<a href="#"><img src="image/icons/up.jpg" /></a>
+    </div>
     
    <!--=============================================Loader============================================= -->  
 		<script>
@@ -97,7 +153,7 @@
         </div>
     
    <!--=============================================Navigation============================================= --> 
-    	<div class="navbar-wrapper">
+        <div class="navbar-wrapper">
           <div class="container">
             <div class="navbar navbar-inverse navbar-static-top" role="navigation">
                 <div class="navbar-header">
@@ -147,98 +203,7 @@
         <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
-        
-   <!--=============================================Login-Signup============================================= -->
-        <section>
-            <div id="login-signup">
-                <a id="modal_trigger" href="#modal" class="btn">Login / Signup</a>
-                <div id="modal" class="popupContainer" style="display:none;">
-                    <header class="popupHeader">
-                        <span class="header_title">Enter World Auto Forum</span>
-                        <span class="modal_close"><i>x</i></span>
-                    </header>
-            	<section class="popupBody">
-					<!-- Social Login -->
-					<div class="social_login">
-						<div class="action_btns">
-							<div class="one_half"><a href="#" id="login_form" class="btn btn_red">Login</a></div>
-							<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
-						</div>
-					</div>
-					<!-- Username & Password Login form -->
-					<div class="user_login">
-						<form name="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-							<label>Email / Username</label>
-							<input type="text" name="email" />
-							<br />
-							<label>Password</label>
-							<input type="password" name="password" />
-							<br />
-							<div class="checkbox">
-								<input id="remember" type="checkbox" />
-								<label for="remember">Remember me on this computer</label>
-							</div>
-							<div class="action_btns">
-								<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-								<div class="one_half last"><a class="btn btn_red" style="padding:1px 1px;"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
-							</div>
-						</form>
-						<a href="#" class="forgot_password">Forgot password?</a>
-					</div>
-					<!-- Register Form -->
-					<div class="user_register">
-						<form name="signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-							<label>Full Name</label>
-							<input type="text" name="name" />
-							<br />
-							<label>Email Address</label>
-							<input type="email" name="email" />
-							<br />
-							<label>Password</label>
-							<input type="password" name="password" />
-							<br />
-							<div class="checkbox">
-								<input id="send_updates" type="checkbox" name="updates" />
-								<label for="send_updates">Send me occasional email updates</label>
-							</div>
-							<div class="action_btns">
-								<div class="one_half"><a href="#" class="btn back_btn">Back</a></div>
-								<div class="one_half last"><a class="btn btn_red" style="padding:1px 1px;"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>
-							</div>
-						</form>
-					</div>
-				</section>
-			</div>
-		</div>
-		<script type="text/javascript">
-			$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
-			$(function(){
-			// Calling Login Form
-				$("#login_form").click(function(){
-					$(".social_login").hide();
-					$(".user_login").show();
-					$(".header_title").text('Login');
-					return false;
-				});
-			// Calling Register Form
-				$("#register_form").click(function(){
-					$(".social_login").hide();
-					$(".user_register").show();
-					$(".header_title").text('Register');
-					return false;
-				});
-			// Going back to Social Forms
-				$(".back_btn").click(function(){
-					$(".user_login").hide();
-					$(".user_register").hide();
-					$(".social_login").show();
-					$(".header_title").text('Enter World Auto Forum');
-					return false;
-				});
-			})
-		</script>
-    </section>
-	
+  
   <!--=============================================Carousel============================================= -->
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -256,7 +221,7 @@
                 		<p>Top Auto Makers & their People across 125 countries are on WAF!<br />Are You ?</p>
 		            </div>
         		</div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.5em"></div>
+                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-19.3em"></div>
 			</div>
 			<div class="item" id="carousel_image2" >
 				<div class="container">
@@ -265,7 +230,7 @@
 		                <p>Auto Components & Parts Makers Love WAF!</p>
 		            </div>
         		</div>
-				<div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
+				<div style="background:#000;height:650px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	    <div class="item" id="carousel_image3">
 				<div class="container">
@@ -274,25 +239,276 @@
 		                <p>From around the world are on WAF!</p>
 		            </div>
 				</div>
-                <div style="background:#000;height:550px;opacity:0.5;position:relative;top:-16.8em"></div>
+                <div style="background:#000;height:650px;opacity:0.5;position:relative;top:-16.7em"></div>
 	        </div>
     	</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-    
-	<!--=============================================Heading============================================= -->
+   <!--=============================================Login-Signup============================================= -->
+		<div class="box">
+        <section >
+    	    
+            <div id="login-signup">
+                <a id="modal_trigger" href="#modal" class="btn">Login | Signup</a>
+                <div id="lean_overlay"></div>
+                <div id="modal" class="popupContainer" style="display:none;">
+                    <header class="popupHeader">
+                        <span class="header_title">Enter World Auto Forum</span>
+                        <span class="modal_close"><i>x</i></span>
+                    </header>
+                    <section class="popupBody">
+                        <!-- Login Form -->
+                        <div class="social_login">
+                        <form name="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                <label>Email / Username</label>
+                                <input type="text" name="email" />
+                                <br />
+                                <label>Password</label>
+                                <input type="password" name="password" />
+                                <br />
+                                <div class="checkbox">
+                                    <input id="remember" type="checkbox" name="remember" />
+                                    <label for="remember">Remember me on this computer</label>
+                                </div>
+                                <div class="action_btns">
+                                    <div class="one_half"><a class="btn btn_red" style="padding:1px 1px;"><input type="submit" class="btn btn_red" value="Login" id="login-reg_button" name="loginbtn" /></a></div>
+								<div class="one_half last"><a href="#" id="register_form" class="btn btn_red">Sign up</a></div>
+							</div>
+						</form>
+                        <div class="user_login">
+							<a href="forgot_password.php" class="forgot_password">Forgot password?</a>
+						</div>
+					</div>
+					<!-- Register Form -->
+					<div class="user_register">
+						<form name="signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+							<label>Full Name</label>
+							<input type="text" name="name" />
+							<br />
+							<label>Email Address</label>
+							<input type="email" name="email" />
+							<br />
+							<label>Password</label>
+							<input type="password" name="password" />
+							<br />
+							<div class="checkbox">
+								<input id="send_updates" type="checkbox" name="updates" />
+								<label for="send_updates">Agree to <span style="text-decoration:underline">Terms of Service</span></label>
+							</div>
+							<div class="action_btns">
+								<div class="one_half"><a class="btn btn_red" style="padding:1px 1px;"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>
+   								<div class="one_half  last"><a href="#" class="btn back_btn">Back to Login</a></div>
+							</div>
+						</form>
+					</div>
+				</section>
+			</div>
+            <div class="btn-fb-login">
+                <div class="title">
+                	Continue With Facebook
+                </div>
+			</div>
+            <div class="btn-g-login">
+            	<div class="title">Continue with Google</div>
+            </div>
+		</div>
+		<script type="text/javascript">
+			$("#modal_trigger").leanModal({top : 150, overlay : 0.7, closeButton: ".modal_close" });
+			$(function(){
+			// Calling Register Form
+				$("#register_form").click(function(){
+					$(".social_login").hide();
+					$(".user_register").show();
+					$(".header_title").text('Register for W.A.F');
+					return false;
+				});
+			// Going back to Social Forms
+				$(".back_btn").click(function(){
+					$(".user_register").hide();
+					$(".social_login").show();
+					$(".header_title").text('Login to W.A.F');
+					return false;
+				});
+			})
+		</script>
+    </section>
 
-	<div class="box shadow">
-    	<div id="company"> 
-			W<font style="font-size:50px">ORLD &nbsp;&nbsp; </font>
-        	A<font style="font-size:50px">UTO &nbsp;&nbsp; </font>
-        	F<font style="font-size:50px">ORUM</font>
+  <div id="company"> 
+			
     	</div>
     </div>
     
-    <div class="content1 shadow">
-    	<table class="details">
+
+    <!--=============================================Pane - 1 ============================================= -->
+    <div class="content1">
+		<div class="details1">
+        	<div id="heading1">
+            	<h1>CREATE</h1>
+            </div>
+            <div id="info1">
+            	Create your professional profile online and be seen by the top Professionals from around the world.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>  
+    </div>
+	<!--=============================================Pane - 2 ============================================= -->    
+    <div class="content2">
+    	<div class="details2">
+        	<div id="heading2">
+            	<h1>CONVERSE</h1>
+            </div>
+            <div id="info2">
+            	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>  
+    </div>
+	<!--=============================================Pane - 3 ============================================= -->        
+    <div class="content3">
+    	<div class="details3">
+        	<div id="heading3">
+            	<h1>CONNECT</h1>
+            </div>
+            <div id="info3">
+            	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>
+    <!--=============================================Pane - 4 ============================================= -->
+    <div class="content4">
+    	<div class="details4">
+        	<div id="heading4">
+            	<h1>GROW</h1>
+            </div>
+            <div id="info4">
+            	Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>
+    <!--=============================================Pane - 5 ============================================= -->
+    <div class="content5">
+		<div class="details5">
+        	<div id="heading5">
+            	<h1>BUY/SELL</h1>
+            </div>
+            <div id="info5">
+            	Use our Marketplace to sell your products or services and gain international exposure and high profits.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>
+    <!--=============================================Pane - 6 ============================================= -->
+    <div class="content6">
+		<div class="details6">
+        	<div id="heading6">
+            	<h1>SPEAK OUT</h1>
+            </div>
+            <div id="info6">
+            	Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>
+    <!--=============================================Pane - 7 ============================================= -->
+    <div class="content7">
+    	<div class="details7">
+        	<div id="heading7">
+            	<h1>BE UPDATED</h1>
+            </div>
+            <div id="info7">
+            	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>  
+    <!--=============================================Pane - 8 ============================================= -->
+    <div class="content8">
+    	<div class="details8">
+        	<div id="heading8">
+            	<h1>GAIN INSIGHT</h1>
+            </div>
+            <div id="info8">
+            	Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>    
+    <!--=============================================Pane - 9 ============================================= -->
+    <div class="content9">
+    	<div class="details9">
+        	<div id="heading9">
+            	<h1>MAKE A DIFFERENCE</h1>
+            </div>
+            <div id="info9">
+            	Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+            </div>
+        </div>  
+        <div class="image1">
+        </div>
+    </div>
+    <!--=============================================Pane - 10 ============================================= -->
+    <div class="content10">
+    	<div id="port">
+        	<!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE -->
+	        <ul class="thumbs_index index parallax-layer">
+                <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
+                <li><img class="img_thumb thumb" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
+                <li><img class="img_thumb thumb" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
+                <li><img class="img_thumb thumb" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
+                <li><img class="img_thumb thumb" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
+               	<li><img class="img_thumb thumb" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
+				<li><img class="img_thumb thumb" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
+                <li><img class="img_thumb thumb" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
+	      	</ul>
+	    </div>
+    	<div class="image1">    </div>
+    </div>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		// Declare parallax on layers
+			jQuery('.parallax-layer').parallax({
+				mouseport: jQuery("#port"),
+				yparallax: false
+			});
+		});
+    </script>
+
+    	<!--<table class="details">
         	<tr>
             	<td>
                 	<div class="panel panel-primary panel-content">
@@ -382,12 +598,22 @@
                 </td>
             </tr>
         </table>
+        
+        
+        <div class="panel panel-primary panel-content" style="margin:auto">
+        	<div class="panel-heading heading-content" style="width:1000px; margin:auto;">People from these countries are here. Are you?</div>
+        </div>
+        <!---slider---> 
+
+        </div>
+
     </div>
-  
+        
+        
+
 
 	<!--=============================================Footer============================================= -->
     
-    <!---->
 
     <div class="footer">
 		<table class="links">
@@ -411,5 +637,6 @@
         </div>
       </div>
     </div><!-- /.container -->
+
   </body>
 </html>
