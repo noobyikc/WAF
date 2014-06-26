@@ -2,7 +2,6 @@
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {

@@ -334,12 +334,103 @@
 		</script>
     </section>
 
-  <div id="company"> 
+ 		 <div id="company"> 
 			
     	</div>
     </div>
+    <div class="content">
+    	<table class="details">
+        	<tr>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Create</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/create.png" />
+                        	Create your professional profile online and be seen by the top Professionals from around the world.
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Converse</div>
+                        <div class="panel-body body-content">
+                            <img class="icon-content" src="image/icons/converse.png" />
+                        	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Connect</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/connect.jpg" />
+                        	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+                        </div>
+                    </div>
+                </td>
+            </tr><tr>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Grow</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/grow.png" />
+							Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Buy/Sell</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/buysell.png" />
+                        	Use our Marketplace to sell your products or services and gain international exposure and high profits.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Speak out</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/speak.jpg" />
+	                        Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+                        </div>
+                    </div>
+                </td>
+            </tr><tr>
+            	<td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Be Updated</div>
+                        <div class="panel-body body-content">
+                        	<img class="icon-content" src="image/icons/updated.png" />
+                        	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+                        </div>
+                    </div>
+                    
+                </td>
+                <td>
+               		<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Gain Insight</div>
+                        <div class="panel-body body-content">
+	                       	<img class="icon-content" src="image/icons/insight.png" />
+                            Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
+                        </div>
+                    </div>
+                </td>
+                <td>
+                	<div class="panel panel-primary panel-content">
+                    	<div class="panel-heading heading-content">Make a Difference</div>
+                        <div class="panel-body body-content">
+                            <img class="icon-content" src="image/icons/difference.png" />
+							Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
     
-
     <!--=============================================Pane - 1 ============================================= -->
     <div class="content1">
 		<div class="details1">
@@ -458,9 +549,9 @@
         </div>
     </div>
     <!--=============================================Pane - 10 ============================================= -->
-    <div class="content10">
+ <!--   <div class="content10">
     	<div id="port">
-        	<!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE -->
+        	<!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE ->
 	        <ul class="thumbs_index index parallax-layer">
                 <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
                 <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
@@ -506,98 +597,9 @@
 				yparallax: false
 			});
 		});
-    </script>
+    </script>-->
 
-    	<!--<table class="details">
-        	<tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Create</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
-                        	Create your professional profile online and be seen by the top Professionals from around the world.
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Converse</div>
-                        <div class="panel-body body-content">
-                            <img class="icon-content" src="image/icons/converse.png" />
-                        	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Connect</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/connect.jpg" />
-                        	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
-                        </div>
-                    </div>
-                </td>
-            </tr><tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Grow</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/grow.png" />
-							Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Buy/Sell</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/buysell.png" />
-                        	Use our Marketplace to sell your products or services and gain international exposure and high profits.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Speak out</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/speak.jpg" />
-	                        Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
-                        </div>
-                    </div>
-                </td>
-            </tr><tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Be Updated</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/updated.png" />
-                        	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Gain Insight</div>
-                        <div class="panel-body body-content">
-	                       	<img class="icon-content" src="image/icons/insight.png" />
-                            Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Make a Difference</div>
-                        <div class="panel-body body-content">
-                            <img class="icon-content" src="image/icons/difference.png" />
-							Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+    	
         
         
         <div class="panel panel-primary panel-content" style="margin:auto">
