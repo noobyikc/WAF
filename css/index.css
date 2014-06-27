@@ -393,35 +393,94 @@ a.btn_red {
 .box {
 	position:relative;
 	width:100%;
-	min-height:6em;
+	height:6em;
 	background:	#FFF;
-}
-
-.shadow{
-    position:relative;
-	z-index:100;}
-
-.shadow:after{
-    position:absolute;
-    z-index:100;
-    -webkit-box-shadow:0 0 40px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px rgba(0,0,0,0.8);
-    bottom:0px;
-    left:10%;
-    right:10%;
-    width:80%;
-    height:50%;
-    -moz-border-radius:100%;
-    border-radius:100%;
 }
 
 .content {
 	position:relative;
+	padding-top:15vh;
 	background:#E4E4E4;
-	min-height:100vh;
+	height:100vh;
 	width:100%;
+
+
 }
 
+.details {
+	width:100%;
+	position:relative;
+}
+
+.panel1 {
+	width:25%;
+	height:6em;
+	padding-top:2.5em;
+	position:relative;
+	margin-left:1%;
+	margin-right:1%;
+	float:left;
+	left:10%;
+	font-size:2em;
+	background:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	-webkit-box-shadow:2px 5px 4px #222;
+            box-shadow:2px 5px 4px #222;
+}
+
+.panel1:hover{
+	-webkit-box-shadow:1px 1px 1px #222;
+            box-shadow:1px 1px 1px #222;
+}
+
+.panel2 {
+	width:25%;
+	position:relative;
+	top:2vh;
+	height:6em;
+	padding-top:2.5em;
+	margin-left:1%;
+	margin-right:1%;
+	float:left;
+	left:10%;
+	font-size:2em;
+	background:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	-webkit-box-shadow:2px 5px 4px #222;
+            box-shadow:2px 5px 4px #222;
+}
+
+.panel2:hover{
+	-webkit-box-shadow:1px 1px 1px #222;
+            box-shadow:1px 1px 1px #222;
+}
+
+.panel3 {
+	width:25%;
+	position:relative;
+	top:4vh;
+	height:6em;
+	padding-top:2.5em;
+	margin-left:1%;
+	margin-right:1%;
+	float:left;
+	left:10%;
+	font-size:2em;
+	background:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	-webkit-box-shadow:2px 5px 4px #222;
+            box-shadow:2px 5px 4px #222;
+}
+.panel3:hover{
+	-webkit-box-shadow:1px 1px 1px #222;
+            box-shadow:1px 1px 1px #222;
+}
 	
 .content1 {
 	display:none;
@@ -429,6 +488,7 @@ a.btn_red {
 	background:#E4E4E4;
 	min-height:100vh;
 	width:100%;
+	z-index:10;
 }
 #heading1 {
 	padding-top:2em;
@@ -654,10 +714,12 @@ a.btn_red {
 
 	position:relative;
 	background:#FFF;
-	min-height:100vh;
+	height:100vh;
 	width:100%;
-	-webkit-box-shadow:0px 5px 58px #222;
-            box-shadow:0px 5px 58px #222;
+}
+
+.content10 > .details10 {
+
 }
 
 /*-----------------------Logo ScrollBar start--------------------------*/
@@ -695,7 +757,6 @@ a.btn_red {
 }
 /*-----------------------Logo ScrollBar end----------------------------*/
 .panel-content {
-	width:85%;
 }
 
 .heading-content {

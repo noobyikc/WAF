@@ -333,221 +333,130 @@
 			})
 		</script>
     </section>
-
- 		 <div id="company"> 
-			
-    	</div>
-    </div>
-    <div class="content">
-    	<table class="details">
-        	<tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Create</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/create.png" />
-                        	Create your professional profile online and be seen by the top Professionals from around the world.
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Converse</div>
-                        <div class="panel-body body-content">
-                            <img class="icon-content" src="image/icons/converse.png" />
-                        	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Connect</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/connect.jpg" />
-                        	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
-                        </div>
-                    </div>
-                </td>
-            </tr><tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Grow</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/grow.png" />
-							Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally. 
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Buy/Sell</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/buysell.png" />
-                        	Use our Marketplace to sell your products or services and gain international exposure and high profits.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Speak out</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/speak.jpg" />
-	                        Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
-                        </div>
-                    </div>
-                </td>
-            </tr><tr>
-            	<td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Be Updated</div>
-                        <div class="panel-body body-content">
-                        	<img class="icon-content" src="image/icons/updated.png" />
-                        	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
-                        </div>
-                    </div>
-                    
-                </td>
-                <td>
-               		<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Gain Insight</div>
-                        <div class="panel-body body-content">
-	                       	<img class="icon-content" src="image/icons/insight.png" />
-                            Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
-                        </div>
-                    </div>
-                </td>
-                <td>
-                	<div class="panel panel-primary panel-content">
-                    	<div class="panel-heading heading-content">Make a Difference</div>
-                        <div class="panel-body body-content">
-                            <img class="icon-content" src="image/icons/difference.png" />
-							Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
     </div>
     
-    <!--=============================================Pane - 1 ============================================= -->
-    <div class="content1">
-		<div class="details1">
-        	<div id="heading1">
-            	<h1>CREATE</h1>
-            </div>
-            <div id="info1">
-            	Create your professional profile online and be seen by the top Professionals from around the world.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>  
-    </div>
-	<!--=============================================Pane - 2 ============================================= -->    
-    <div class="content2">
-    	<div class="details2">
-        	<div id="heading2">
-            	<h1>CONVERSE</h1>
-            </div>
-            <div id="info2">
-            	Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>  
-    </div>
-	<!--=============================================Pane - 3 ============================================= -->        
-    <div class="content3">
-    	<div class="details3">
-        	<div id="heading3">
-            	<h1>CONNECT</h1>
-            </div>
-            <div id="info3">
-            	Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
-            </div>
-        </div>  
-        <div class="image1">
+   	<!--=============================================Landing page============================================= -->
+    <div class="content">
+    	<!--=============================================Pane - 1 ============================================= -->
+  		<div class="panel1">CREATE</div>
+        <div class="content1">
+            <div class="details1">
+                <div id="heading1">
+                    <h1>CREATE</h1>
+                </div>
+                <div id="info1">
+                    Create your professional profile online and be seen by the top Professionals from around the world.
+                </div>
+            </div>  
         </div>
-    </div>
-    <!--=============================================Pane - 4 ============================================= -->
-    <div class="content4">
-    	<div class="details4">
-        	<div id="heading4">
-            	<h1>GROW</h1>
+        <!--=============================================Pane - 2 ============================================= -->    
+        <div class="panel1">CONVERSE</div>
+        <div class="content2">
+            <div class="details2">
+                <div id="heading2">
+                    <h1>CONVERSE</h1>
+                </div>
+                <div id="info2">
+                    Jobs in the conversation on WAF. Find and follow your friends and companies and be updated about the latest news.
+                </div>
+            </div>  
+        </div>
+		<!--=============================================Pane - 3 ============================================= -->        
+        <div class="panel1">CONNECT</div>
+        <div class="content3">
+            <div class="details3">
+        	    <div id="heading3">
+                    <h1>CONNECT</h1>
+                </div>
+                <div id="info3">
+                    Find your former colleagues and stay in touch or make new connections in companies and grow professionally.
+                </div>
+            </div>  
+        </div>
+        <!--=============================================Pane - 4 ============================================= -->
+       <div class="panel2">GROW</div>
+       <div class="content4">
+            <div class="details4">
+                <div id="heading4">
+                    <h1>GROW</h1>
+                </div>
+                <div id="info4">
+                    Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally.
+                </div>
             </div>
-            <div id="info4">
-            	Search and apply for the most lucrative jobs in the industry using your WAF profile and grow professionally.
+       </div>
+       <!--=============================================Pane - 5 ============================================= -->
+        <div class="panel2">BUY | SELL</div> 
+        <div class="content5">
+            <div class="details5">
+                <div id="heading5">
+                    <h1>BUY/SELL</h1>
+                </div>
+                <div id="info5">
+                    Use our Marketplace to sell your products or services and gain international exposure and high profits.
+                </div>
+            </div>  
+        </div>
+         <!--=============================================Pane - 6 ============================================= -->
+        <div class="panel2">SPEAK OUT</div> 
+        <div class="content6">
+            <div class="details6">
+                <div id="heading6">
+                    <h1>SPEAK OUT</h1>
+                </div>
+                <div id="info6">
+                    Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
+                </div>
+            </div>  
+        </div>
+        <!--=============================================Pane - 7 ============================================= -->
+        <div class="panel3">BE UPDATED</div> 
+        <div class="content7">
+            <div class="details7">
+                <div id="heading7">
+                    <h1>BE UPDATED</h1>
+                </div>
+                <div id="info7">
+                    Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
+                </div>
             </div>
         </div>  
-        <div class="image1">
-        </div>
-    </div>
-    <!--=============================================Pane - 5 ============================================= -->
-    <div class="content5">
-		<div class="details5">
-        	<div id="heading5">
-            	<h1>BUY/SELL</h1>
-            </div>
-            <div id="info5">
-            	Use our Marketplace to sell your products or services and gain international exposure and high profits.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>
-    </div>
-    <!--=============================================Pane - 6 ============================================= -->
-    <div class="content6">
-		<div class="details6">
-        	<div id="heading6">
-            	<h1>SPEAK OUT</h1>
-            </div>
-            <div id="info6">
-            	Write your own blog posts on your profile and be recognised in as expert in the highly competitive auto industry.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>
-    </div>
-    <!--=============================================Pane - 7 ============================================= -->
-    <div class="content7">
-    	<div class="details7">
-        	<div id="heading7">
-            	<h1>BE UPDATED</h1>
-            </div>
-            <div id="info7">
-            	Stay updated with WAF news of the auto industry. Led by the Captain of the industry, be a winner among your peers.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>
-    </div>  
     <!--=============================================Pane - 8 ============================================= -->
-    <div class="content8">
-    	<div class="details8">
-        	<div id="heading8">
-            	<h1>GAIN INSIGHT</h1>
-            </div>
-            <div id="info8">
-            	Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
-            </div>
-        </div>  
-        <div class="image1">
+        <div class="panel3">GAIN INSIGHT</div>
+        <div class="content8">
+            <div class="details8">
+                <div id="heading8">
+                    <h1>GAIN INSIGHT</h1>
+                </div>
+                <div id="info8">
+                    Access WAF Whitepapers and gain new insights about almost any topic related to the auto industry.
+                </div>
+            </div>  
         </div>
-    </div>    
     <!--=============================================Pane - 9 ============================================= -->
-    <div class="content9">
-    	<div class="details9">
-        	<div id="heading9">
-            	<h1>MAKE A DIFFERENCE</h1>
+        <div class="panel3">MAKE A DIFFERENCE</div>
+        <div class="content9">
+            <div class="details9">
+                <div id="heading9">
+                    <h1>MAKE A DIFFERENCE</h1>
+                </div>
+                <div id="info9">
+                    Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
+                </div>
             </div>
-            <div id="info9">
-            	Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career.
-            </div>
-        </div>  
-        <div class="image1">
-        </div>
+    	</div>
     </div>
+	<!--=============================================Logo Scroller Content============================================= -->
+    <div class="content10">
+            	<div class="details10">
+                	<h1>People from these countries are here. Are you?</h1>
+                </div>
+                <!--  INSERT SCROLLER HERE-->
+
+    </div>
+    
+    
+    
     <!--=============================================Pane - 10 ============================================= -->
  <!--   <div class="content10">
     	<div id="port">
@@ -599,21 +508,9 @@
 		});
     </script>-->
 
-    	
-        
-        
-        <div class="panel panel-primary panel-content" style="margin:auto">
-        	<div class="panel-heading heading-content" style="width:1000px; margin:auto;">People from these countries are here. Are you?</div>
-        </div>
-        <!---slider---> 
-
-        </div>
-
-    </div>
-        
-        
-
-
+    
+    
+    
 	<!--=============================================Footer============================================= -->
     
 
