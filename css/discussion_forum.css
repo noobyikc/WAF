@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+.heading1 {
+	position:relative;
+	top:4em;
+	padding-left:5%;
+}
+
+.heading1 > h1 {
+	font-size:60px;
+}
+
+#sort-options {
+	width: 70%;
+	height:1.8em;
+	clear: both;
+	float: left;
+	/*background-color: #555;*/
+	margin: 1em;
+	border-radius: 2px;
+}
+
+
+.tabs {
+	position:relative;
+	width: 100%;
+	clear: both;
+	background-color: #E9E9E9;
+	margin-top: 2.8em;
+	height: 100%;
+
+}
+
+.tab-links {
+	font-size:18px;
+}
+
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links li {
+	padding:0 2em 0;
+    float:left;
+    list-style:none;
+}
+.tab-links li.active {
+	border-bottom:2px solid #F001;
+}
+.tab-links li:hover {
+	border-bottom:2px solid #009;
+}
+
+/* Discussions Main content*/
+.holder1 {
+	width: 99%;
+	margin-top:1em;
+}
+
