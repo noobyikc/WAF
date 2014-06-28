@@ -12,8 +12,8 @@
         
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/default.css" />
-			<link rel="stylesheet" type="text/css" href="css/component2.css" />
-
+/*			<link rel="stylesheet" type="text/css" href="css/component2.css" />
+*/
 			<!--<SCRIPT language=JavaScript>
 			function reload(form)
 			{
@@ -105,7 +105,7 @@
          	<div class="holder1">
 				<ul class="cbp_tmtimeline">
 					<li>
-						<div class="cbp_tmicon ">
+						<div class="cbp_tmicon">
                         	<!-- Add upvotes downvotes number here this comes from database dynamically-->
                         </div>
 						<div class="cbp_tmlabel">
@@ -114,10 +114,64 @@
 								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
 								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>				
 							</div>
-                            <h4><a href="#">How do i log in??</a></h4>
+                            <h3><a href="#">How do i log in??</a></h3>
                             <p>I am having problem loging in WAF.So plzzz help me and let me log in.</p>
                         </div>
                     </li>
+                    <li>
+						<div class="cbp_tmicon">
+                        </div>
+						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
+								
+							</div>
+							<h3><a href="#">Very Simple</a></h3>
+							<p>Its simple just Click the log i button and enter your details.</p>
+							<div class="dislike">
+							<a href="#" class="s3d flickr">
+								DisLike
+								<span class="icons flickr"></span>
+							</a>
+							</div>
+
+							<div class="like">
+							<a href="#" class="s3d flickr">
+								Like
+								<span class="icons flickr"></span>
+							</a>
+							</div>
+						</div>
+					</li>
+                    <li>
+						<div class="cbp_tmicon">
+                        </div>
+						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
+							</div>
+							<h3><a href="#">SOMETHING</a></h3>
+							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
+							<div class="dislike">
+							<a href="#" class="s3d flickr">
+								DisLike
+								<span class="icons flickr"></span>
+							</a>
+							</div>
+							<div class="count"><p>+2</p>
+							</div>
+							<div class="like">
+							<a href="#" class="s3d flickr">
+								Like
+								<span class="icons flickr"></span>
+							</a>
+							</div>
+						</div>
+					</li>
              
 						<!--<textarea placeholder="Write Your Answer" rows="3" name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>-->
 						<!--<SCRIPT language=JavaScript>
@@ -136,63 +190,9 @@
 							}
 
 						</script>-->
-					</li>
-					<li>
-						
-						<div class="cbp_tmicon cbp_tmicon-screen"></div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-								
-							</div>
-							<h2><a href="#">Very Simple</a></h2>
-							<p>Its simple just Click the log i button and enter your details.</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-							<div class="count"><p>+2</p>
-							</div>
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						
-						<div class="cbp_tmicon cbp_tmicon-mail"></div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-								
-							</div>
-							<h2><a href="#">SOMETHING</a></h2>
-							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-							<div class="count"><p>+2</p>
-							</div>
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-						</div>
-					</li>
+					
+					
+					
 					<li>
 						
 						<div class="cbp_tmicon cbp_tmicon-phone"></div>
