@@ -339,57 +339,6 @@ a.btn_red {
 	left:40%;
 }
 
-/* Footer CSS*/
-.footer{
-	position:static;
-	bottom:0;
-  	height: 8em;
-	padding-top:2em;
-	width: 100%;
-  	background: #000000;
-  	color: #333333;
-  	transition: all 0.2s ease-out;
-}
-
-.links {
-	width:65%;
-	position:relative;
-	left:35%;	
-}
-
-.links > tbody > tr > td{
-	width:20%;
-}
-/*
-.links > td > a {
-		text-align:center;
-}*/
-
-.copyright {
-	position:relative;
-	top:1em;
-	bottom:0;
-	left:10%;
-	width:40%;
-	text-align:left;
-}
-
-.copyright > p {
-	font-size:16px;
-	padding-left:2em;
-}
-
-
-.footer > ul > a {
-	color:#333333;
-}
-
-
-.footer:hover{
-  color: #ffffff;
-  text-decoration:none;
-}
-
 .box {
 	position:relative;
 	width:100%;

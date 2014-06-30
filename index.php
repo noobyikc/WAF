@@ -17,6 +17,7 @@
             <link rel="stylesheet" type="text/css" href="css/carousel.css" />
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
+            <link rel="stylesheet" type="text/css" href="css/footer.css" />
 
             <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>

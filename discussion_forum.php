@@ -11,9 +11,9 @@
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
-			<link rel="stylesheet" type="text/css" href="css/default.css" />
-/*			<link rel="stylesheet" type="text/css" href="css/component2.css" />
-*/
+			<!--<link rel="stylesheet" type="text/css" href="css/default.css" />-->
+<!--			<link rel="stylesheet" type="text/css" href="css/component2.css" />
+-->
 			<!--<SCRIPT language=JavaScript>
 			function reload(form)
 			{
@@ -115,7 +115,9 @@
 								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>				
 							</div>
                             <h3><a href="#">How do i log in??</a></h3>
-                            <p>I am having problem loging in WAF.So plzzz help me and let me log in.</p>
+                            <p>I am having problem logging into WAF.So please guide me along and help me login.</p>
+                            <a href="#" class="dislike flickr">DisLike</a>
+                            <a href="#" class="like flickr">Like</a>                           
                         </div>
                     </li>
                     <li>
@@ -129,21 +131,10 @@
 								
 							</div>
 							<h3><a href="#">Very Simple</a></h3>
-							<p>Its simple just Click the log i button and enter your details.</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-						</div>
+							<p>Its simple just Click the login button and enter your details.</p>
+                            <a href="#" class="dislike flickr">DisLike</a>
+                            <a href="#" class="like flickr">Like</a>
+                         </div>
 					</li>
                     <li>
 						<div class="cbp_tmicon">
@@ -155,21 +146,25 @@
 								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
 							</div>
 							<h3><a href="#">SOMETHING</a></h3>
-							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
+							<p>DETAILS about this the owner of this website. fsf</p>
+                            <a href="#" class="dislike flickr">DisLike</a>
+                            <a href="#" class="like flickr">Like</a>
+                        </div>
+					</li>
+                    <li>
+						
+						<div class="cbp_tmicon">
+                        </div>
+						<div class="cbp_tmlabel">
+							<div class="share">
+								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>								
 							</div>
-							<div class="count"><p>+2</p>
-							</div>
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
+							<h3><a href="#">SOMETHING</a></h3>
+							<p>DETAILS which you will tell me about shortly.</p>
+                            <a href="#" class="dislike flickr">DisLike</a>
+                            <a href="#" class="like flickr">Like</a>
 						</div>
 					</li>
              
@@ -190,68 +185,29 @@
 							}
 
 						</script>-->
-					
-					
-					
-					<li>
-						
-						<div class="cbp_tmicon cbp_tmicon-phone"></div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-								
-							</div>
-							<h2><a href="#">SOMETHING</a></h2>
-							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-							<div class="count"><p>+2</p>
-							</div>
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						
-						<div class="cbp_tmicon cbp_tmicon-earth"></div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-								
-							</div>
-							<h2><a href="#">SOMETHING</a></h2>
-							<p>DETAILS       hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhh hhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fsf</p>
-							<div class="dislike">
-							<a href="#" class="s3d flickr">
-								DisLike
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-							<div class="count"><p>+2</p>
-							</div>
-							<div class="like">
-							<a href="#" class="s3d flickr">
-								Like
-								<span class="icons flickr"></span>
-							</a>
-							</div>
-						</div>
-					</li>
-					
 				</ul>
-			</div>	
+			</div>
+        </div>
+        <div class="footer">
+            <table class="links">
+                <tr>
+                    <td><a href="#">Sitemap</a></td>
+                    <td><a href="#">Terms</a></td>
+                    <td><a href="#">Privacy</a></td>
+                    <td><a href="#">Jobs</a></td>
+                    <td><a href="#">Marketplace</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Forum/Discussion</a></td>
+                    <td><a href="#">Events</a></td>
+                    <td><a href="#">Create Advt.</a></td>
+                    <td><a href="#">Create Pages</a></td>
+                    <td></td>
+            </table>
+            <div class="copyright">
+                <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
             </div>
+          </div>	
 	</body>
 </html>

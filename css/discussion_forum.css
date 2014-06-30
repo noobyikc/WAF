@@ -1,22 +1,33 @@
 @charset "utf-8";
 /* CSS Document */
+.sidepane {
+	position:relative;
+	float:right;
+	top:12.8em;
+	width:22%;
+	border-left:2px solid #CCC;
+	min-height:10em;
+	margin-right:1%;
+	
+}
 .heading1 {
 	position:relative;
-	top:4em;
-	padding-left:5%;
+	float:left;
+	top:5em;
+	padding-left:4%;
 }
 
 .heading1 > h1 {
-	font-size:60px;
+	font-size:70px;
 }
 
 #sort-options {
-	width: 70%;
+	width: 75%;
 	height:1.8em;
 	clear: both;
 	float: left;
 	/*background-color: #555;*/
-	margin: 1em;
+	margin-left: 1em;
 	border-radius: 2px;
 }
 
@@ -47,7 +58,7 @@
     list-style:none;
 }
 .tab-links li.active {
-	border-bottom:2px solid #F001;
+	border-bottom: 2px solid #F00;
 }
 .tab-links li:hover {
 	border-bottom:2px solid #009;
@@ -79,20 +90,21 @@
 }
 
 .cbp_tmtimeline > li{
-	max-height:9em;
+	min-height:9em;
 }
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
+	content:' ';
 	width: 60px;
 	height: 60px;
 	position:relative;
-	line-height: 40px;
+	line-height: 20px;
 	background: #46a4da;
 	border-radius: 10%;
 	box-shadow: 0 0 0 5px #afdcf8;
 	text-align: center;
 	left: 0%;
-	top: 2em;
+	top: 0.2em;
 	margin: 0 0 0 -1.8em;
 }
 
@@ -101,9 +113,9 @@
 	margin: 0 0 0 5%;
 	background: #3594cb;
 	color: #fff;
-	padding: 1em;
+	padding: 0.5em;
 	font-size: 15px;
-	line-height: 1.4;
+	line-height: 1.4em;
 	position: relative;
 	border-radius: 5px;
 	left:0.5em;
@@ -112,11 +124,10 @@
 	margin: 0 0 0 5%;
 	background: #3594cb;
 	color: #fff;
-	padding: 1em;
-	font-size: 15px;
-	line-height: 1.4;
+	padding: 0.5em;
+	font-size: 14px;
+	line-height: 1.4em;
 	position: relative;
-	top:-4em;
 	left:0.5em;
 	border-radius: 5px;
 }
@@ -139,7 +150,7 @@
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel p{
-	font-size:25px;
+	font-size:15px;
 }
 
 /* The triangle */
@@ -160,11 +171,10 @@
 
 }
 
-
 @media screen and (max-width: 65.375em) {
 
 	.cbp_tmtimeline > li .cbp_tmtime span:last-child {
-		font-size: 1.5em;
+		font-size: 18px;
 	}
 }
 
@@ -186,8 +196,7 @@
 	.cbp_tmtimeline > li .cbp_tmlabel {
 		margin: 0 0 30px 0;
 		padding: 1em;
-		font-weight: 400;
-		font-size: 95%;
+		font-size:18px;
 	}
 
 	.cbp_tmtimeline > li .cbp_tmlabel:after {
@@ -209,4 +218,115 @@
 		left: auto;
 		margin: -55px 5px 0 0px;
 	}	
+}
+
+.share {
+	float:right;
+	margin-top:-0.4em;
+	margin-right:-0.4em;
+
+}
+
+.flickr {
+    background: #ea66ac;
+    background: -webkit-gradient(linear, 0 0, 0 0, from(#ea66ac), to(#da3868));
+    background: -moz-linear-gradient(#ea66ac, #da3868);
+    background: linear-gradient(#ea66ac, #da3868);
+    border-top: 1px solid #f3a2cd;
+    color: rgba(74,4,32,1); }
+    
+.flickr:active {
+    background: #da3868;
+    background: -webkit-gradient(linear, 0 0, 0 0, from(#da3868), to(#ea66ac));
+    background: -moz-linear-gradient(#da3868, #ea66ac);
+    background: linear-gradient(#da3868, #ea66ac); }
+
+.like{
+    position: relative;
+	width:100px;
+	height: 30px;
+    margin: 0 10px 0;
+    padding: 5px;
+	float: right;
+	text-align:center;
+	text-decoration: none;
+	color:#000;    
+    -webkit-border-radius:3px;
+       -moz-border-radius:3px;
+            border-radius:3px;            
+    -webkit-box-shadow:0 4px 5px rgba(0,0,0,.3);
+       -moz-box-shadow:0 4px 5px rgba(0,0,0,.3);
+            box-shadow:0 4px 5px rgba(0,0,0,.3);          
+    display: inline-block !important;
+	cursor:pointer;
+}
+
+.dislike{
+    position: relative;
+	width:100px;
+	height: 30px;
+    padding: 5px;
+	float: right;
+	text-align:center;
+	text-decoration: none;
+	color:#000;    
+    -webkit-border-radius:3px;
+       -moz-border-radius:3px;
+            border-radius:3px;            
+    -webkit-box-shadow:0 4px 5px rgba(0,0,0,.3);
+       -moz-box-shadow:0 4px 5px rgba(0,0,0,.3);
+            box-shadow:0 4px 5px rgba(0,0,0,.3);          
+    display: inline-block !important;
+	cursor:pointer;
+}
+
+/* Footer CSS*/
+.footer{
+	position:relative;
+	bottom:0;
+  	height: 8em;
+	padding-top:2em;
+	width: 100%;
+  	background: #000000;
+  	color: #333333;
+  	transition: all 0.2s ease-out;
+}
+
+.links {
+	width:65%;
+	position:relative;
+	left:35%;	
+}
+
+.links > tbody > tr > td{
+	width:20%;
+}
+/*
+.links > td > a {
+		text-align:center;
+}*/
+
+.copyright {
+	position:relative;
+	top:1em;
+	bottom:0;
+	left:10%;
+	width:40%;
+	text-align:left;
+}
+
+.copyright > p {
+	font-size:16px;
+	padding-left:2em;
+}
+
+
+.footer > ul > a {
+	color:#333333;
+}
+
+
+.footer:hover{
+  color: #ffffff;
+  text-decoration:none;
 }

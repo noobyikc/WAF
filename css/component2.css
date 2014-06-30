@@ -1,36 +1,4 @@
-div.share{
-	
-	float:right;
-	height:30px;
-	width:130px;
 
-}
-div.like{
-	width:100px;
-	height:30px;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-left:0px;
-	padding: 0px;
-	float: right;
-	//text-align:center;
-		color:#FF0000;
-		/* gradients */
-	background: -webkit-gradient(linear, left top, left bottom, 
-	color-stop(0%,  white), color-stop(15%,#F8F8F8 ), color-stop(100%, #D7E9F5)); 
-	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
-
-	/* outer shadows  (note the rgba is red, green, blue, alpha) */
-	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
-	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
-
-	/* rounded corners */
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 7px; 
-	border-radius: 7px;
-
-}
 div.count{
 	width:30px;
 	height:30px;
@@ -44,50 +12,6 @@ div.count{
 	
 }
 
-div.dislike{
-	width:100px;
-	height:30px;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-left:10px;
-	padding: 0px;
-	float: right;
-	}
-a.s3d  {
-    clear: both;
-    
-    -webkit-border-radius:3px;
-       -moz-border-radius:3px;
-            border-radius:3px;
-            
-    -webkit-box-shadow:0 4px 5px rgba(0,0,0,.3);
-       -moz-box-shadow:0 4px 5px rgba(0,0,0,.3);
-            box-shadow:0 4px 5px rgba(0,0,0,.3);
-            
-    display: inline-block !important;
-    font: 700 13px/36px 'Arial', Helvetica, Clean, sans-serif;
-    height: 30px;
-    margin: 0 0 10px;
-    padding: 0 10px 11px;
-    position: relative;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(255,255,255,.35);
-    width: 100px; }
-
-a.flickr {
-    background: #ea66ac;
-    background: -webkit-gradient(linear, 0 0, 0 0, from(#ea66ac), to(#da3868));
-    background: -moz-linear-gradient(#ea66ac, #da3868);
-    background: linear-gradient(#ea66ac, #da3868);
-    border-top: 1px solid #f3a2cd;
-    color: rgba(74,4,32,1); }
-    
-a.flickr:active {
-    background: #da3868;
-    background: -webkit-gradient(linear, 0 0, 0 0, from(#da3868), to(#ea66ac));
-    background: -moz-linear-gradient(#da3868, #ea66ac);
-    background: linear-gradient(#da3868, #ea66ac); }
 
 .icons {
     background:  url("/WAF/image/help.png")  no-repeat;
