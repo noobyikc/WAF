@@ -84,9 +84,6 @@
 			<script>
                 new UISearch( document.getElementById( 'sb-search' ) );
             </script>
-        <!--=============================================Side Pane============================================= --> 
-        <div class="sidepane">
-        </div>
         <!--=============================================Discussions============================================= --> 
         
         <div class="heading1">
@@ -188,26 +185,10 @@
 				</ul>
 			</div>
         </div>
-        <div class="footer">
-            <table class="links">
-                <tr>
-                    <td><a href="#">Sitemap</a></td>
-                    <td><a href="#">Terms</a></td>
-                    <td><a href="#">Privacy</a></td>
-                    <td><a href="#">Jobs</a></td>
-                    <td><a href="#">Marketplace</a></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Forum/Discussion</a></td>
-                    <td><a href="#">Events</a></td>
-                    <td><a href="#">Create Advt.</a></td>
-                    <td><a href="#">Create Pages</a></td>
-                    <td></td>
-            </table>
-            <div class="copyright">
-                <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
-            </div>
-          </div>	
+        <!--=============================================Side Pane============================================= --> 
+        <div class="sidepane">
+        <!--=============================================Post New Discussion============================================= -->
+        	<a href="#" class="new_discussion">Post a discussion !!</a> 
+        </div>
 	</body>
 </html>

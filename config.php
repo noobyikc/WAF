@@ -1,7 +1,7 @@
 <?Php
 /////// Update your database login details here /////
 $dbhost_name = 'localhost'; // Your host name 
-$database = "disscuss";       // Your database name
+$database = "worldauto";       // Your database name
 $username = 'root';            // Your login userid 
 $password = '';            // Your password 
 //////// End of database details of your server //////

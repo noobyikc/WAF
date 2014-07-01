@@ -2,13 +2,12 @@
 /* CSS Document */
 .sidepane {
 	position:relative;
+	display:block;
 	float:right;
-	top:12.8em;
+	top:-2em;
 	width:22%;
-	border-left:2px solid #CCC;
-	min-height:10em;
+	min-height:20em;
 	margin-right:1%;
-	
 }
 .heading1 {
 	position:relative;
@@ -22,13 +21,14 @@
 }
 
 #sort-options {
+	position:relative;
+	top:1.2em;
 	width: 75%;
-	height:1.8em;
+	height:2em;
 	clear: both;
 	float: left;
 	/*background-color: #555;*/
 	margin-left: 1em;
-	border-radius: 2px;
 }
 
 
@@ -66,12 +66,33 @@
 
 /* Discussions Main content*/
 .holder1 {
-	width: 99%;
-	margin-top:1em;
+	width: 100%;
+	padding-top:2em;
+	border-right:3px solid #E9E9E9;
+}
+
+.new_discussion{
+	position:relative;	
+	display:inline;
+	font-size:25px;
+	float:right;
+	color:#000;
+	width:100%;
+	min-height:1.8em;
+	text-align:center;
+	padding:1%;
+	background:#F00;
+	box-shadow:1px 2px 8px #666;
+}
+
+.new_discussion:hover{
+	text-decoration:none;
+	box-shadow: 0px 1px 1px #666;
 }
 
 .cbp_tmtimeline {
 	margin-left:2em;
+	margin-right:1em;
 	padding: 0;
 	list-style: none;
 	position: relative;
@@ -123,7 +144,7 @@
 .cbp_tmtimeline > li:first-child .cbp_tmlabel {
 	margin: 0 0 0 5%;
 	background: #3594cb;
-	color: #fff;
+	color: #FFF;
 	padding: 0.5em;
 	font-size: 14px;
 	line-height: 1.4em;
@@ -133,7 +154,8 @@
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-	background: #6cbfee;
+	background: #676767;
+	color:#FFF;
 	font-size:15px;
 	position:relative;
 	top:-4em;
@@ -278,55 +300,4 @@
             box-shadow:0 4px 5px rgba(0,0,0,.3);          
     display: inline-block !important;
 	cursor:pointer;
-}
-
-/* Footer CSS*/
-.footer{
-	position:relative;
-	bottom:0;
-  	height: 8em;
-	padding-top:2em;
-	width: 100%;
-  	background: #000000;
-  	color: #333333;
-  	transition: all 0.2s ease-out;
-}
-
-.links {
-	width:65%;
-	position:relative;
-	left:35%;	
-}
-
-.links > tbody > tr > td{
-	width:20%;
-}
-/*
-.links > td > a {
-		text-align:center;
-}*/
-
-.copyright {
-	position:relative;
-	top:1em;
-	bottom:0;
-	left:10%;
-	width:40%;
-	text-align:left;
-}
-
-.copyright > p {
-	font-size:16px;
-	padding-left:2em;
-}
-
-
-.footer > ul > a {
-	color:#333333;
-}
-
-
-.footer:hover{
-  color: #ffffff;
-  text-decoration:none;
 }
