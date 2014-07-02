@@ -92,11 +92,13 @@
         <div id="sort-options">
             <div class="tabs">
                 <ul class="tab-links">
-                    <li class="active" id="#tab1">New</li>
-                    <li id="#tab2">Top</li>
-                    <li id="#tab3">Rising</li>
-                    <li id="#tab4">Promoted</li>
-                    <li id="#tab5">F.A.Q</li>
+                    <a href="#"><li class="active" id="#tab1">New</li></a>
+                    <a href="#"><li id="#tab2">Top</li></a>
+                    <a href="#"><li id="#tab3">Rising</li></a>
+                    <a href="#"><li id="#tab4">Promoted</li></a>
+                    <a href="#"><li id="#tab5">F.A.Q</li></a>
+                    <a href="#"><li id="#tab6">Categories</li></a>
+                    <a href="#"><li id="#tab7" style="float:right">Post a Discussion !!</li></a>
                 </ul>
             </div>
          	<div class="holder1">
@@ -187,8 +189,9 @@
         </div>
         <!--=============================================Side Pane============================================= --> 
         <div class="sidepane">
-        <!--=============================================Post New Discussion============================================= -->
-        	<a href="#" class="new_discussion">Post a discussion !!</a> 
+        <!--=============================================Advertisements============================================= -->
+        	<a href="#" class="advt1">Find me the best price of Mercedes v2 diesel engine</a> 
+            <a href="#" class="advt2">Grab the summer sale car and bike horns from Bosch</a>  
         </div>
 	</body>
 </html>
