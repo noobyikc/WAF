@@ -1,60 +1,82 @@
 @charset "utf-8";
 /* CSS Document */
+
+.contentpane1{
+	position:relative;
+	width:90%;
+	margin:auto;
+	top:8.5em;
+	height:16.2em;
+}
+.contentpane2{
+	position:relative;
+	width:90%;
+	margin:auto;
+	min-height:20em;
+	top:8.5em;
+/*	border:1px solid #000;
+*/}
 #tabs {
 	position:relative;
 	top:90px;
 }
 
-#friends {
-	position:relative;
-	width:24%;
-	bottom:288px;
-	float:left;
-	left:20px;
-
-}
-
 #pic_sign {
 	position:relative;
-	width:24%;
-	float:left;
-	top:100px;
-	margin-left:20px;
+	width:13.5em;
+	display:inline-block;
 }
 
 #pic {
-	height:356px;
+	height:16em;
 }
 
 
-#profile1 {
+#personal {
 	position:relative;
-	width:70%;
-	height:350px;
-	top:100px;
-	float:right;
-	margin-right:20px;
-	margin-bottom:20px;
+	width:60%;
+	height:16.15em;
+	margin-left:-0.3em;
+	display:inline-block;
 }
-
-#profile {
+#discussions{
 	position:relative;
-	width:70%;
-	height:450px;
-	top:100px;
+	width:15.5%;
+	height:17em;
+	display:inline-block;
+}
+#education {
+	position:relative;
+	width:60%;
+	height:17em;
+	display:inline-block;
+	margin-left:-0.2em;
+
+}
+
+#name{
+	position:relative;
+	float:left;
+}
+#post {
+	font-size:17px;
+	color:#009;
+	padding-top:0.8em;
+	position:relative;
 	float:right;
-	margin-right:20px;
-	margin-bottom:20px;
 }
 
-#profile_box {
-	height:300px;
-}
-
-#label {
+.label {
+	color:#666;
+	font-size:16px;
+	padding:2em;
 	position: relative;
-	width:130px;
-	padding: 10px 5px 10px 20px;
+	line-height:2em;
+	display:inline;
+}
+.label-ans{
+	display:inline;
+	font-size:18px;
 }
 
 #label2 {
