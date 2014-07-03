@@ -110,14 +110,14 @@
 ?>
 		   
 <!-----slider script--->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
     <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
     <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
     <script type="text/javascript" src="js/jssor.core.js"></script>
     <script type="text/javascript" src="js/jssor.utils.js"></script>
     <script type="text/javascript" src="js/jssor.slider.js"></script>
     <script>
-        jQuery(document).ready(function ($) {
+        jssor_slider1_starter = function (containerId) {
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
@@ -138,7 +138,7 @@
                 $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
             };
 
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
 
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizes
@@ -161,7 +161,7 @@
             //    $(window).bind("orientationchange", ScaleSlider);
             //}
             //responsive code end
-        });
+        };
     </script>
 <!----slider--->
 
@@ -505,18 +505,28 @@
     </div>
 	<!--=============================================Logo Scroller Content============================================= -->
     <div class="content10">
-            	<div class="details10">
+            	<div class="details10" style="margin-left:150px">
                 	<h1>People from these countries are here. Are you?</h1>
                 </div>
                 
                 <!--  INSERT SCROLLER HERE-->
                 <!-- Jssor Slider Begin -->
     <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 20px; left: 0px; width: 980px; height: 100px; overflow: hidden; ">
+    <div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 980px; height: 100px; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
 
 
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 20px; top: 0px; width: 980px; height: 100px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 100px; overflow: hidden;">
             <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
                 <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
                 <li><img class="img_thumb thumb" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
@@ -550,7 +560,9 @@
 				<li><img class="img_thumb thumb" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
                 <li><img class="img_thumb thumb" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
         </div>
-        
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
     </div>
 
     </div>
