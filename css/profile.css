@@ -1,21 +1,56 @@
 @charset "utf-8";
 /* CSS Document */
 
-.contentpane1{
+.contentpane12 {
 	position:relative;
-	width:90%;
-	margin:auto;
-	top:8.5em;
+	width:70%;
+	margin-left:3%;
+	margin-bottom:1%;
+	top:8em;
+	box-shadow:2px 2px 2px #333;
+}
+
+.contentpane1 {
+	position:relative;
 	height:16.2em;
 }
-.contentpane2{
+
+.contentpane2 {
 	position:relative;
-	width:90%;
-	margin:auto;
-	min-height:20em;
+	height:17em;
+}
+
+.contentpane3 {
+	position:relative;
+	float:right;
+	top:8em;
+	width:23%;
+	height:33.3em;
+	margin-right:2.8%;
+	box-shadow:2px 2px 2px #333;
+
+}
+
+.contentpane4 {
+	position:relative;
+	width:70%;
+	margin-left:3%;
+	margin-bottom:3%;
+	min-height:8em;
 	top:8.5em;
-/*	border:1px solid #000;
-*/}
+	box-shadow:2px 2px 2px #333;
+}
+
+.contentpane5 {
+	position:relative;
+	width:70%;
+	margin-left:3%;
+	margin-bottom:3%;
+	min-height:8em;
+	top:8.5em;
+	box-shadow:2px 2px 2px #333;
+}
+
 #tabs {
 	position:relative;
 	top:90px;
@@ -28,29 +63,35 @@
 }
 
 #pic {
-	height:16em;
+	height:29.6em;
 }
 
 
 #personal {
 	position:relative;
-	width:60%;
-	height:16.15em;
+	width:80%;
+	top:-13.5em;
+	height:16.25em;
 	margin-left:-0.3em;
 	display:inline-block;
 }
 #discussions{
 	position:relative;
-	width:15.5%;
+	width:20%;
 	height:17em;
 	display:inline-block;
 }
+.number {
+	font-size:20px;
+	min-height:3.5em;
+}
 #education {
 	position:relative;
-	width:60%;
+	top:-8.55em;
+	width:80%;
 	height:17em;
 	display:inline-block;
-	margin-left:-0.2em;
+	margin-left:-0.3em;
 
 }
 

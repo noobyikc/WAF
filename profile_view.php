@@ -30,7 +30,7 @@ $url = "image/bg2.jpg";
                 width:100%;
                 height:100%;
 /*                background-image:url('<?php echo $url ?>');*/
-background:#CCC;
+				background:#E3E2FE;
                 background-repeat: no-repeat;
                 background-position:top;
 				z-index:-1;
@@ -93,133 +93,144 @@ background:#CCC;
 	    <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
-	<!--=============================================ContentPane============================================= --> 
-		<div class="contentpane1">
-       		<!--=============================================Profile-Pic============================================= --> 
-            <div class="panel panel-default" id="pic_sign">
-                <div id="pic">
-                    <a href="#" class="thumbnail" onclick="">
-                    	<img src="image/unnamed.png" />
-                    </a>
+	<!--============================================= ContentPane - 3 ============================================= --> 
+        <div class="contentpane3">
+            <div class="panel panel-default" id="friends">
+                <div class="panel-heading">Connections</div>
+                <div class="panel-body" id="pic">
+                <!--<div class="btn-group" id="button3">
+                <button type="button" class="btn btn-primary">View All</button>
+                </div>-->
                 </div>
-            </div> 
-           	<!--=============================================Personal-Details============================================= --> 
-	   		<div class="panel panel-default" id="personal">
-	    		<div class="panel-heading">
-					<div id="name"><?php echo "Inshu Kumar Chugh";?></div>
-                    <div id="post"><?php echo "Director at Chutiyaapa Unlimited";?></div>
+            </div>
+        </div>
+    <!--============================================= ContentPane - 1 ============================================= --> 
+		<div class="contentpane12">
+            <div class="contentpane1">
+                <!--=============================================Profile-Pic============================================= --> 
+                <div class="panel panel-default" id="pic_sign">
+                    <div id="pic">
+                        <a href="#" class="thumbnail" onclick="">
+                            <img src="image/unnamed.png" />
+                        </a>
+                    </div>
+                </div> 
+                <!--=============================================Personal-Details============================================= --> 
+                <div class="panel panel-default" id="personal">
+                    <div class="panel-heading">
+                        <div id="name"><?php echo "Inshu Kumar Chugh";?></div>
+                        <div id="post"><?php echo "Director Sales Department at Bosch";?></div>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <tr>
+                                <td><div class="label">Born on</div></td>
+                                <td><div class="label-ans"><?php echo "13th, July, 1993";?> </div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="label">Gender</div></td>
+                                <td><div class="label-ans"><?php echo " Male"; ?></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="label">Nationality</div></td>
+                                <td><div class="label-ans"><?php echo "India"; ?></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="label">Contact Info</div></td>
+                                <td><div class="label-ans"><?php echo "9999-999-999"; ?></div></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-		    	<div class="panel-body">
+           </div>
+		<!--============================================= ContentPane - 2 ============================================= --> 
+	    	<div class="contentpane2">
+                <div class="panel panel-default" id="discussions">
+                <div class="panel-heading">
+                	Discussions
+                </div>
+                <div class="number">
+                </div>
+                <div class="panel-heading">
+                	Comments
+                </div>
+                <div class="number">
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="education">
+	            <div class="panel-heading">Education and Current Affairs </div>
+            	<div class="panel-body" id="profile_box">
                     <table>
-                        <tr>
-                            <td><div class="label">Born on</div></td>
-                            <td><div class="label-ans"><?php echo "13th, July, 1993";?> </div></td>
+                        <tr> 
+                            <td><div class="label">Degree </div></td>
+                            <td><div class="label-ans"><?php echo "B-tech Graduate, Batch of 2011-15";?> </div></td>                       
                         </tr>
-                        <tr>
-                            <td><div class="label">Gender</div></td>
-                            <td><div class="label-ans"><?php echo " Male"; ?></div></td>
+                        <tr> 
+                            <td></td>
+                            <td><div class="label-ans"><?php echo "IIITD, Delhi ";?> </div></td>
                         </tr>
-                        <tr>
-                        	<td><div class="label">Nationality</div></td>
-                            <td><div class="label-ans"><?php echo "India"; ?></div></td>
+                        <tr> 
+                            <td><div class="label">Job status</div></td>
+                            <td><div class="label-ans"><?php echo "Employed";?></div></td>                   
                         </tr>
-                        <tr>
-                        	<td><div class="label">Contact Info</div></td>
-                            <td><div class="label-ans"><?php echo "9999-999-999"; ?></div></td>
+                        <tr> 
+                            <td><div class="label">Email-Id</div></td>
+                            <td><div class="label-ans"><?php echo "inshu@bosch.com";?></div></td>
                         </tr>
                     </table>
                 </div>
             </div>
-       </div>
-       <div class="contentpane2">
-            <div class="panel panel-default" id="discussions">
-            	<div class="panel-heading">
-                	Discussions
-                </div>
-                <div class="panel-body" id="pic">
+        </div>
+   	</div>
 
-                </div>
-            </div>
-            <div class="panel panel-default" id="education">
-	            <div class="panel-heading">Education and Current Affairs </div>
-            	<div class="panel-body" id="profile_box">
-    			<table>
-                    <tr> 
-                        <td id="label">What did you study? : </td>
-                        <td><input type="text" name="degree" value="" /></td>
+	<!--============================================= ContentPane - 4 ============================================= --> 
+        <div class="contentpane4">
+            <div class="panel panel-default" id="profile">
+           		<div class="panel-heading">Experience </div>
+	            <div class="panel-body" id="profile_box">
+                    <table>
+                        <tr> 
+                            <td id="label">What did you study? : </td>
+                            <td><input type="text" name="degree" value="" /></td>
+                            
+                        </tr>
                         
-                    </tr>
-                
-                <tr> 
-                    <td id="label">Where did you study? : </td>
-                    <td><input type="text" name="location" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Company : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Location : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Number(Office) : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Email-id: </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                
-      </table>
-                
-    </div>
-    </div>
-    <div class="panel panel-default" id="profile">
-      <div class="panel-heading">Work Experience </div>
-      <div class="panel-body" id="profile_box">
-      <table>
-                <tr> 
-                    <td id="label">What did you study? : </td>
-                    <td><input type="text" name="degree" value="" /></td>
-                    
-                </tr>
-                
-                <tr> 
-                    <td id="label">Where did you study? : </td>
-                    <td><input type="text" name="location" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Company : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Location : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Number(Office) : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Contact Email-id: </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                
-      </table>
-	</div>                 
-    </div>
-    
+                        <tr> 
+                            <td id="label">Where did you study? : </td>
+                            <td><input type="text" name="location" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Company : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Location : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Contact Number(Office) : </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+                        <tr> 
+                            <td id="label">Contact Email-id: </td>
+                            <td><input type="text" name="name" value="" /></td>
+                            
+                        </tr>
+		        	</table>
+				</div>                 
+			</div>
+		</div>
+    <!--============================================= ContentPane - 5 ============================================= --> 
+        <div class="contentpane5">
+             <div class="panel panel-default" id="activity">
+             	<div class="panel-heading">Activity</div>
+             </div>
+        </div>
     
     
    
@@ -227,23 +238,16 @@ background:#CCC;
     
     
     
-    <div class="panel panel-default" id="friends">
-                                  <div class="panel-heading">Connections</div>
-                                          <div class="panel-body" id="pic">
-                                          <!--<div class="btn-group" id="button3">
-                                 			 <button type="button" class="btn btn-primary">View All</button>
-                            				</div>-->
-                                  </div>
-     </div>
+
                         	
                                 
 
     
-    <div class="btn-group" id="button4" >  
+    <!--<div class="btn-group" id="button4" >  
       <button type="button" class="btn btn-primary">View as friend</button>
       <button type="button" class="btn btn-primary">View as from public</button>
       <button type="button" class="btn btn-primary">Edit</button>
-    </div>
+    </div>-->
 
 
 <!--=============================================Footer============================================= -->
