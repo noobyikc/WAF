@@ -2,10 +2,10 @@
 /* CSS Document */
 /* Footer CSS*/
 .footer{
-	position:static;
+	position:relative;
 	bottom:0;
-  	height: 8em;
-	padding-top:2em;
+  	height: 8.6em;
+	padding-top:2.4em;
 	width: 100%;
   	background: #000000;
   	color: #333333;

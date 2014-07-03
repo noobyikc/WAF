@@ -15,6 +15,7 @@ $url = "image/bg2.jpg";
             <link rel="stylesheet" type="text/css" href="css/profile.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/index.css" />
+            <link rel="stylesheet" type="text/css" href="css/footer.css"  />
 
             <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
@@ -93,14 +94,39 @@ $url = "image/bg2.jpg";
 	    <script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
+    <!--=============================================  ============================================= -->     
 	<!--============================================= ContentPane - 3 ============================================= --> 
         <div class="contentpane3">
             <div class="panel panel-default" id="friends">
                 <div class="panel-heading">Connections</div>
-                <div class="panel-body" id="pic">
+                <div class="panel-body">
+                	<table>
+                    	<tr>
+                        	<td style="height:3em;"><div class="label"><?php echo "Friend1" ;?></div></td>
+                            <td><div class="friend-pic"></div></td>
+                        </tr>
+                        <tr>
+                        	<td><div class="friend-pic"></div></td>
+                        	<td style="height:4em;"><div class="label"><?php echo "Friend2" ;?></div></td>                            
+                        </tr>
+                        <tr>
+                        	<td style="height:4em;"><div class="label"><?php echo "Friend3" ;?></div></td>                        
+                        	<td><div class="friend-pic"></div></td>
+                        </tr>
+                        <tr>
+                        	<td ><div class="friend-pic"></div></td>
+                        	<td style="height:4em;"><div class="label"><?php echo "Friend4" ;?></div></td>                            
+                        </tr>
+                        <tr>
+                        	<td style="height:4em;"><div class="label">And many more ...</div></td>
+                            <td></td>
+                        </tr>
+                    </table>
+					<div class="btn-success" id="button1">View All</div>                          
                 <!--<div class="btn-group" id="button3">
                 <button type="button" class="btn btn-primary">View All</button>
                 </div>-->
+                
                 </div>
             </div>
         </div>
@@ -110,8 +136,7 @@ $url = "image/bg2.jpg";
                 <!--=============================================Profile-Pic============================================= --> 
                 <div class="panel panel-default" id="pic_sign">
                     <div id="pic">
-                        <a href="#" class="thumbnail" onclick="">
-                            <img src="image/unnamed.png" />
+                        <a class="thumbnail"><img src="image/unnamed.png" />
                         </a>
                     </div>
                 </div> 
@@ -190,37 +215,18 @@ $url = "image/bg2.jpg";
            		<div class="panel-heading">Experience </div>
 	            <div class="panel-body" id="profile_box">
                     <table>
+                    	<?php //while loop here ?>
                         <tr> 
-                            <td id="label">What did you study? : </td>
-                            <td><input type="text" name="degree" value="" /></td>
-                            
-                        </tr>
-                        
-                        <tr> 
-                            <td id="label">Where did you study? : </td>
-                            <td><input type="text" name="location" value="" /></td>
-                            
+                            <td><div class="label"><?php echo "Manager";?></div></td>
                         </tr>
                         <tr> 
-                            <td id="label">Company : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
+                            <td><div class="label"><?php echo " Zoomjax Pvt Ltd.";?></div></td>                            
+                            <td><div class="label"><?php echo "(2010 - 2013)";?></div></td>
                         </tr>
                         <tr> 
-                            <td id="label">Location : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
+                            <td colspan="2" style="padding-left:1.8em"><div class="" style="text-align:justify"><?php echo "Zoomjax is the fastest platform for generating targeted ad impressions. At Zoomjax, Iâm responsible for building products that are thoughtfully designed, scalable, and easy to use for media buyers and affiliate network managers. I manage a 20-person product team of software engineers and web developers who work hard to make sure your ads consistently find your target demographic with quicksilver efficiency. If you're an engineer looking for a challenge, drop us a line. We'd love to hear from you! ";?></div></td>                            
                         </tr>
-                        <tr> 
-                            <td id="label">Contact Number(Office) : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
-                        <tr> 
-                            <td id="label">Contact Email-id: </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
+                        <?php //while loop close here ?>
 		        	</table>
 				</div>                 
 			</div>
@@ -228,7 +234,10 @@ $url = "image/bg2.jpg";
     <!--============================================= ContentPane - 5 ============================================= --> 
         <div class="contentpane5">
              <div class="panel panel-default" id="activity">
-             	<div class="panel-heading">Activity</div>
+             	<div class="panel-heading">Recent Activity</div>
+                <div class="panel-body">
+                
+                </div>
              </div>
         </div>
     
@@ -253,7 +262,7 @@ $url = "image/bg2.jpg";
 <!--=============================================Footer============================================= -->
     
 
-<!--    <div class="footer">
+    <div class="footer">
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>
@@ -272,9 +281,9 @@ $url = "image/bg2.jpg";
         	</tr>
         </table>
         <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+            <p>(c) 2014 World Auto Forum inc. , all rights reserved</p>
         </div>
-      </div>-->
+      </div>
  
 </body>
 </html>	
