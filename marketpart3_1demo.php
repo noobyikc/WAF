@@ -825,7 +825,7 @@
 						</script>
 						<!--=============================================BUTTONS============================================= --> 
 						<br>
-						<div class="content clearfix_side">
+						<div class="clearfix_side" style="margin-left:100px;margin-bottom:50px;">
 							<div class="block block-40 clearfix_side">
 								<p><a href="#" id="trigger" class="menu-trigger">CATEGORIES</a></p>
 							</div>
