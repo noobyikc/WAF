@@ -1,9 +1,3 @@
-<?php
-
-$url = "image/bg2.jpg";
-?>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,12 +9,7 @@ $url = "image/bg2.jpg";
             <link rel="stylesheet" type="text/css" href="css/profile.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/index.css" />
-            <script type="text/javascript" src="js/bootstrap.js"></script>
-            <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-            <script src="js/modernizr.custom.js"></script>
-         	<script src="js/classie.js"></script>
-			<script src="js/uisearch.js"></script>
-            <script src="tagcanvas.min.js" type="text/javascript"></script>
+			<link rel="stylesheet" type="text/css" href="css/footer.css" />
 
         <!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -32,8 +21,9 @@ $url = "image/bg2.jpg";
             <script src="js/modernizr.custom.js"></script>
             <script src="js/classie.js"></script>
             <script src="js/uisearch.js"></script>
+            <script src="js/add-del-rows.js"></script>
 
-
+<?php $url = 'image/bg2.jpg';?>
 <!-----Background Image---->
 <style type="text/css">
 #back1
@@ -83,7 +73,7 @@ $url = "image/bg2.jpg";
 <?php
 	 include('includes/connection.php');
 	 include('includes/variables.php');
-     
+	 $url = "image/bg2.jpg";
 ?>
 
 <?php
@@ -166,78 +156,118 @@ $url = "image/bg2.jpg";
     </script>
 	<!--============================================= ContentPane - 1 ============================================= --> 
 		<div class="contentpane12">
-            <div class="contentpane1">
-                <!--=============================================Profile-Pic============================================= --> 
-                <div class="panel panel-default" id="pic_sign">
-                    <div id="pic">
-                        <a class="thumbnail"><img src="image/unnamed.png" />
-                        </a>
-                    </div>
-                </div> 
+            <div class="contentpane1"> 
                 <!--=============================================Personal-Details============================================= --> 
                 <div class="panel panel-default" id="personal">
-                    <div class="panel-heading">
-                        <div id="name"><?php echo "Inshu Kumar Chugh";?></div>
-                        <div id="post"><?php echo "Director Sales Department at Bosch";?></div>
-                    </div>
+                    <div class="panel-heading">About</div>
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td><div class="label">Born on</div></td>
-                                <td><div class="label-ans"><?php echo "13th, July, 1993";?> </div></td>
+					<div id="pic">
+                    
+                    </div>
+                    <div>
+                        <table width="70%">
+                            <tr> 
+                                <td><div class="label">Name</div></td>
+                                <td><input type="text" name="name" value="" style="width:100%"/></td>
+                            </tr>
+                            <tr> 
+                                <td><div class="label">Date of Birth</div></td>
+                                <td><input type="date" name="date" value="" style="width:100%"/></td>
+                            </tr>
+                            <tr> 
+                                <td><div class="label">Country</div></td>
+                                <td>             	
+                                    <?php
+                                        $sql = 'select name from countries';
+                                        $result = mysql_query($sql);
+                                        echo "<select country = 'name' style="."'width:100%'".">";
+                                        while ($row = mysql_fetch_array($result))
+                                        {
+                                            echo "<option value='".$row['name']."'>".$row['name']."</option>";
+                                        }
+                                        echo "</select>";
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td><div class="label">Gender</div></td>
-                                <td><div class="label-ans"><?php echo " Male"; ?></div></td>
+                                <td>
+                                    <select name="gender" style="width:100%">
+                                        <option value="select">--SELECT--</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td><div class="label">Nationality</div></td>
-                                <td><div class="label-ans"><?php echo "India"; ?></div></td>
+                                <td><div class="label">Mobile Number</div></td>
+                                <td><input type="text" name="m_no" style="width:100%"/></td>
                             </tr>
-                            <tr>
-                                <td><div class="label">Contact Info</div></td>
-                                <td><div class="label-ans"><?php echo "9999-999-999"; ?></div></td>
+                             <tr> 
+                                <td><div class="label">Job status</div></td>
+                                <td><input type="text" name="job_status" style="width:100%"/></td>                   
+                            </tr>
+                            <tr> 
+                                <td><div class="label">Email-Id</div></td>
+                                <td><input type="email" name="email-id" style="width:100%"/></td>
                             </tr>
                         </table>
                     </div>
                 </div>
            </div>
-		<!--============================================= ContentPane - 2 ============================================= --> 
-	    	<div class="contentpane2">
-                <div class="panel panel-default" id="discussions">
-                <div class="panel-heading">
-                	Discussions
-                </div>
-                <div class="number">
-                </div>
-                <div class="panel-heading">
-                	Comments
-                </div>
-                <div class="number">
-                </div>
-            </div>
-
+        </div>
+	<!--============================================= ContentPane - 2 ============================================= --> 
+		<div class="contentpane2">
             <div class="panel panel-default" id="education">
 	            <div class="panel-heading">Education and Current Affairs </div>
             	<div class="panel-body" id="profile_box">
-                    <table>
-                        <tr> 
-                            <td><div class="label">Degree </div></td>
-                            <td><div class="label-ans"><?php echo "B-tech Graduate, Batch of 2011-15";?> </div></td>                       
-                        </tr>
-                        <tr> 
+                	<table width="100%">
+                    	<tr>
+                        	<td>
+                                <input type="button"  value="Add More Degrees" onclick="addrow('ED_table')" style="margin-bottom:2em;"/>
+                                <input type="button" value="Delete Row" onclick="delrow('ED_table')" style="margin-bottom:2em;"/>
+                            </td>
                             <td></td>
-                            <td><div class="label-ans"><?php echo "IIITD, Delhi ";?> </div></td>
+                            <td></td>
+                		</tr> 
+						<tr>   
+                        	<td width="30%"><div class="label">Degree</div></td>
+                            <td width="30%"><div class="label">Specialization</div></td>
+                            <td width="40%"><div class="label">Board/University</div></td>
                         </tr>
-                        <tr> 
-                            <td><div class="label">Job status</div></td>
-                            <td><div class="label-ans"><?php echo "Employed";?></div></td>                   
+                        <tr>
+                            <table id="ED_table" width="100%">
+                                <tr>
+                                    <td width="30%"><input class="input-group-lg" type="text" name="c_degree[]" style="width:90%"/></td>
+                                    <td width="30%"><input class="input-group-lg" type="text" name="c_specialization[]" style="width:90%" /></td>
+                                    <td width="40%"><input class="input-group-lg" type="text" name="c_university[]" style="width:90%" /></td>
+                                </tr>
+                            </table>
                         </tr>
-                        <tr> 
-                            <td><div class="label">Email-Id</div></td>
-                            <td><div class="label-ans"><?php echo "inshu@bosch.com";?></div></td>
-                        </tr>
-                    </table>
+                     </table>
+                     <table>
+                        <tr>
+                        	<td>
+    	              			<input type="button"  value="Add More experience" onclick="addrow('EQ_table')" style="margin-top:1em;margin-bottom:2em;"/>
+	    		            	<input type="button" value="Delete Row" onclick="delrow('EQ_table')" style="margin-top:1em;margin-bottom:2em;"/>
+                            </td>
+                            <td></td>
+                            <td></td>
+                		</tr>
+                        <tr>
+                            <td width="30%"><div class="label">Company</div></td>
+                            <td width="30%"><div class="label">Tenure</div></td>
+                            <td width="27%"><div class="label">Location</div></td>
+                        </tr> 
+                        <tr>
+                        	<table id="EQ_table" width="100%">   	
+                                <tr>
+                               		<td width="30%"><input class="input-group-lg" type="text" name="c_company[]" style="width:90%"/></td>
+                                    <td width="30%"><input class="input-group-lg" type="text" name="c_tenure[]" style="width:90%"/></td>
+                                    <td width="40%"><input class="input-group-lg" type="text" name="c_location[]" style="width:90%"/></td>
+                            </table>
+                        </tr>                       
+              </table>
                 </div>
             </div>
         </div>
@@ -266,66 +296,13 @@ $url = "image/bg2.jpg";
 			</div>
 		</div>
     <!--============================================= ContentPane - 5 ============================================= --> 
-        <div class="contentpane5">
-             <div class="panel panel-default" id="activity">
-             	<div class="panel-heading">Recent Activity</div>
-                <div class="panel-body">
-                
-                </div>
-             </div>
-        </div>
-    
-    
-   
-    
-    
-    
-    
-
-                        	
-                                
-
-    
     <!--<div class="btn-group" id="button4" >  
       <button type="button" class="btn btn-primary">View as friend</button>
       <button type="button" class="btn btn-primary">View as from public</button>
       <button type="button" class="btn btn-primary">Edit</button>
     </div>-->
 
-
-<!--=============================================Footer============================================= -->
-    
-
-    <div class="footer">
-		<table class="links">
-        	<tr>
-            	<td><a href="#">Sitemap</a></td>
-                <td><a href="#">Terms</a></td>
-                <td><a href="#">Privacy</a></td>
-                <td><a href="#">Jobs</a></td>
-            	<td><a href="#">Marketplace</a></td>
-                <td></td>
-            </tr>
-            <tr>
-            	<td><a href="#">Forum/Discussion</a></td>
-                <td><a href="#">Events</a></td>
-                <td><a href="#">Create Advt.</a></td>
-                <td><a href="#">Create Pages</a></td>
-                <td></td>
-        	</tr>
-        </table>
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc. , all rights reserved</p>
-        </div>
-      </div>
- 
-</body>
-</html>	
-
-
-
 <!------ MAIN CONTENT BAR ------> 
-<div class="container"> 
 
 <script type="text/javascript">
 												 $(document).ready(function() {
@@ -346,49 +323,7 @@ $url = "image/bg2.jpg";
     <div class="panel panel-default" id="profile1">
       	<div class="panel-heading">Personal Details</div>
       	<div class="panel-body" id="profile_box">
-            <table>
-                <tr> 
-                    <td id="label">Name : </td>
-                    <td><input type="text" name="name" value="" /></td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Date of Birth (MM/DD/YYYY) : </td>
-                    <td><input type="date" name="date" value="" />
-                    
-                    </td>
-                    
-                </tr>
-                <tr> 
-                    <td id="label">Country : </td>
-                    <td><!-- <input type="text" name="nationality" value="" />-->
-                   	
-				          <?php
-
-								$sql = 'select name from countries';
-								$result = mysql_query($sql);
-								echo "<select country = 'name'>";
-								while ($row = mysql_fetch_array($result))
-								{
-									echo "<option value='".$row['name']."'>".$row['name']."</option>";
-									}
-								echo "</select>";
-							?></td>
-                  </tr>
-                  <tr>
-                    <td id="label">Gender : </td>
-                    <td ><select name="gender">
-                        <option value="select">--SELECT--</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                      </select>
-                     </td>
-                  </tr>
-                  <tr>
-                    <td id="label">Mobile Number : </td>
-                    <td><input type="text" name="m_no" /></td>
-                  </tr>
-                </table>
+            
                 <div class="btn-group" id="button2"> 
                   <!-- buttons for general profile -->
                   <form name="profile" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -398,65 +333,7 @@ $url = "image/bg2.jpg";
                 </div>
            </div>
         </div>
-        
-                <div class="panel panel-default" id="pic_sign">
-                    <div class="panel-heading">Photo</div>
-                      <div class="panel-body" id="pic">
-                      <a href="#" class="thumbnail">
-                      <img src="Images/ramukaka5.jpg" />
-                      </a>
-                    </div>
-                    
-                     <div class="btn-group" id="button1">
-                      
-                      <button type="button" class="btn btn-primary">Profile Photo</button>
-                      <button type="button" class="btn btn-primary">Cover Photo</button>
-                    </div>    
-                </div>
-      
-        <div class="panel panel-default" id="profile">
-              <div class="panel-heading">Education and Current Affairs </div>
-              <div class="panel-body" id="profile_box">
-              <table>
-                        <tr> 
-                            <td id="label">What did you study? : </td>
-                            <td><input type="text" name="degree" value="" /></td>
-                        </tr>
-                        
-                        <tr> 
-                            <td id="label">Where did you study? : </td>
-                            <td><input type="text" name="location" value="" /></td>
-                            
-                        </tr>
-                        <tr> 
-                            <td id="label">Company : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
-                        <tr> 
-                            <td id="label">Location : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
-                        <tr> 
-                            <td id="label">Contact Number(Office) : </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
-                        <tr> 
-                            <td id="label">Contact Email-id: </td>
-                            <td><input type="text" name="name" value="" /></td>
-                            
-                        </tr>
-                        
-              </table>
-                <div class="btn-group" id="button2">
-                      <button type="button" class="btn btn-primary">Edit</button>
-                      <button type="button" class="btn btn-primary">Save Changes</button>
-                </div>
-                </div>   
-		
-        </div>
+
             
              
 	          <div class="panel panel-default" id="profile" style="margin-bottom:150px">

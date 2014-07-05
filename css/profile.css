@@ -5,19 +5,19 @@
 	position:relative;
 	width:70%;
 	margin-left:8%;
-	margin-bottom:1%;
+	margin-bottom:2%;
 	top:8em;
 	box-shadow:2px 2px 2px #333;
 }
 
 .contentpane1 {
 	position:relative;
-	height:16.2em;
+	min-height:22.2em;
 }
 
 .contentpane2 {
 	position:relative;
-	height:17em;
+	min-height:19.6em;
 }
 
 .contentpane3 {
@@ -63,17 +63,18 @@
 }
 
 #pic {
-	height:29.6em;
+	float:right;
+	height:16em;
+	width:12em;
+	margin-right:3em;
+	background:#36F;
+	display:inline-block;
 }
 
 
 #personal {
 	position:relative;
-	width:80%;
-	top:-13.5em;
-	height:16.25em;
 	margin-left:-0.3em;
-	display:inline-block;
 }
 #discussions{
 	position:relative;
@@ -91,12 +92,8 @@
 }
 #education {
 	position:relative;
-	top:-8.55em;
-	width:80%;
-	height:17em;
-	display:inline-block;
+	min-height:17em;
 	margin-left:-0.3em;
-
 }
 
 #activity {
