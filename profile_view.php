@@ -12,7 +12,7 @@ $url = "image/bg2.jpg";
 	<title>Profile Page</title>
 		<!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-            <link rel="stylesheet" type="text/css" href="css/profile.css">
+            <link rel="stylesheet" type="text/css" href="css/profile_view.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/index.css" />
             <link rel="stylesheet" type="text/css" href="css/footer.css"  />
@@ -30,8 +30,7 @@ $url = "image/bg2.jpg";
                 position:fixed;
                 width:100%;
                 height:100%;
-/*                background-image:url('<?php echo $url ?>');*/
-				background:#E3E2FE;
+                background-image:url('<?php echo $url ?>');
                 background-repeat: no-repeat;
                 background-position:top;
 				z-index:-1;

@@ -100,92 +100,114 @@
                     <a href="#"><li id="#tab6">Categories</li></a>
                     <a href="#"><li id="#tab7" style="float:right">Post a Discussion !!</li></a>
                 </ul>
+	
+                <div class="tab-content">
+                	<ul class="cbp_tmtimeline active" id="tab1">
+                    	<li>
+                        	<div class="cbp_tmicon">
+                            <!-- Add upvotes downvotes number here this comes from database dynamically-->
+                            </div>
+                            <div class="cbp_tmlabel">
+                            	<div class="share">
+                                    <a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>				
+                                </div>
+                                <h3><a href="#">How do i log in??</a></h3>
+                                <p>I am having problem logging into WAF.So please guide me along and help me login.</p>
+                                <a href="#" class="dislike flickr">DisLike</a>
+                                <a href="#" class="like flickr">Like</a>                           
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="cbp_tmtimeline" id="tab2">
+                   		<li>
+                        	<div class="cbp_tmicon">
+                            </div>
+                            <div class="cbp_tmlabel">
+                                <div class="share">
+                                    <a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
+                                    
+                                </div>
+                                <h3><a href="#">Very Simple</a></h3>
+                                <p>Its simple just Click the login button and enter your details.</p>
+                                <a href="#" class="dislike flickr">DisLike</a>
+                                <a href="#" class="like flickr">Like</a>
+                             </div>
+                        </li> 
+                    </ul>
+					<ul class="cbp_tmtimeline" id="tab3">
+                   		<li>
+                        	<div class="cbp_tmicon">
+                            </div>
+                            <div class="cbp_tmlabel">
+                                <div class="share">
+                                    <a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
+                                    
+                                </div>
+                                <h3><a href="#">Very Simple</a></h3>
+                                <p>Its simple just Click the login button and enter your details.</p>
+                                <a href="#" class="dislike flickr">DisLike</a>
+                                <a href="#" class="like flickr">Like</a>
+                             </div>
+                        </li>
+                    </ul>
+                    <ul class="cbp_tmtimeline" id="tab4">    
+                        <li>
+							<div class="cbp_tmicon">
+	                        </div>
+                            <div class="cbp_tmlabel">
+                                <div class="share">
+                                    <a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
+                                    <a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>								
+                                </div>
+                                <h3><a href="#">SOMETHING</a></h3>
+                                <p>DETAILS which you will tell me about shortly.</p>
+                                <a href="#" class="dislike flickr">DisLike</a>
+                                <a href="#" class="like flickr">Like</a>
+                            </div>
+                        </li>
+					</ul>                 
+                </div>
             </div>
-         	<div class="holder1">
-				<ul class="cbp_tmtimeline">
-					<li>
-						<div class="cbp_tmicon">
-                        	<!-- Add upvotes downvotes number here this comes from database dynamically-->
-                        </div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>				
-							</div>
-                            <h3><a href="#">How do i log in??</a></h3>
-                            <p>I am having problem logging into WAF.So please guide me along and help me login.</p>
-                            <a href="#" class="dislike flickr">DisLike</a>
-                            <a href="#" class="like flickr">Like</a>                           
-                        </div>
-                    </li>
-                    <li>
-						<div class="cbp_tmicon">
-                        </div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-								
-							</div>
-							<h3><a href="#">Very Simple</a></h3>
-							<p>Its simple just Click the login button and enter your details.</p>
-                            <a href="#" class="dislike flickr">DisLike</a>
-                            <a href="#" class="like flickr">Like</a>
-                         </div>
-					</li>
-                    <li>
-						<div class="cbp_tmicon">
-                        </div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>
-							</div>
-							<h3><a href="#">SOMETHING</a></h3>
-							<p>DETAILS about this the owner of this website. fsf</p>
-                            <a href="#" class="dislike flickr">DisLike</a>
-                            <a href="#" class="like flickr">Like</a>
-                        </div>
-					</li>
-                    <li>
-						
-						<div class="cbp_tmicon">
-                        </div>
-						<div class="cbp_tmlabel">
-							<div class="share">
-								<a href="#"><image src="image/logo/facebook-icon.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/gplus.png" style="height:30px;width:30px;"></a>
-								<a href="#"><image src="image/logo/linkedln.png" style="height:30px;width:30px;"></a>								
-							</div>
-							<h3><a href="#">SOMETHING</a></h3>
-							<p>DETAILS which you will tell me about shortly.</p>
-                            <a href="#" class="dislike flickr">DisLike</a>
-                            <a href="#" class="like flickr">Like</a>
-						</div>
-					</li>
-             
-						<!--<textarea placeholder="Write Your Answer" rows="3" name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>-->
-						<!--<SCRIPT language=JavaScript>
-							var textarea = document.querySelector('textarea');
-
-							textarea.addEventListener('keydown', autosize);
-             
-								function autosize(){
-								var el = this;
-								setTimeout(function(){
-								el.style.cssText = 'height:auto; padding:0';
-								// for box-sizing other than "content-box" use:
-								// el.style.cssText = '-moz-box-sizing:content-box';
-								el.style.cssText = 'height:' + el.scrollHeight + 'px';
-								},0);
-							}
-
-						</script>-->
-				</ul>
-			</div>
+            <script type="text/javascript">
+				$(document).ready(function() {
+					$('.tabs .tab-links li').click(function()  {
+						var currentAttrValue = $(this).attr('id');
+						// Show/Hide Tabs
+						$('.tabs ' + currentAttrValue).siblings().slideUp(400);
+						$('.tabs ' + currentAttrValue).delay(400).slideDown(400);
+				 
+						// Change/remove current tab to active
+						$(this).parent('li').addClass('active').siblings().removeClass('active');
+						$(this).addClass('active');
+					});
+					$("#tab1").click(function() {
+					    $("tab1").load("the/page/from/where/it/should/be/updated.php"); 
+					});
+					$("#tab2").click(function() {
+					    $("tab2").load("the/page/from/where/it/should/be/updated.php"); 
+					});
+					$("#tab3").click(function() {
+					    $("tab3").load("the/page/from/where/it/should/be/updated.php"); 
+					});		
+					$("#tab4").click(function() {
+					    $("tab4").load("the/page/from/where/it/should/be/updated.php"); 
+					});			
+					$("#tab5").click(function() {
+					    $("tab5").load("the/page/from/where/it/should/be/updated.php"); 
+					});			
+					$("#tab6").click(function() {
+					    $("tab6").load("the/page/from/where/it/should/be/updated.php"); 
+					});
+				
+				});
+			</script>
         </div>
         <!--=============================================Side Pane============================================= --> 
         <div class="sidepane">
