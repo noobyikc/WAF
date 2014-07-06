@@ -1,0 +1,11 @@
+Project Name : World Auto Forum	
+Project id : waf-2014
+
+javascript origins: http://localhost
+		    http://www.worldautoforum.com
+
+client secret : Wlge1NzC8KPYuoSz4LbHfKku
+
+client id : 141591073286-ftj490gpbmrkjsh6dftbqnk397eumi40.apps.googleusercontent.com
+
+email address : 141591073286-ftj490gpbmrkjsh6dftbqnk397eumi40@developer.gserviceaccount.com

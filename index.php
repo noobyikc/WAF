@@ -364,9 +364,23 @@
                 	Continue With Facebook
                 </div>
 			</div>
-            <div class="btn-g-login">
-            	<div class="title">Continue with Google</div>
-            </div>
+			<script type="text/javascript">
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/client:plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+            </script>
+            <span id="signinButton" class="btn-g-login">
+            <div class="title">Continue with Google</div>
+                <span
+                    data-callback="signinCallback"
+                    data-clientid="CLIENT_ID"
+                    data-cookiepolicy="single_host_origin"
+                    data-requestvisibleactions="http://schema.org/AddAction"
+                    data-scope="https://www.googleapis.com/auth/plus.login">
+                </span>
+            </span>
 		</div>
 		<script type="text/javascript">
 			$("#modal_trigger").leanModal({top : 150, overlay : 0.7, closeButton: ".modal_close" });
