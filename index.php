@@ -113,9 +113,6 @@
 
     <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
     <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
-    <script type="text/javascript" src="js/jssor.core.js"></script>
-    <script type="text/javascript" src="js/jssor.utils.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
     <script>
         jssor_slider1_starter = function (containerId) {
             var options = {
@@ -143,22 +140,23 @@
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizes
             function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 980));
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 980));
                 else
-                    window.setTimeout(ScaleSlider, 30);
+                    $JssorUtils$.$Delay(ScaleSlider, 30);
             }
 
             ScaleSlider();
+            $JssorUtils$.$AddEvent(window, "load", ScaleSlider);
+
 
             if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                $(window).bind('resize', ScaleSlider);
+                $JssorUtils$.$OnWindowResize(window, ScaleSlider);
             }
 
-
             //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-            //    $(window).bind("orientationchange", ScaleSlider);
+            //    $JssorUtils$.$AddEvent(window, "orientationchange", ScaleSlider);
             //}
             //responsive code end
         };
@@ -530,7 +528,9 @@
                 <!--  INSERT SCROLLER HERE-->
                 <!-- Jssor Slider Begin -->
     <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 0px; left: 150px; width: 980px; height: 100px; overflow: hidden; ">
+
+        
+        <div id="slider1_container" style="position: relative; top: 0px; margin-bottom:50px; margin-top:20px; left: 150px; width: 1100px; height: 100px; overflow: hidden; ">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -542,42 +542,91 @@
             </div>
         </div>
 
-
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 100px; overflow: hidden;">
-            <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
-                <li><img class="img_thumb thumb" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
-                <li><img class="img_thumb thumb" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
-                <li><img class="img_thumb thumb" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
-                <li><img class="img_thumb thumb" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
-               	<li><img class="img_thumb thumb" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
-				<li><img class="img_thumb thumb" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
+        <div u="slides" style="cursor: move; position: absolute;  top: 0px; width: 1100px; height: 100px; overflow: hidden;">
+        	<div><img u="image" alt="amazon" src="image/company logos/1.png" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/2.png" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/3.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/4.png" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/5.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/6.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/7.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/8.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/9.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/10.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/11.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/12.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/13.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/14.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/15.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/16.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/17.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/18.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/19.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/20.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/21.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/22.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/23.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/24.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/25.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/26.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/27.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/28.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/29.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/30.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/31.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/32.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/33.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/34.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/35.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/36.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/37.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/38.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/39.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/40.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/41.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/42.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/43.jpg" /></div>
+            
+            
         </div>
+        		
+            	<!----
+                <li><img class="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
+                <li><img class="image" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
+                <li><img class="image" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
+                <li><img class="image" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
+                <li><img class="image" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
+                <li><img class="image" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
+                <li><img class="image" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
+                <li><img class="image" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
+                <li><img class="image" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
+                <li><img class="image" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
+                <li><img class="image" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
+                <li><img class="image" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
+                <li><img class="image" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
+                <li><img class="image" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
+                <li><img class="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
+                <li><img class="image" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
+                <li><img class="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
+                <li><img class="image" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
+                <li><img class="image" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
+                <li><img class="image" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
+                <li><img class="image" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
+                <li><img class="image" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
+                <li><img class="image" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
+                <li><img class="image" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
+                <li><img class="image" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
+                <li><img class="image" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
+                <li><img class="image" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
+                <li><img class="image" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
+               	<li><img class="image" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
+                <li><img class="image" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
+				<li><img class="image" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
+                <li><img class="image" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
+        </div>--->
+        <a style="display: none" href="http://www.jssor.com">html slider</a>
+        <!-- Trigger -->
         <script>
             jssor_slider1_starter('slider1_container');
         </script>
@@ -590,38 +639,38 @@
     	<div id="port">
         	<!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE ->
 	        <ul class="thumbs_index index parallax-layer">
-                <li><img class="img_thumb thumb" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
-                <li><img class="img_thumb thumb" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
-                <li><img class="img_thumb thumb" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
-                <li><img class="img_thumb thumb" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
-                <li><img class="img_thumb thumb" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
-               	<li><img class="img_thumb thumb" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
-				<li><img class="img_thumb thumb" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
-                <li><img class="img_thumb thumb" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
+                <li><img class="image" alt="audi" src="image/logo/New folder/logos/Audi_logo.jpg" /></li>
+                <li><img class="image" alt="goodyear" src="image/logo/New folder/logos/545px-Goodyear_logo.svg.png" /></li>
+                <li><img class="image" alt="siemens" src="image/logo/New folder/logos/181806_316_siemens.jpg" /></li>
+                <li><img class="image" alt="amtek" src="image/logo/New folder/logos/amtek_logo.png" /></li>
+                <li><img class="image" alt="bosch" src="image/logo/New folder/logos/bosch_logo.jpg" /></li>
+                <li><img class="image" alt="bajaj" src="image/logo/New folder/logos/bajaj_logo.jpg" /></li>
+                <li><img class="image" alt="bmw bikes logo" src="image/logo/New folder/logos/bmw bikes_logo.JPG" /></li>
+                <li><img class="image" alt="fiat" src="image/logo/New folder/logos/fiat_logo.jpg" /></li>
+                <li><img class="image" alt="ford" src="image/logo/New folder/logos/ford_logo.jpg" /></li>
+                <li><img class="image" alt="fuso" src="image/logo/New folder/logos/fuso_logo.JPG" /></li>
+                <li><img class="image" alt="gm" src="image/logo/New folder/logos/gm_logo.jpg" /></li>
+                <li><img class="image" alt="castrol" src="image/logo/New folder/logos/Castrol_Logo.jpg" /></li>
+                <li><img class="image" alt="caparo" src="image/logo/New folder/logos/caparo.jpg" /></li>
+                <li><img class="image" alt="harley davidson" src="image/logo/New folder/logos/Harley-Davidson-Logo-300x225.jpg" /></li>
+                <li><img class="image" alt="visteon" src="image/logo/New folder/logos/visteon_logo.jpg" /></li>
+                <li><img class="image" alt="tvs" src="image/logo/New folder/logos/tvs.jpg" /></li>
+                <li><img class="image" alt="bmw logo" src="image/logo/New folder/logos/bmw_logo.jpg" /></li>
+                <li><img class="image" alt="maruti suzuki" src="image/logo/New folder/logos/Maruti-Suzuki-new-logo.jpg" /></li>
+                <li><img class="image" alt="hero" src="image/logo/New folder/logos/hero_logo.jpg" /></li>
+                <li><img class="image" alt="hyundai" src="image/logo/New folder/logos/hyundai_logo.jpg" /></li>
+                <li><img class="image" alt="isuzu" src="image/logo/New folder/logos/Isuzu-Logo.jpg" /></li>
+                <li><img class="image" alt="mazda" src="image/logo/New folder/logos/mazda_logo.jpg" /></li>
+                <li><img class="image" alt="mercedes" src="image/logo/New folder/logos/merc_logo.jpg" /></li>
+                <li><img class="image" alt="mitsubushi" src="image/logo/New folder/logos/mitsubishi_logo.jpg" /></li>
+                <li><img class="image" alt="nissan" src="image/logo/New folder/logos/nissan_Logo.jpg" /></li>
+                <li><img class="image" alt="renault" src="image/logo/New folder/logos/renault_logo.jpg" /></li>
+                <li><img class="image" alt="suzuki" src="image/logo/New folder/logos/suzuki_logo.jpg" /></li>
+                <li><img class="image" alt="tata" src="image/logo/New folder/logos/tata_logo.jpg" /></li>
+               	<li><img class="image" alt="toyota" src="image/logo/New folder/logos/Toyota_logo.jpg" /></li>
+                <li><img class="image" alt="volvo" src="image/logo/New folder/logos/volvo cars_logo.jpg" /></li>
+				<li><img class="image" alt="volkswagen" src="image/logo/New folder/logos/VW_logo.jpg" /></li>
+                <li><img class="image" alt="yamaha" src="image/logo/New folder/logos/yamaha_logo.jpg" /></li>
 	      	</ul>
 	    </div>
     	<div class="image1">    </div>
