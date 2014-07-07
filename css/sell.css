@@ -111,17 +111,132 @@ div.form{
 	//text-align:center;
 		color:#FF0000;
 		/* gradients */
-	background: -webkit-gradient(linear, left top, left bottom, 
-	color-stop(0%,  white), color-stop(15%,#F8F8F8 ), color-stop(100%, #D7E9F5)); 
-	//background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
 
-	/* outer shadows  (note the rgba is red, green, blue, alpha) */
-	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
-	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
 
-	/* rounded corners */
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 7px; 
-	border-radius: 7px;
+}
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
+body {
+
+  font-family: 'Lato', sans-serif;
+}
+
+* :focus { outline: 0; }
+
+#opacity_bg {
+
+  bottom: 0;
+  left: 0;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#wrapper {
+
+  margin: 35px auto;
+  position: relative;
+  z-index: 999;
+  width: 650px;
+}
+
+#wrapper h3 {
+  border-bottom: 1px solid #c9d0d3;
+  border-radius: 3px 3px 0 0;
+  color: #56524f;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+#wrapper .x-1 {
+  background: none;
+  border: 0;
+  color: #56524f;
+  font-size: 16px;
+  font-weight: bold;
+  float: right;
+  margin: 0 0 0 0;
+}
+
+#wrapper div {
+  padding: 15px 40px 30px;
+}
+
+#wrapper input[type=text] {
+  border: 1px solid #cdcdcd;
+  height: 14px;
+  padding: 20px;
+  width: 413px;
+}
+
+input[type=text]#year, input[type=text]#link {
+  width: 184px;
+}
+
+#wrapper #separate {
+  column-count: 1;
+  column-gap: 0;
+  padding: 0;
+}
+
+.custom-file-input {
+  border: 0;
+  color: transparent;
+  cursor: pointer;
+  height: 40px;
+  overflow: hidden;
+  width: 115px;
+}
+
+.custom-file-input:active {
+  outline: 0;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  background: #f68867;
+  color: #fff;
+  content: "Select the file";
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 14px;
+  white-space: nowrap;
+}
+
+
+#fileDisplayArea, #fileDisplayArea2, #fileDisplayArea3 {
+  background: #fff;
+  border-color: #ccc;
+  box-sizing: border-box;
+  border-style: dashed;
+  height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  width: 115px;
+}
+
+#fileDisplayArea img, #fileDisplayArea2 img, #fileDisplayArea3 img {
+  height: auto;
+  margin: -15px 0 0 -40px;
+  width: 480%;
+}
+
+input[type=submit] {
+  background: #f68867;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0 0 0 410px;
+  padding: 16px;
 }

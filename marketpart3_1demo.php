@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/search.css" />
-        <link rel="stylesheet" type="text/css" href="css/market.css" />
+        
 			
 			<link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
 			
@@ -1192,7 +1192,7 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 										<br>Blue
 										<br>Ajanta Electronics
@@ -1203,7 +1203,7 @@
 									<div class="pic_prod">
 										<img src="image/a-t.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										American Tourister ALPHA
 										<br>BLACK
 										<br>ELPHI BAGS
@@ -1213,23 +1213,20 @@
 									</div>
 								</div></a>
 								<a class="a-hover" href="#"><div class="product">
-									<div class="pic_prod">
+									<div class="pic_prod" style="color:black;text-align:center;">
 										<img src="image/Lee-Cooper.jpg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Lee-Cooper Sports Shoes
 										<br>Black
 										<br>Roadside
-										
-									
-									
 									</div>
 								</div></a>
 								<a class="a-hover" href="#"><div class="product">
 									<div class="pic_prod">
 										<img src="image/Converse.jpg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Converse-Take Me Higher
 										<br>Red
 										<br>Converse-Delhi
@@ -1242,7 +1239,7 @@
 									<div class="pic_prod">
 										<img src="image/Diadora.jpg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 											Converse-Take Me Higher
 										<br>Red
 										<br>Converse-Delhi
@@ -1253,7 +1250,7 @@
 									<div class="pic_prod">
 										<img src="image/a-t2.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 									Converse-Take Me Higher
 										<br>Red
 										<br>Converse-Delhi
@@ -1264,7 +1261,7 @@
 									<div class="pic_prod">
 										<img src="image/vans.jpg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 											Converse-Take Me Higher
 										<br>Red
 										<br>Converse-Delhi
@@ -1275,7 +1272,7 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 									
 									
@@ -1286,12 +1283,10 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 									
-									<section>
-										<button style="font-size: 1.0rem;margin-top: 3px; float:right;" class="buy" id="js-trigger-overlay" type="button">SEE MORE</button>
-									</section>
+									
 									
 									</div>
 								</div></a>
@@ -1299,12 +1294,10 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 									
-									<section>
-										<button style="font-size: 1.0rem;margin-top: 3px; float:right;" class="buy" id="js-trigger-overlay" type="button">SEE MORE</button>
-									</section>
+									
 									
 									</div>
 								</div></a>
@@ -1312,12 +1305,10 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 									
-									<section>
-										<button style="font-size: 1.0rem;margin-top: 3px; float:right;" class="buy" id="js-trigger-overlay" type="button">SEE MORE</button>
-									</section>
+									
 									
 									</div>
 								</div></a>
@@ -1325,12 +1316,10 @@
 									<div class="pic_prod">
 										<img src="image/nokia.jpeg" alt="img04" />
 									</div>
-									<div class="button_2_Prod">
+									<div class="button_2_Prod" style="color:black;text-align:center;">
 										Nokia Lumia 720
 									
-									<section>
-										<button style="font-size: 1.0rem;margin-top: 3px; float:right;" class="buy" id="js-trigger-overlay" type="button">SEE MORE</button>
-									</section>
+									
 									
 									</div>
 								</div></a>

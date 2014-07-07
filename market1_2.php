@@ -16,7 +16,7 @@
             <link rel="stylesheet" type="text/css" href="css/carousel.css" />
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
-			<link rel="stylesheet" type="text/css" href="css/market.css" />
+			
 			<link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
 			<link rel="stylesheet" type="text/css" href="css/sell.css" />
 			
@@ -34,6 +34,10 @@
 			}
 
 			</script>
+			
+			
+			<link rel="stylesheet" type="text/css" href="css/demo.css" />
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
 
    </head>
 
@@ -41,7 +45,7 @@
       <!--=============================================Navigation============================================= --> 
     	<div class="navbar-wrapper">
           <div class="container">
-            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -90,21 +94,16 @@
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
 		
-		<div class="form">
-			<form class="white-pink" align="center" action=""  method="POST">
-			<h1>Post An AD
-        			<span>Please fill all the texts in the fields.</span>
-    			</h1>
+		<div class="form" style="height:70px;">
 					<!--=============================================List============================================= --> 
    
 		<?php
 
 		require 'config.php';  // Database connection
 
-		?>
-		<div class="search">
-			<span><h1>Select Your Category</h1></span>
-		<?Php
+		
+		
+		
 
 		@$cat=$_GET['cat']; 
 		if(strlen($cat) > 0 and !is_numeric($cat)){ 
@@ -124,7 +123,11 @@
 		}else{$quer="SELECT DISTINCT subcategory FROM subcategory order by subcategory"; } 
 
 
-		echo "<form method=post name=f1 align='center' action='sell1.php'>";
+		echo "<form class='white-pink' method=post name=f1 align='center' action='sell1.php'>";
+		?>
+		
+			<span><h1>Select Your Category</h1></span>
+		<?php	
 
 
 		echo "<select name='cat' placeholder='-Category-' style='width:320px;color:black;' onchange=\"reload(this.form)\"><option value=''>Select one</option>";
@@ -142,108 +145,74 @@
 		}
 		echo "</select>";
 		?>
-		<br>
-		<?php
-
-
 		
+			
+		
+
+		<?php
 		echo "</form>";
 		?>
-		
-		
-		
-		<span><h1></h1></span>
-		
+		<div class="container_form" style="width:675px;margin-left:-20px; margin-top:40px;">
+			<section class="af-wrapper">
+	            <h3>Post An ADD</h3>
+		        
 				
-    			<label>
-        			<span>Ad Title :</span> 
-				<input type="text" name="t1" size="40" input id="name"placeholder="Title"/>
-			</label>	
-			
-			<label>
-				<span>Discribtion :</span>
-				<input type="text" name="t2" size="270"/ input id="name" placeholder="Discription">
-			</label><br>
-			
-			<h1>
-        			<span></span>
-    		</h1>
-    		
-			<h1><br>Seller Information
-        			<span></span>
-    		</h1>
-    		
-
-			
-			<label><span>Contact Name</span> 
-			<input type="text" name="t3" size="20"input id="name" placeholder="Full Name"/>
-			</label>
-			
-			<label>
-				<span>Email ID :</span>
-				<input type="text" name="t4" size="20"input id="email" placeholder="Valid Email Address"/>
-			</label>				
-			<label>
-				<span>Phone No :</span>
-				<input type="text" name="t4" size="20"input id="email" placeholder="Phone Number"/>
-			</label>				
-			
-			<label>
-				<span>I am:</span>
-				<input type="radio" name="r1" value="1"/>An Individual<br>
-				<input type="radio" name="r1" value="2"/>Professional
-			</label><br>
-			<label>
-				<span>State :</span>
-				<select name="cars">
-					<option value="none" selected>Select Your State</option>
-					<option value="Andra Pradesh">Andra Pradesh</option>
-					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-					<option value="Assam">Assam</option>
-					<option value="Bihar">Bihar</option>
-					<option value="Chhattisgarh">Chhattisgarh</option>
-					<option value="Goa">Goa</option>
-					<option value="Gujarat">Gujarat</option>
-					<option value="Haryana">Haryana</option>
-					<option value="Himachal Pradesh">Himachal Pradesh</option>
-					<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-					<option value="Jharkhand">Jharkhand</option>
-					<option value="Karnataka">Karnataka</option>
-					<option value="Kerala">Kerala</option>
-					<option value="Madya Pradesh">Madya Pradesh</option>
-					<option value="Maharashtra">Maharashtra</option>
-					<option value="Manipur">Manipur</option>
-					<option value="Meghalaya">Meghalaya</option>
-					<option value="Mizoram">Mizoram</option>
-					<option value="Nagaland">Nagaland</option>
-					<option value="Orissa">Orissa</option>
-					<option value="Punjab">Punjab</option>					
-					<option value="Rajasthan">Rajasthan</option>
-					<option value="Sikkim">Sikkim</option>
-					<option value="Tamil Nadu">Tamil Nadu</option>
-					<option value="Tripura">Tripura</option>
-					<option value="Uttaranchal">Uttaranchal</option>
-					<option value="Uttar Pradesh">Uttar Pradesh</option>
-					<option value="West Bengal">West Bengal</option>
-					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-					<option value="Delhi">Delhi</option>
-					<option value="Lakshadeep">Lakshadeep</option>
+				
+				
+				<form class="af-form" id="af-form" novalidate>
 					
-				</select>
-			</label>				
-			
-			<h1></h1><br>	
-
-			
-			<label>	
-					<input type="submit" name="s1" value="Post Ad" class="button"/>
-					<td><input type="reset" name="re1" value="Reset" class="button"/>
-			</label>
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">AD Title</label>
+							<input type="text" name="title" id="input-title">
+						</div>
+					</div>
 				
-			
-		</form>	
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="input-name">Describtion </label>
+							<input type="text" name="describex" id="input-name" required>
+						</div>
+					</div><br>
+					
+					<h3>Sellers Information</h3>
+					
+					<div class="af-outer">
+						<div class="af-inner">
+						  <label for="name">Your Name</label>
+						  <input type="email" name="name" id="name">
+						</div>
+					</div>
+					
+					<div class="af-outer af-required">
+						<div class="af-inner">
+						  <label for="input-email">Email address</label>
+						  <input type="email" name="email_address" id="input-email">
+						</div>
+					</div>
+					
+					
+					
+					<div class="af-outer af-required">
+						<div class="af-inner">
+						  <label for="input-country">State</label>
+						  <input type="email" name="state" id="input-state" required>
+						</div>
+					</div>
+					
+					
+					
+					<div class="af-outer">
+						<div class="af-inner">
+						  <label for="input-phone">Phone Number</label>
+						  <input type="email" name="phonenumber" id="input-phone">
+						</div>
+					</div>
+		  
+					
+					<input type="submit" value="Post AD!" /> 
+					
+				</form>
+			</section>
 		</div>
-		
-			
-			
-		
+	</div>
