@@ -367,19 +367,25 @@
 			<script type="text/javascript">
                 (function() {
                     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                    po.src = 'https://apis.google.com/js/client:plusone.js';
+                    po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                 })();
+				function render() {
+    				gapi.signin.render('btn-g-login', {
+      					'callback': 'signinCallback',
+    					'clientid': '141591073286-ftj490gpbmrkjsh6dftbqnk397eumi40.apps.googleusercontent.com',
+      					'cookiepolicy': 'single_host_origin',
+      					'requestvisibleactions': 'http://schema.org/AddAction',
+      					'scope': 'https://www.googleapis.com/auth/plus.login'
+    				});
+  				}
             </script>
-            <span id="signinButton" class="btn-g-login">
-            <div class="title">Continue with Google</div>
-                <span
-                    data-callback="signinCallback"
-                    data-clientid="CLIENT_ID"
-                    data-cookiepolicy="single_host_origin"
-                    data-requestvisibleactions="http://schema.org/AddAction"
-                    data-scope="https://www.googleapis.com/auth/plus.login">
-                </span>
+            <div id="gSignInWrapper">
+                <div id="btn-g-login" class="customGPlusSignIn">
+                    <span class="icon"></span>
+                    <span class="buttonText title">Continue with Google+</span>
+                </div>
+			</div>
             </span>
 		</div>
 		<script type="text/javascript">
