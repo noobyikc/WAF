@@ -7,7 +7,7 @@
             <meta name="author" content="">
            
             <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-            <link rel="shortcut icon" href="../favicon.ico">
+            <link rel="shortcut icon" href="fonts/favicon.ico">
         
             <title>World Auto Forum</title>
         
