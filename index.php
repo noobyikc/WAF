@@ -565,7 +565,7 @@
 		<!--=============================================Logo Scroller Content============================================= -->
     	<div class="content10">
             	<div class="details10" style="margin-left:150px">
-                	<h2>People from these countries are here. Are you?</h2>
+                	<h2>People from these companies are here. Are you?</h2>
                 </div>
                 
                 <!--  INSERT SCROLLER HERE-->
@@ -573,23 +573,20 @@
     <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
 
         
-        <div id="slider1_container" style="position: relative; top: 0px; margin-bottom:50px; margin-top:20px; left: 150px; width: 1100px; height: 100px; overflow: hidden; ">
+        <div id="slider1_container" style="position: relative; top: 0px; margin-bottom:50px;  left: 150px; width: 1100px; height: 100px; overflow: hidden; ">
 
         <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div u="loading" style="position: absolute; top: 0px; left: 0px; width:120px;">
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-        </div>
 
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute;  top: 0px; width: 1100px; height: 100px; overflow: hidden;">
-        	<div><img u="image" alt="amazon" src="image/company logos/1.png" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/2.png" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/3.jpg" /></div>
+        	<div><img u="image" alt="amazon" src="image/company logos/1.png" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/2.png" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/3.jpg" style="width:130px"/></div>
             <div><img u="image" alt="amazon" src="image/company logos/4.png" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/5.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/6.jpg" /></div>
@@ -623,13 +620,13 @@
             <div><img u="image" alt="amazon" src="image/company logos/34.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/35.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/36.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/37.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/38.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/39.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/40.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/41.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/42.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/43.jpg" /></div>
+            <div><img u="image" alt="amazon" src="image/company logos/37.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/38.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/39.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/40.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/41.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/42.jpg" style="width:130px"/></div>
+            <div><img u="image" alt="amazon" src="image/company logos/43.jpg" style="width:130px"/></div>
             
             
         </div>

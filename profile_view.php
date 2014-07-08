@@ -169,18 +169,19 @@ $url = "image/bg2.jpg";
            </div>
 		<!--============================================= ContentPane - 2 ============================================= --> 
 	    	<div class="contentpane2">
-                <div class="panel panel-default" id="discussions">
-                <div class="panel-heading">
-                	Discussions
+                <div class="panel panel-default" id="sidetab" style=" width:13.08em">
+                    <ul class="nav nav-pills nav-stacked" style="font-size:1em;" >
+                          <li class="active"><a href="#">Home</a></li>
+                          <li><a href="#">Profile</a></li>
+                          <li><a href="#">Messages</a></li>
+                          <li><a href="#">Notifications</a></li>
+                          <li><a href="#">Discussion Forums</a></li>
+                          <li><a href="#">Jobs</a></li>
+                          <li><a href="#">Settings</a></li>
+						
+                        </ul>
                 </div>
-                <div class="number">
-                </div>
-                <div class="panel-heading">
-                	Comments
-                </div>
-                <div class="number">
-                </div>
-            </div>
+                
 
             <div class="panel panel-default" id="education">
 	            <div class="panel-heading">Education and Current Affairs </div>

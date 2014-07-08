@@ -12,7 +12,7 @@ $url = "image/bg2.jpg";
 	<title>Home Page</title>
 		<!-- CSS -->
             <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-            <link rel="stylesheet" type="text/css" href="css/profile.css">
+            <link rel="stylesheet" type="text/css" href="css/profile_home.css">
    			<link rel="stylesheet" type="text/css" href="css/search.css" />
 			<link rel="stylesheet" type="text/css" href="css/index.css" />
             <link rel="stylesheet" type="text/css" href="css/footer.css"  />
@@ -59,8 +59,8 @@ $url = "image/bg2.jpg";
                 	<div class="navbar-collapse collapse">
                     	<ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">Sign In</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about"><img src="image/icons/note2.png" style="max-height:1.7em;"/></a></li>
+                            <li><a href="#contact">Notifications</a></li>
                             <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
@@ -130,6 +130,9 @@ $url = "image/bg2.jpg";
                 </div>
             </div>
         </div>
+        
+        
+      
     <!--============================================= ContentPane - 1 ============================================= --> 
 		<div class="contentpane12">
             <div class="contentpane1">
@@ -138,13 +141,25 @@ $url = "image/bg2.jpg";
                     <div id="pic">
                         <a class="thumbnail"><img src="image/unnamed.png" />
                         </a>
+                                <div class="btn-group" style="margin-left:4em">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                          Display Pic
+                                          <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                          <li><a href="#">Edit Display Pic</a></li>
+                                          <li><a href="#">Edit Description</a></li>
+                                        </ul>
+                                      </div>
+                                      
+                              
                     </div>
                 </div> 
                 <!--=============================================Personal-Details============================================= --> 
-                <div class="panel panel-default" id="personal">
+                <div class="panel panel-default" id="personal" style=" width: 48.5em;">
                     <div class="panel-heading">
-                        <div id="name"><?php echo "Inshu Kumar Chugh";?></div>
-                        <div id="post"><?php echo "Director Sales Department at Bosch";?></div>
+                        <div id="name"><?php echo "Manmeet Singh Oberoi";?></div>
+                        <div id="post"><?php echo "Director Sales Department at Padosi ke ghar";?></div>
                     </div>
                     <div class="panel-body">
                         
@@ -153,103 +168,62 @@ $url = "image/bg2.jpg";
            </div>
 		<!--============================================= ContentPane - 2 ============================================= --> 
 	    	<div class="contentpane2">
-                <div class="panel panel-default" id="discussions">
-                <div class="panel-heading">
-                    <ul class="nav nav-pills">
+                <div class="panel panel-default" id="sidetab" style=" height: 22em; width:17.08em">
+                    <ul class="nav nav-pills nav-stacked" style="font-size:1em;" >
                           <li class="active"><a href="#">Home</a></li>
                           <li><a href="#">Profile</a></li>
                           <li><a href="#">Messages</a></li>
+                          <li><a href="#">Notifications</a></li>
+                          <li><a href="#">Discussion Forums</a></li>
+                          <li><a href="#">Jobs</a></li>
+                          <li><a href="#">Settings</a></li>
+						
                         </ul>
                 </div>
                 <div class="number">
                 </div>
-                <div class="panel-heading">
-                	Comments
-                </div>
-                <div class="number">
-                </div>
+                
+                
             </div>
 
-            <div class="panel panel-default" id="education">
-	            <div class="panel-heading">Education and Current Affairs </div>
-            	<div class="panel-body" id="profile_box">
-                    <table>
-                        <tr> 
-                            <td><div class="label">Degree </div></td>
-                            <td><div class="label-ans"><?php echo "B-tech Graduate, Batch of 2011-15";?> </div></td>                       
-                        </tr>
-                        <tr> 
-                            <td></td>
-                            <td><div class="label-ans"><?php echo "IIITD, Delhi ";?> </div></td>
-                        </tr>
-                        <tr> 
-                            <td><div class="label">Job status</div></td>
-                            <td><div class="label-ans"><?php echo "Employed";?></div></td>                   
-                        </tr>
-                        <tr> 
-                            <td><div class="label">Email-Id</div></td>
-                            <td><div class="label-ans"><?php echo "inshu@bosch.com";?></div></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            
         </div>
-   	</div>
-
-	<!--============================================= ContentPane - 4 ============================================= --> 
-        <div class="contentpane4">
-            <div class="panel panel-default" id="profile">
-           		<div class="panel-heading">Experience </div>
-	            <div class="panel-body" id="profile_box">
-                    <table>
-                    	<?php //while loop here ?>
-                        <tr> 
-                            <td><div class="label"><?php echo "Manager";?></div></td>
-                        </tr>
-                        <tr> 
-                            <td><div class="label"><?php echo " Zoomjax Pvt Ltd.";?></div></td>                            
-                            <td><div class="label"><?php echo "(2010 - 2013)";?></div></td>
-                        </tr>
-                        <tr> 
-                            <td colspan="2" style="padding-left:1.8em"><div class="" style="text-align:justify"><?php echo "Zoomjax is the fastest platform for generating targeted ad impressions. At Zoomjax, Iâm responsible for building products that are thoughtfully designed, scalable, and easy to use for media buyers and affiliate network managers. I manage a 20-person product team of software engineers and web developers who work hard to make sure your ads consistently find your target demographic with quicksilver efficiency. If you're an engineer looking for a challenge, drop us a line. We'd love to hear from you! ";?></div></td>                            
-                        </tr>
-                        <?php //while loop close here ?>
-		        	</table>
-				</div>                 
-			</div>
-		</div>
-    <!--============================================= ContentPane - 5 ============================================= --> 
-        <div class="contentpane5">
-             <div class="panel panel-default" id="activity">
-             	<div class="panel-heading">Recent Activity</div>
+          <!--============================================= ContentPane - 6 ============================================= --> 
+        <div class="contentpane6">
+            <div class="panel panel-default" id="ads">
+                <div class="panel-heading">Sponsored Ads</div>
                 <div class="panel-body">
+                	<div class="panel panel-default" id="spons_ad">
+                    		<div class="panel-heading">Sponsored Ad 1</div>
+                            		<div class="panel-body">
+                                    bakwas bakwas
+                                    </div>
+                             </div>
+                             <div class="panel panel-default" id="spons_ad">
+                    		<div class="panel-heading">Sponsored Ad 1</div>
+                            		<div class="panel-body">
+                                    bakwas bakwas
+                                    </div>
+                             </div>
+                             <div class="panel panel-default" id="spons_ad">
+                    		<div class="panel-heading">Sponsored Ad 1</div>
+                            		<div class="panel-body">
+                                    bakwas bakwas
+                                    </div>
+                             </div>
+					<div class="btn-success" id="button1">View All</div>                          
                 
                 </div>
-             </div>
+            </div>
         </div>
-    
-    
+        
    
-    
-    
-    
-    
 
-                        	
-                                
-
-    
-    <!--<div class="btn-group" id="button4" >  
-      <button type="button" class="btn btn-primary">View as friend</button>
-      <button type="button" class="btn btn-primary">View as from public</button>
-      <button type="button" class="btn btn-primary">Edit</button>
-    </div>-->
-
-
+	
 <!--=============================================Footer============================================= -->
     
 
-    <div class="footer">
+    <div class="footer" style="margin-top:auto; top:1000px;">
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>

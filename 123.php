@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TagCanvas example</title>
-    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-    <script src="js/tagcanvas.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      window.onload = function() {
-        try {
-          TagCanvas.Start('myCanvas','tags',{
-            textColour: '#ff0000',
-            outlineColour: '#ff00ff',
-            reverse: true,
-            depth: 0.8,
-            maxSpeed: 0.05
-          });
-        } catch(e) {
-          // something went wrong, hide the canvas container
-          document.getElementById('myCanvasContainer').style.display = 'none';
-        }
-      };
-    </script>
-  </head>
-  <body>
-    <h1>TagCanvas example page</h1>
-    <div id="myCanvasContainer">
-      <canvas width="300" height="300" id="myCanvas">
-        <p>Anything in here will be replaced on browsers that support the canvas element</p>
-      </canvas>
-    </div>
-    <div id="tags">
-      <ul>
-        <li><a href="http://www.google.com" target="_blank">Google</a></li>
-        <li><a href="/fish">Fish</a></li>
-        <li><a href="/chips">Chips</a></li>
-        <li><a href="/salt">Salt</a></li>
-        <li><a href="/vinegar">Vinegar</a></li>
-      </ul>
-    </div>
-  </body>
-</html>
+$url = "https://ajax.googleapis.com/ajax/services/feed/find?" .
+       "v=1.0&q=Official%20Google%20Blog&userip=INSERT-USER-IP";
+
+// sendRequest
+// note how referer is set manually
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_REFERER, /* Enter the URL of your site here */);
+$body = curl_exec($ch);
+curl_close($ch);
+
+// now, process the JSON string
+$json = json_decode($body);
+// now have some fun with the results...
