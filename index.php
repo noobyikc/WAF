@@ -365,7 +365,7 @@
             <script>
       			window.fbAsyncInit = function() {
         			FB.init({
-          				appId      : '104044288825',
+          				appId      : '268741753315056',
           				xfbml      : true,
           				version    : 'v2.0'
         			});
@@ -377,12 +377,23 @@
 						js = d.createElement(s); js.id = id;
 						js.src = "//connect.facebook.net/en_US/sdk.js";
 						fjs.parentNode.insertBefore(js, fjs);
-	       			}
-					(document, 'script', 'facebook-jssdk'));
+	       		}(document, 'script', 'facebook-jssdk'));
+				FB.login(function(response) {
+  					if (response.status === 'connected') {
+						// Logged into your app and Facebook.
+				  	} else if (response.status === 'not_authorized') {
+						// The person is logged into Facebook, but not your app.
+				  	} else {
+					// The person is not logged into Facebook, so we're not sure if
+					// they are logged into this app or not.
+				  	}
+				});
+				
+					
     		</script>
             
             <div class="btn-fb-login">
-                <div class="title">
+                <div class="title" scope="public_profile,email" onclick="FB.login()">
                 	Continue With Facebook
                 </div>
 			</div>
@@ -562,11 +573,11 @@
 			});
         </script>
 	</div>
-		<!--=============================================Logo Scroller Content============================================= -->
-    	<div class="content10">
-            	<div class="details10" style="margin-left:150px">
-                	<h2>People from these companies are here. Are you?</h2>
-                </div>
+	<!--=============================================Logo Scroller Content============================================= -->
+    <div class="content10">
+       	<div class="details10">
+           	<h2>People from these companies are here. Are you?</h2>
+        </div>
                 
                 <!--  INSERT SCROLLER HERE-->
                 <!-- Jssor Slider Begin -->
@@ -583,7 +594,7 @@
             </div>
 
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute;  top: 0px; width: 1100px; height: 100px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute;  top: 0px; width: 1140px; height: 100px; overflow: hidden;">
         	<div><img u="image" alt="amazon" src="image/company logos/1.png" style="width:130px"/></div>
             <div><img u="image" alt="amazon" src="image/company logos/2.png" style="width:130px"/></div>
             <div><img u="image" alt="amazon" src="image/company logos/3.jpg" style="width:130px"/></div>

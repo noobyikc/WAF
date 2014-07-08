@@ -355,8 +355,9 @@ a.btn_red {
 .content {
 	position:relative;
 	padding-top:15vh;
-	background:#E4E4E4;
-	height:100vh;
+	background-image:url(../image/gears.png);
+	background-size:1366px 680px;
+	min-height:48em;
 	width:100%;
 }
 
@@ -587,15 +588,19 @@ a.btn_red {
 	text-align:center;
 }
 
-/*.content10 {
+.content10 {
 	position:relative;
-	top:20%;
-	height:100vh;
 	width:100%;
-}*/
+}
 
 .content10 > .details10 {
-
+	width:100%;
+	margin-top:8%;
+	padding-left:18%;
+	margin-bottom:8%;
+}
+.details10 > h2 {
+	font-size:40px;
 }
 
 /*-----------------------Logo ScrollBar start--------------------------*/
