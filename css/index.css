@@ -72,11 +72,13 @@
  }
 
  .btn-g-login .icon {  
-    background: url('images/g+.png') no-repeat;
-    width: 22px;
-    height: 22px;
+
     float: left;
     margin: 4px 6px;
+	background: url('/+/images/branding/btn_red_32.png') transparent 5px 50% no-repeat;
+    width: 35px;
+    height: 35px;
+    border-right: #bb3f30 1px solid;
 	
  }
 #btn-g-login .title {
@@ -557,9 +559,11 @@ a.btn_red {
 	padding-top:2.5em;
 	background-image:url(../image/icons/insight.png);
 	background-size:cover;
+	font-weight:900;
 	transition:padding-top ease-in-out 0.5s;
 }
 .content8:hover {
+	background-image:none;
 	font-size:19px;
 	padding-top:2em;
 	padding-left:0.8em;
@@ -568,10 +572,14 @@ a.btn_red {
 }
 .content9 {
 	height:100%;
+	background-image:url(../image/icons/difference.png);
+	background-size:cover;
+	font-weight:900;
 	padding-top:2.5em;
 	transition:padding-top ease-in-out 0.5s;
 }
 .content9:hover {
+	background-image:none;
 	font-size:19px;
 	padding-top:2em;
 	padding-left:0.8em;

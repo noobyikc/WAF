@@ -18,6 +18,8 @@
             <link rel="stylesheet" type="text/css" href="css/index.css" />
 			<link rel="stylesheet" type="text/css" href="css/search.css" />
             <link rel="stylesheet" type="text/css" href="css/footer.css" />
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
 
             <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -30,6 +32,7 @@
             <script type="text/javascript" src="js/jssor.core.js"></script>
 			<script type="text/javascript" src="js/jssor.utils.js"></script>
             <script type="text/javascript" src="js/jssor.slider.js"></script>
+            
 </head>
 
 
@@ -359,11 +362,31 @@
 					</div>
 				</section>
 			</div>
+            <script>
+      			window.fbAsyncInit = function() {
+        			FB.init({
+          				appId      : '104044288825',
+          				xfbml      : true,
+          				version    : 'v2.0'
+        			});
+      			};
+			    (
+					function(d, s, id){
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) {return;}
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/sdk.js";
+						fjs.parentNode.insertBefore(js, fjs);
+	       			}
+					(document, 'script', 'facebook-jssdk'));
+    		</script>
+            
             <div class="btn-fb-login">
                 <div class="title">
                 	Continue With Facebook
                 </div>
 			</div>
+			
 			<script type="text/javascript">
                 (function() {
                     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -532,7 +555,7 @@
     	</div>
         <script type="text/javascript">
 			$('.content9').mouseover(function() {
-  				$('.content9').html("Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life and career");
+  				$('.content9').html("Be a part of the largest group of Auto professionals, show your expertise and make a difference to your life");
 			});
 			$('.content9').mouseleave(function() {
 				$('.content9').html("MAKE A DIFFERENCE");
