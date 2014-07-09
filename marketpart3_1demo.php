@@ -55,6 +55,8 @@
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#about">Sign In</a></li>
                             <li><a href="#contact">Contact</a></li>
+							<li><a href="#about">Post Ad</a></li>
+							<li><a href="#about">Post Requirements</a></li>
                             <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
