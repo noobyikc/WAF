@@ -479,3 +479,100 @@ div.job_apply{
 	margin-left:350px;
 	padding: 0px;
 }
+div.apply_form{
+	width:837px;
+	height:800px;
+	margin-top: -20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left:50px;
+	padding: 0px;
+	float: left;
+	
+}
+
+.info
+{	margin-left:80px;
+	margin-top:40px;
+	font-size: 2.5em;
+	color:#1C1C1C;
+}
+.form_real label {
+	display: block;
+	padding: 40px 5px 5px 2px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.form_real input,
+.form_real textarea,
+.form_real select {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	line-height: 1;
+	font-size: 1.2em;
+	padding: 5px 10px;
+	color:#5858FA;
+	display: block;
+	width: 100%;
+	background: transparent;
+}
+
+.form_real input,
+.form_real textarea {
+	border: 3px solid #5858FA;
+}
+.form_real textarea {
+	min-height: 150px;
+}
+
+.form_real input:focus,
+.form_real textarea:focus,
+.form_real label:active + input,
+.form_real label:active + textarea {
+	outline: none;
+	border: 3px solid #D8D8D8;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #10689a;
+    font-style: italic;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #10689a;
+    font-style: italic;
+}
+.cbp-mc-column {
+	width: 50%;
+	padding: 10px 5px 30px 0px;
+	float: left;
+}
+.form_real input.cbp-mc-submit {
+	background: #10689a;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	float:right;
+}
+
+.form_real input.cbp-mc-submit:hover {
+	background: #1478b1;
+}
