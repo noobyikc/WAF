@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2014 at 01:55 PM
+-- Generation Time: Jul 11, 2014 at 08:03 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -324,6 +324,7 @@ CREATE TABLE IF NOT EXISTS `discussion_comments` (
 CREATE TABLE IF NOT EXISTS `discussion_questions` (
   `dis_id` int(11) NOT NULL AUTO_INCREMENT,
   `question` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `category` varchar(255) NOT NULL,
   `subcat` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL,
@@ -339,6 +340,62 @@ CREATE TABLE IF NOT EXISTS `discussion_questions` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+  `job_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `job_title` varchar(255) NOT NULL,
+  `description` varchar(2550) DEFAULT NULL,
+  `tagline` varchar(255) DEFAULT NULL,
+  `last_date` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `stipend` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `company_website` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`job_id`),
+  KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_applicants`
+--
+
+CREATE TABLE IF NOT EXISTS `job_applicants` (
+  `job_applicant_id` int(11) NOT NULL,
+  `job_id` int(11) NOT NULL,
+  `applicant_email` varchar(255) NOT NULL,
+  PRIMARY KEY (`job_applicant_id`),
+  UNIQUE KEY `job_id` (`job_id`),
+  UNIQUE KEY `applicant_email` (`applicant_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `market_seller`
+--
+
+CREATE TABLE IF NOT EXISTS `market_seller` (
+  `ad_id` int(11) NOT NULL,
+  `ad_category` varchar(255) NOT NULL,
+  `ad_subcategory` varchar(255) NOT NULL,
+  `ad_title` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `seller_name` varchar(255) DEFAULT NULL,
+  `seller_address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `seller_phone` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ad_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `profile`
 --
 
@@ -349,16 +406,18 @@ CREATE TABLE IF NOT EXISTS `profile` (
   `country` varchar(255) DEFAULT NULL,
   `gender` varchar(255) DEFAULT NULL,
   `mobile` varchar(255) DEFAULT NULL,
+  `job_status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`sno`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `profile`
 --
 
-INSERT INTO `profile` (`sno`, `email`, `dob`, `country`, `gender`, `mobile`) VALUES
-(1, 'shrutibansal.student@gmail.com', '08/21/1990', 'usa', 'female', '0987654321');
+INSERT INTO `profile` (`sno`, `email`, `dob`, `country`, `gender`, `mobile`, `job_status`) VALUES
+(1, 'shrutibansal.student@gmail.com', '08/21/1990', 'usa', 'female', '0987654321', NULL),
+(4, 'shruti@trial.com', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -379,7 +438,9 @@ CREATE TABLE IF NOT EXISTS `register` (
 --
 
 INSERT INTO `register` (`name`, `email`, `password`, `sendupdates`) VALUES
+('', '', '', ''),
 ('Shruti', 'abc@gmail.com', '8947893', 'true'),
+('', 'shruti@trial.com', 'trial.com', 'true'),
 ('shruti bansal', 'shrutibansal.student@gmail.com', 'try123', 'true'),
 ('trial', 'trial@mail.com', 'trial', 'false');
 
@@ -779,6 +840,25 @@ ALTER TABLE `discussion_comments`
 --
 ALTER TABLE `discussion_questions`
   ADD CONSTRAINT `discussion_questions_ibfk_1` FOREIGN KEY (`email`) REFERENCES `register` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `jobs`
+--
+ALTER TABLE `jobs`
+  ADD CONSTRAINT `jobs_ibfk_1` FOREIGN KEY (`email`) REFERENCES `register` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `job_applicants`
+--
+ALTER TABLE `job_applicants`
+  ADD CONSTRAINT `job_applicants_ibfk_1` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`job_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `job_applicants_ibfk_2` FOREIGN KEY (`applicant_email`) REFERENCES `register` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `market_seller`
+--
+ALTER TABLE `market_seller`
+  ADD CONSTRAINT `market_seller_ibfk_1` FOREIGN KEY (`email`) REFERENCES `register` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `profile`
