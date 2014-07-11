@@ -168,11 +168,11 @@
                         <table width="70%">
                             <tr> 
                                 <td><div class="label">Name</div></td>
-                                <td><input type="text" name="name" value="" style="width:100%"/></td>
+                                <td><input type="text" name="pname" value="" style="width:100%"/></td>
                             </tr>
                             <tr> 
                                 <td><div class="label">Date of Birth</div></td>
-                                <td><input type="date" name="date" value="" style="width:100%"/></td>
+                                <td><input type="date" name="dob" value="" style="width:100%"/></td>
                             </tr>
                             <tr> 
                                 <td><div class="label">Country</div></td>
@@ -180,7 +180,7 @@
                                     <?php
                                         $sql = 'select name from countries';
                                         $result = mysql_query($sql);
-                                        echo "<select country = 'name' style="."'width:100%'".">";
+                                        echo "<select name = 'country' style="."'width:100%'".">";
                                         while ($row = mysql_fetch_array($result))
                                         {
                                             echo "<option value='".$row['name']."'>".$row['name']."</option>";

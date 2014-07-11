@@ -228,9 +228,9 @@
 													<li><a href="#">Engine Parts- Engine Assembly</a></li>
 													<li><a href="#">Engine Parts- Engine Components</a></li>
 													<li><a href="#">Engine Parts- Engine Mounts</a></li>
-													<li><a href="#">Engine Parts-  Exhaust System</a></li>
+													<li><a href="#">Engine Parts- ï¿½Exhaust System</a></li>
 													<li><a href="#">Engine Parts- Fuel System</a></li>
-													<li><a href="#">Engine Parts-  Muffer System</a></li>
+													<li><a href="#">Engine Parts- ï¿½Muffer System</a></li>
 													<li><a href="#">Engine Parts- Radiator & Parts</a></li>
 													<li><a href="#">Engine Parts- Tanks & Parts</a></li>
 													<li><a href="#">Engine Parts- TurboChargers</a></li>
@@ -283,9 +283,9 @@
 													<li><a href="#">Engine Parts- Engine Assembly</a></li>
 													<li><a href="#">Engine Parts- Engine Components</a></li>
 													<li><a href="#">Engine Parts- Engine Mounts</a></li>
-													<li><a href="#">Engine Parts-  Exhaust System</a></li>
+													<li><a href="#">Engine Parts- ï¿½Exhaust System</a></li>
 													<li><a href="#">Engine Parts- Fuel System</a></li>
-													<li><a href="#">Engine Parts-  Muffer System</a></li>
+													<li><a href="#">Engine Parts- ï¿½Muffer System</a></li>
 													<li><a href="#">Engine Parts- Radiator & Parts</a></li>
 													<li><a href="#">Engine Parts- Tanks & Parts</a></li>
 													<li><a href="#">Engine Parts- TurboChargers</a></li>
@@ -833,7 +833,7 @@
 							<div class="buy_buttons">
 								<div class="post_REQ">
 									<section>
-										<button class="buy" id="js-trigger-overlay" type="button">Submit An ADD</button>
+										<a href="market1_2.php" class="buy" id="js-trigger-overlay">Submit An AD</a>
 									</section>
 								</div>
 								<div class="post_ADD">

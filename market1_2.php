@@ -159,7 +159,7 @@
 				
 				
 				
-				<form class="af-form" id="af-form" novalidate>
+				<form class="af-form" id="af-form" >
 					
 					<div class="af-outer">
 						<div class="af-inner">

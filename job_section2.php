@@ -101,7 +101,7 @@
 				</section>
 			</div>
 			<div class="job_compony"><br>
-				<h2><u>W.A.F. Partners<u></h2><br>
+				<h2><u>W.A.F. Partners</u></h2><br>
 				<img src="image/company logos/1.png" alt="img04" />
 				<img src="image/company logos/2.png" alt="img04" />
 				<img src="image/company logos/3.jpg" alt="img04" />
@@ -216,28 +216,5 @@
 				
 			</div>
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	</body>
 </html>

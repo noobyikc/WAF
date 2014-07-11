@@ -49,7 +49,7 @@
 				$res = mysql_query("select * from register where email = '$cook'") or die(mysql_error());
 				while($rows = mysql_fetch_array($res))
 				{
-					if($_COOKIE['cookpass'] == md5($rows['paasword']))
+					if($_COOKIE['cookpass'] == md5($rows['password']))
 					{
 						$_SESSION['sessemail'] = $_COOKIE['cookmail'];
 	  					$_SESSION['sesspassword'] = $rows['password'];
@@ -350,9 +350,13 @@
 							<label>Password</label>
 							<input type="password" name="password" />
 							<br />
-							<div class="checkbox">
+                            <div class="checkbox">
 								<input id="send_updates" type="checkbox" name="updates" />
-								<label for="send_updates">Agree to <span style="text-decoration:underline">Terms of Service</span></label>
+								<label for="send_updates">Send me occasional updates</label>
+                            </div>
+							<div class="checkbox">
+								<input id="privacy" type="checkbox" name="privacy_policy" />
+								<label for="privacy">Agree to <span style="text-decoration:underline">Terms of Service</span></label>
 							</div>
 							<div class="action_btns">
 								<div class="one_half"><a class="btn btn_red" style="padding:1px 1px;"><input name="registerbtn" class="btn btn_red" type="submit" id="login-reg_button" value="Register" /></a></div>

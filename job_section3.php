@@ -33,6 +33,22 @@
           
 
 	</head>
+<?php
+ 		include('includes/connection.php');
+	    include('includes/variables.php');
+ 
+?>
+
+<?php
+	if(isset($_POST['postbtn']))
+	{
+		$sql_query = mysql_query('Insert into jobs(company_name, company_website, description, email, job_title, last_date, location, stipend, tagline) Values ($company_name, $company_website, $description, $_SESSION["cookmail"], $job_title, $last_date, $location, $stipend, $tagline);') or die(mysql_error);
+		if($sql_query)
+		{
+			echo "<script> alert('Advertisement for job has been submitted successfully.');</script>";	
+		}
+	}
+?>
 	
   	<body data-spy="scroll" data-target=".navbar navbar-inverse">
    		<!--=============================================Navigation============================================= --> 
@@ -101,7 +117,7 @@
 				</section>
 			</div>
 			<div class="job_compony"><br>
-				<h2><u>W.A.F. Partners<u></h2><br>
+				<h2><u>W.A.F. Partners</u></h2><br>
 				<img src="image/company logos/1.png" alt="img04" />
 				<img src="image/company logos/2.png" alt="img04" />
 				<img src="image/company logos/3.jpg" alt="img04" />
@@ -169,51 +185,51 @@
 			</div>
 			
 			<div class="apply_form">
-				<form class="form_real">
+				<form class="form_real" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 					<label style="font-size: 1.5em;" for="job_title">Post A JOB</label>
 				
 					<label for="job_title">Job Title</label>
 	  				<input type="text" id="job_title" name="job_title" placeholder="..E.G. Software Enginner" Required>
 					
 					<label for="Description">Description or Job Profile</label>
-	  				<textarea id="Description" name="Description" placeholder="Thing u Require In the Candidate---" Required></textarea>
+	  				<textarea id="Description" name="description" placeholder="Thing u Require In the Candidate---" Required></textarea>
 					
 					<label for="tagline">Tagline</label>
 	  				<textarea id="tagline" name="tagline" placeholder="Some Impersive Tagline" Required></textarea>
 					
 					<label for="last_date">Last Date to Apply</label>
-	  				<input type="text" id="last_date" name="last_date" placeholder="..E.G. 18-9-2014" Required></textarea>
+	  				<input type="date" id="last_date" name="last_date" Required></textarea>
 					
 					<label for="location">Location</label>
 	  				<input type="text" id="location" name="location" placeholder="..E.G. Delhi,India or Pune,Maharashtra,India" Required>
 					
-					<label for="stipend">Stipend</label>
+					<label for="stipend">Stipend/CTC</label>
 					<input type="text" id="stipend" name="stipend" placeholder="..Stipend" Required>
 					
 					<div class="cbp-mc-column ">
-						<label for="compony_name">Compony Name</label>
-						<input type="text" id="compony_name" name="compony_name" placeholder="..E.G. W.A.F." Required>
+						<label for="compony_name">Company Name</label>
+						<input type="text" id="company_name" name="company_name" placeholder="..E.G. W.A.F." Required>
 					</div>	
 					<div class="cbp-mc-column" >
-						<label for="compony_website">Compony Website</label>
-						<input type="text" id="compony_website" name="compony_website" placeholder="http://" Required>
+						<label for="company_website">Company Website</label>
+						<input type="text" id="company_website" name="company_website" placeholder="http://" Required>
 					</div><br>	
-					<label for="compony_address">Compony Address</label>
-					<input type="text" id="compony_address" name="compony_address" placeholder="..Address" Required>
+					<label for="company_address">Company Address</label>
+					<input type="text" id="company_address" name="company_address" placeholder="..Address" Required>
 					
-					<label for="compony_city">City</label>
+					<label for="company_city">City</label>
 					<input type="text" id="compony_city" name="compony_city" placeholder="..City" Required>
 					
-					<label for="compony_zip">Compony Zip-Code</label>
-					<input type="text" id="compony_zip" name="compony_zip" placeholder="..Zip-Code" Required>
+					<label for="company_zip">Company Zip-Code</label>
+					<input type="text" id="company_zip" name="company_zip" placeholder="..Zip-Code" Required>
 					
-					<label for="compony_country">Compony Country</label>
-					<input type="text" id="compony_country" name="compony_country" placeholder="..Country" Required>
+					<label for="compony_country">Company Country</label>
+					<input type="text" id="company_country" name="company_country" placeholder="..Country" Required>
 					
 					<label for="company_info">About the Company</label>
 	  				<textarea id="company_info" name="company_info" placeholder="Some Information about the Company" Required></textarea>
 					
-					<input class="cbp-mc-submit" type="submit" value="Send your data" />
+					<input class="cbp-mc-submit" type="submit" value="Post The Job" name="postbtn" />
 				</form>	
 			</div>
 			
