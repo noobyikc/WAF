@@ -29,10 +29,36 @@
 			<script src="js/uisearch.js"></script>
 			
 			<link rel="stylesheet" type="text/css" href="css/job_section.css" />
+            <script type="text/javascript">
+			function disablefield()
+			{
+				document.apply_button.job_apply.disabled = true;
+			}
+			</script>
 
           
 
 	</head>
+    <?php
+ 		include('includes/connection.php');
+	    include('includes/variables.php');
+		$job = $_GET['id'];
+ 	?>
+    <?php
+	if(isset($_POST['job_apply']))
+	{
+		$sql = mysql_query('Insert into job_applicants (job_id, applicant_email) values ($job, $_SESSION["cookmail"]);') or die(mysql_error());
+		if($sql)
+		{
+			echo "<script>alert('You have applied for the job successfully.');</script>";
+			disablefield(); //needs to be checked.
+		}
+		else
+		{
+			echo "<script>alert('Oops! Something went wrong. Please try again later.');</script>";
+		}
+	}
+	?>
 	
   	<body data-spy="scroll" data-target=".navbar navbar-inverse">
    		<!--=============================================Navigation============================================= --> 
@@ -97,7 +123,7 @@
 				<br><br><br><h2><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in</a> No Account? <a href="#">Sign Up!</a></h2>
 				
 				<section>
-					<button class="buy" id="js-trigger-overlay" type="button">Submit An Job</button>
+					<a href="job_section3.php" class="buy" id="js-trigger-overlay" type="button">Post A Job</a>
 				</section>
 			</div>
 			<div class="job_compony"><br>
@@ -160,6 +186,7 @@
 				
 			</div>
 		</div>
+        
 		<div class="jobs" style="height:1500px;">
 			<div class="search">
 				<form class="form-wrapper cf">
@@ -167,11 +194,14 @@
 					<button type="submit">Search</button>
 				</form>
 			</div>
-			
+			<?php
+				$query = mysql_query('Select * from jobs where job_id = "$job";')or die(mysql_error());
+				$rows = mysql_fetch_array($query);
+			?>
 			<div class="jobs_elements">
 					<div class="job_topic">
-						<h1><strong>Web Site Administrator</strong></h1>
-						<h2>W.A.F. (Delhi)</h2>
+						<h1><strong><?php echo $rows['job_title']; ?></strong></h1>
+						<h2><?php echo $rows['company_name']; echo "("; echo $rows['location']; echo")"; ?> </h2>
 					</div>
 					<div class="job_2_infobar">
 						<div class="share">
@@ -182,17 +212,15 @@
 						<div class="job_2_avail">Available
 						</div>
 						<div class="job_timeline">
-							<image src="image/clock.png">18-3-2014
+							<image src="image/clock.png"><?php echo $rows['last_date']; ?>
 						</div>
 					</div>
 					<div class="job_info">
-						<h3>W.A.F. is looking for an Website Administrator for our all new AWESOME W.A.F. site and we need highly dedicated people.</h3><br>
-						<h2><strong>About The Compony</strong></h2>
-						<p>A Swiss company focused on innovation and quality, Logitech designs personal peripherals to help people enjoy a better experience with the digital world. We started in 1981 with mice, which (new at the time) provided a more intuitive way of interacting with a personal computer. We became the worldwide leader in computer mice, and have reinvented the mouse in dozens of ways to match the evolving needs of PC and laptop users.
-
-						Since those early days, we have expanded our expertise in product design beyond the computer mouse, with a broad portfolio of interface devices that are the "last inch" between you and your computer or your console game, digital music or home-entertainment system.</p>
+						<h3> <?php echo $rows['description']; ?> </h3><br>
+						<h2><strong>Company Website</strong></h2>
+						<p> <?php echo $rows['company_website']; ?></p>
 						<br><br>
-						<h2><strong>What The Compony Looks For</strong></h2>
+						<h2><strong>What The Company Looks For</strong></h2>
 						<ul>
 							<li>1 or more years of experience working with JavaScript, object-oriented design, test-driven development and Agile</li>
 							<li>Good command of English and Hindi</li>
@@ -201,14 +229,16 @@
 						</ul>
 						<br><br>
 						<h2><strong>Stipend:</strong></h2>	
-						<p>10-20K Monthly</p>
+						<p> <?php echo $rows['stipend']; ?></p>
 						<br>
 						<h2><strong>Last Date To Apply</strong></h2>	
-						<p>25-July-2014</p>
+						<p><?php echo $rows['last_date']; ?></p>
 					</div>
 					<div class="job_apply">
 						<section>
-							<button class="buy" id="js-trigger-overlay" style="margin-left:10px;" type="button">Apply For Job</button>
+                        <form name = "apply_button" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+							<button class="buy" id="js-trigger-overlay" style="margin-left:10px;" type="button" name = "job_apply">Apply For Job</button>
+                            </form>
 						</section>
 						
 					</div>

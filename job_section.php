@@ -33,6 +33,11 @@
           
 
 	</head>
+<?php
+	include('includes/connection.php');
+	include('includes/variables.php');
+ 
+?>
 	
   	<body data-spy="scroll" data-target=".navbar navbar-inverse">
    		<!--=============================================Navigation============================================= --> 
@@ -97,11 +102,11 @@
 				<br><br><br><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Sign in</a> No Account? <a href="#">Sign Up!</a></h2>
 				
 				<section>
-					<button class="buy" id="js-trigger-overlay" type="button">Submit An Job</button>
+					<a href="job_section3" class="buy" id="js-trigger-overlay" type="button">Post A Job</a>
 				</section>
 			</div>
 			<div class="job_compony"><br>
-				<h2><u>W.A.F. Partners<u></h2><br>
+				<h2><u>W.A.F. Partners</u></h2><br>
 				<img src="image/company logos/1.png" alt="img04" />
 				<img src="image/company logos/2.png" alt="img04" />
 				<img src="image/company logos/3.jpg" alt="img04" />
@@ -167,121 +172,29 @@
 					<button type="submit">Search</button>
 				</form>
 			</div>
-			
+			<?php
+			$query = mysql_query('select * from jobs;') or die(mysql_error());
+			while($rows = mysql_fetch_array($query))
+			{
+				$id = $rows['job_id'];
+			?>
 			<div class="jobs_elements">
-				<a href="#"><div class="jobs_jobs">
+				<a href="job_section2.php?id= <?php echo $_GET['id']; ?>" >
+                 <div class="jobs_jobs">
 					<div class="jobs_text">
-						<h1>WebSite Administrator</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
+						<h1> <?php echo $rows['job_title']; ?> </h1>
+						<h3> <?php echo $rows['company_name']; echo "("; echo $rows['location']; echo ")"; ?> </h3>
 					</div>
 					<div class="jobs_avail">Available
 					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
+					<div class="jobs_last_date">Last Date To Apply:<br> <?php echo $rows['last_date'] ?>
 					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>BackEnd Developer</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>Senior Marketing Analyst</h1>
-						<h3>Hyundai(India,Maharashtra,Pune)</h3>
-						
-					</div>
-					<div class="jobs_avail">Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>WebSite Administrator</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Not-Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>Interns</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Not Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>WebSite Administrator</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>WebSite Administrator</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				<a href="#"><div class="jobs_jobs">
-					<div class="jobs_text">
-						<h1>WebSite Administrator</h1>
-						<h3>W.A.F.(India,Delhi)</h3>
-						
-					</div>
-					<div class="jobs_avail">Available
-					</div>
-					<div class="jobs_last_date">Last Date To Apply:<br>18-3-2014
-					</div>
-				</div></a>
-				
-			</div>
+				 </div> 
+                 </a>
+             </div>
+               <?php
+			}
+			   ?>
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	</body>
 </html>
