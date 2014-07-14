@@ -20,10 +20,76 @@
         <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 
 		<script src="js/uisearch.js"></script>
-        		<script src="js/modernizr.custom.js"></script>
+        <script src="js/modernizr.custom.js"></script>
        	<script src="js/classie.js"></script>
-
    		<script src="js/uiMorphingButton_fixed.js"></script>
+        <script>
+			(function() {
+            	var docElem = window.document.documentElement, didScroll, scrollPosition;
+	            // trick to prevent scrolling when opening/closing button
+    	        function noScrollFn() {
+        	        window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+            	}
+				function noScroll() {
+					window.removeEventListener( 'scroll', scrollHandler );
+					window.addEventListener( 'scroll', noScrollFn );
+	            }
+	            function scrollFn() {
+    	            window.addEventListener( 'scroll', scrollHandler );
+        	    }
+	            function canScroll() {
+    	            window.removeEventListener( 'scroll', noScrollFn );
+        	        scrollFn();
+	            }
+	            function scrollHandler() {
+    	            if( !didScroll ) {
+						didScroll = true;
+						setTimeout( function() { scrollPage(); }, 60 );
+					}
+	            };
+	            function scrollPage() {
+    	            scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+        	        didScroll = false;
+            	};
+	
+	            scrollFn();
+
+    	        [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+        	        new UIMorphingButton( bttn, {
+						closeEl : '.icon-close',
+						onBeforeOpen : function() {
+							// don't allow to scroll
+							noScroll();
+						},
+						onAfterOpen : function() {
+							// can scroll again
+    	                    canScroll();
+	                    },
+						onBeforeClose : function() {
+							// don't allow to scroll
+							noScroll();
+	                    },
+						onAfterClose : function() {
+							// can scroll again
+							canScroll();
+						}
+	                } );
+    	        } );
+            	// for demo purposes only
+	            [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+    	            bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+        	    } );
+	        })();
+			
+			$(function() {
+              $('#a').click(function() {
+                    
+                    $('#a1').toggleClass('hide'); //use this line to toggle
+                    //$('#a1').css('display', 'block'); //use this line to make it visible on the first click and stay visible.
+              });
+            });
+    </script>
+        
 	</head>
 	
     <body>
@@ -87,75 +153,85 @@
                 	<h3>Kindly select your domain</h3>
                 </div>
             <section>
+				
 				<div class="mockup-content">
+					
+					
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button type="button">Auto Component/Parts</button>
 						<div class="morph-content">
-                       		<div class="content-style-form content-style-form-2">
-                            	<span class="icon icon-close">Close the dialog</span>					
-								<form>
-									<label for="Your Product">Your Product</label>
-					  				<select id="Your Product" name="Your Product">
-                                	    <option>Select your Product type</option>
-                                        <option>Crankshaft</option>
-                                        <option>Bearing</option>
-                                        <option>Battery</option>
-					  				</select>
-									<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
-									<p><label>Company Name</label><input type="text" /></p>
-									<p><label>Function/Department</label><input type="text" /></p>
-									<p><button>All Set</button></p>
-								</form>
-                        	</div>
-						</div>
-					</div><!-- morph-button -->                   
-					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-						<button type="button">Auto Manufacturer/Maker</button>
-						<div class="morph-content">
-							<div class="content-style-form content-style-form-2">
-								<span class="icon icon-close">Close the dialog</span>
-								<form>
-									<label for="You Manufacture">You Manufacture</label>
-	  								<select id="You Manufacture" name="You Manufacture">
-				  						<option>Select your type</option>
-	  									<option>Two Wheeler Maker</option>
-	  									<option>Passenger Car Maker</option>
-				  						<option>Trucks and buses Maker</option>
-	  								</select>
-									<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
-									<p><label>Company Name</label><input type="text" /></p>
-									<p><label>Function/Department</label><input type="text" /></p>
-									<p><button>All Set</button></p>
-								</form>
+							<div>
+								<div class="content-style-form content-style-form-2">
+									<span class="icon icon-close">Close the dialog</span>
+									
+									<form>
+										<p><label>Your Product</label><input type="text" /></p>
+						<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
+						<p><label>Company Name</label><input type="text" /></p>
+						<p><label>Function/Department</label><input type="text" /></p>
+
+						<p><button>All Set</button></p>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div><!-- morph-button -->
+					
+				
+					
+					
+					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+						<button type="button">Auto Manufacturer/Maker</button>
+						<div class="morph-content">
+							<div>
+								<div class="content-style-form content-style-form-2">
+									<span class="icon icon-close">Close the dialog</span>
+									
+									<form>
+										
+										<p><label>You Manufacture</label><input type="text" /></p>
+
+						<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
+						<p><label>Company Name</label><input type="text" /></p>
+						<p><label>Function/Department</label><input type="text" /></p>
+										
+										<p><button>All Set</button></p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!-- morph-button -->
+					
+									
+					
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button type="button">Auto Dealer</button>
 						<div class="morph-content">
-							<div class="content-style-form content-style-form-2">
-								<span class="icon icon-close">Close the dialog</span>
-								<form>
-									<label for="You Deal In">You Deal In</label>
-				  					<select id="You Deal In" name="You Deal In">
-	  									<option>Select your type</option>
-	  									<option>Two Wheeler Maker</option>
-				  						<option>Passenger Car Maker</option>
-	  									<option>Trucks and buses Maker</option>
-	  								</select>
-									<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
-									<p><label>Company Name</label><input type="text" /></p>
-									<p><label>Function/Department</label><input type="text" /></p>
-									<p><button>All Set</button></p>
-								</form>
+							<div>
+								<div class="content-style-form content-style-form-2">
+									<span class="icon icon-close">Close the dialog</span>
+									
+									<form>
+										<p><label>You Deal In</label><input type="text" /></p>
+							<p><label>Grow your network on WAF , Email</label><input type="text" /></p>
+						<p><label>Company Name</label><input type="text" /></p>
+						<p><label>Function/Department</label><input type="text" /></p>
+
+
+
+							<p><button>All Set</button></p>
+									</form>
+								</div>
 							</div>
 						</div>
-					</div><!-- morph-button -->			
+					</div><!-- morph-button -->
+					
 				</div><!-- /form-mockup -->
 			</section>
+            
             <section>
             	<div class="mockup-content">
-                	<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+                	<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed" id="a">
 						<button type="button">Unable to Fit In</button>
 						<div class="morph-content">
 							<div class="content-style-form content-style-form-2">
@@ -167,117 +243,100 @@
 					</div><!-- morph-button -->
                 </div>                
             </section>
-            <section>
-				<div class="mockup-content">
+            <div class="mockup-content hide" style="" id="a1">
+					
+					
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button type="button">I Belong to Auto Industry</button>
 						<div class="morph-content">
 							<div>
 								<div class="content-style-form content-style-form-2">
-                                    <span class="icon icon-close">Close the dialog</span>
-                                    <form>
-                                    </form>
+									<span class="icon icon-close">Close the dialog</span>
+									
+									<form>
+										<ul>
+<a href=#><li>Auto Associations/Bodies</li></a>
+<a href=#><li>Moto Racing</li></a>
+<a href=#><li>Mutli Brand Bike Services</li></a>
+<a href=#><li>Mutli Brand Car Services</li></a>
+<a href=#><li>Used/Pre Owned Car Business</li></a>
+<a href=#><li>Vehicle Equipment</li></a>
+<a href=#><li>Vehicle Testing</li></a>
+<a href=#><li>Vehicle Tools</li></a>
+</ul>
+
+							
+
+									</form>
 								</div>
 							</div>
 						</div>
 					</div><!-- morph-button -->
+					
+				
+					
+					
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button type="button">I Provide Services to Auto Industry</button>
 						<div class="morph-content">
-							<div class="content-style-form content-style-form-2">
-								<span class="icon icon-close">Close the dialog</span>
-								<form>
-								</form>
-                            </div>
+							<div>
+								<div class="content-style-form content-style-form-2">
+									<span class="icon icon-close">Close the dialog</span>
+									
+									<form>
+
+									
+									<ul>
+<a href=#><li> Advertising</li></a>
+<a href=#><li>CRM</li></a>
+<a href=#><li>Consultants </li></a>
+<a href=#><li>Direct Marketing</li></a>
+<a href=#><li>Event Management</li></a>
+<a href=#><li>Finance Sector</li></a>
+<a href=#><li>IT</li></a>
+<a href=#><li>Logistics Service Provider</li></a>
+<a href=#><li>Media/Press</li></a>
+<a href=#><li>Public Relations</li></a>
+<a href=#><li>Quality Certification</li></a>
+<a href=#><li>Research Companies</li></a>
+<a href=#><li>Training Service Provider </li></a>
+</ul>
+									
+							
+									</form>
+								</div>
+							</div>
 						</div>
 					</div><!-- morph-button -->
+					
 				</div><!-- /form-mockup -->
 			</section>
+  
+
         </div>
+        
         <div class="footer">
-		<table class="links">
-        	<tr>
-            	<td><a href="#">Sitemap</a></td>
-                <td><a href="#">Terms</a></td>
-                <td><a href="#">Privacy</a></td>
-                <td><a href="#">Jobs</a></td>
-            	<td><a href="#">Marketplace</a></td>
-                <td></td>
-            </tr>
-            <tr>
-            	<td><a href="#">Forum/Discussion</a></td>
-                <td><a href="#">Events</a></td>
-                <td><a href="#">Create Advt.</a></td>
-                <td><a href="#">Create Pages</a></td>
-                <td></td>
-        </table>
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
-        </div>
-      </div>
-        	<script>
-        (function() {
-            var docElem = window.document.documentElement, didScroll, scrollPosition;
-
-            // trick to prevent scrolling when opening/closing button
-            function noScrollFn() {
-                window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
-            }
-
-            function noScroll() {
-                window.removeEventListener( 'scroll', scrollHandler );
-                window.addEventListener( 'scroll', noScrollFn );
-            }
-
-            function scrollFn() {
-                window.addEventListener( 'scroll', scrollHandler );
-            }
-
-            function canScroll() {
-                window.removeEventListener( 'scroll', noScrollFn );
-                scrollFn();
-            }
-
-            function scrollHandler() {
-                if( !didScroll ) {
-                    didScroll = true;
-                    setTimeout( function() { scrollPage(); }, 60 );
-                }
-            };
-
-            function scrollPage() {
-                scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
-                didScroll = false;
-            };
-
-            scrollFn();
-
-            [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
-                new UIMorphingButton( bttn, {
-                    closeEl : '.icon-close',
-                    onBeforeOpen : function() {
-                        // don't allow to scroll
-                        noScroll();
-                    },
-                    onAfterOpen : function() {
-                        // can scroll again
-                        canScroll();
-                    },
-                    onBeforeClose : function() {
-                        // don't allow to scroll
-                        noScroll();
-                    },
-                    onAfterClose : function() {
-                        // can scroll again
-                        canScroll();
-                    }
-                } );
-            } );
-
-            // for demo purposes only
-            [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
-                bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-            } );
-        })();
-    </script>
+            <table class="links">
+                <tr>
+                    <td><a href="#">Sitemap</a></td>
+                    <td><a href="#">Terms</a></td>
+                    <td><a href="#">Privacy</a></td>
+                    <td><a href="#">Jobs</a></td>
+                    <td><a href="#">Marketplace</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Forum/Discussion</a></td>
+                    <td><a href="#">Events</a></td>
+                    <td><a href="#">Create Advt.</a></td>
+                    <td><a href="#">Create Pages</a></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="copyright">
+                <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+            </div>
+       </div>
 	</body>
+</html>
+        	

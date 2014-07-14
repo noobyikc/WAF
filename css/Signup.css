@@ -3,12 +3,11 @@
 .contentpane {
 	position:relative;
 	top:50px;
-	margin-bottom:2em;
+	margin-bottom:5em;
 }
 section {
 	padding: 2em;
 	text-align: justify;
-	
 	margin: 0 auto;
 	clear: both;
 }
