@@ -98,29 +98,6 @@
     width: 67%;
 }
 
-
-div.form{
-	width:634px;
-	height:606px;
-	margin-top: 150px;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left:360px;
-	padding: 0px;
-	float: left;
-	//text-align:center;
-		color:#FF0000;
-		/* gradients */
-
-
-}
-@import url(http://fonts.googleapis.com/css?family=Lato);
-
-body {
-
-  font-family: 'Lato', sans-serif;
-}
-
 * :focus { outline: 0; }
 
 #opacity_bg {
