@@ -58,8 +58,8 @@ $url = "image/bg2.jpg";
                     </div>
                 	<div class="navbar-collapse collapse">
                     	<ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about"><img src="image/icons/note2.png" style="max-height:1.7em;"/></a></li>
+                            <li class="active"><a href="#"><img src="image/icons/home.png" style="max-height:1.6em;"/></a></li>
+                            <li><a href="#about"><img src="image/icons/note2.png" style="max-height:1.6em;"/></a></li>
                             <li><a href="#contact">Notifications</a></li>
                             <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
