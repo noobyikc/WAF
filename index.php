@@ -745,6 +745,8 @@
     
 
     <div class="footer">
+    	<div class="cmp_logo">
+        </div>
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>
@@ -760,10 +762,16 @@
                 <td><a href="#">Create Advt.</a></td>
                 <td><a href="#">Create Pages</a></td>
                 <td></td>
+            </tr>
+            <tr>
+            	<td colspan="5">
+                    <div class="copyright">
+                        <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+                    </div>
+                </td>
+            </tr>
         </table>
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
-        </div>
+        
       </div>
     </div><!-- /.container -->
 

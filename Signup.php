@@ -11,17 +11,16 @@
 		<link rel="stylesheet" type="text/css" href="css/search.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
         <link rel="stylesheet" type="text/css" href="css/Signup.css" />
-        
 		<link rel="stylesheet" type="text/css" href="Sign-up/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="Sign-up/css/content.css" />
-
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        
+        	
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-
-		<script src="js/uisearch.js"></script>
         <script src="js/modernizr.custom.js"></script>
-       	<script src="js/classie.js"></script>
+        <script src="js/classie.js"></script>
+		<script src="js/uisearch.js"></script>
    		<script src="js/uiMorphingButton_fixed.js"></script>
         <script>
 			(function() {
@@ -153,10 +152,7 @@
                 	<h3>Kindly select your domain</h3>
                 </div>
             <section>
-				
 				<div class="mockup-content">
-					
-					
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
 						<button type="button">Auto Component/Parts</button>
 						<div class="morph-content">
@@ -316,27 +312,34 @@
         </div>
         
         <div class="footer">
-            <table class="links">
-                <tr>
-                    <td><a href="#">Sitemap</a></td>
-                    <td><a href="#">Terms</a></td>
-                    <td><a href="#">Privacy</a></td>
-                    <td><a href="#">Jobs</a></td>
-                    <td><a href="#">Marketplace</a></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Forum/Discussion</a></td>
-                    <td><a href="#">Events</a></td>
-                    <td><a href="#">Create Advt.</a></td>
-                    <td><a href="#">Create Pages</a></td>
-                    <td></td>
-                </tr>
-            </table>
-            <div class="copyright">
-                <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
-            </div>
-       </div>
+    	<div class="cmp_logo">
+        </div>
+		<table class="links">
+        	<tr>
+            	<td><a href="#">Sitemap</a></td>
+                <td><a href="#">Terms</a></td>
+                <td><a href="#">Privacy</a></td>
+                <td><a href="#">Jobs</a></td>
+            	<td><a href="#">Marketplace</a></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td><a href="#">Forum/Discussion</a></td>
+                <td><a href="#">Events</a></td>
+                <td><a href="#">Create Advt.</a></td>
+                <td><a href="#">Create Pages</a></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td colspan="5">
+                    <div class="copyright">
+                        <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+      </div>
 	</body>
 </html>
         	

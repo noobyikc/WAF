@@ -15,7 +15,8 @@
 .links {
 	width:65%;
 	position:relative;
-	left:35%;	
+	float:right;
+	margin-right:5em;
 }
 
 .links > tbody > tr > td{
@@ -28,11 +29,20 @@
 
 .copyright {
 	position:relative;
-	top:1em;
 	bottom:0;
-	left:10%;
-	width:40%;
+	top:1em;
+	left:-20em;
+	width:60%;
 	text-align:left;
+}
+
+.cmp_logo {
+	width:100px;
+	position:relative;
+	left:3em;
+	height:90px;
+	background-image:url(../image/waf-logo.png);
+	float:left;
 }
 
 .copyright > p {

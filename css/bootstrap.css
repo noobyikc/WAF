@@ -4412,9 +4412,8 @@ a.list-group-item.active > .badge,
 .thumbnail > img,
 .thumbnail a > img {
   display:block;
-  height:auto;
   max-width:100%;
-  height:15.6em;
+  height:14em;
   margin-right: auto;
   margin-left: auto;
 }

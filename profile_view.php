@@ -169,18 +169,18 @@ $url = "image/bg2.jpg";
            </div>
 		<!--============================================= ContentPane - 2 ============================================= --> 
 	    	<div class="contentpane2">
-                <div class="panel panel-default" id="sidetab" style=" width:13.08em">
-                    <ul class="nav nav-pills nav-stacked" style="font-size:1em;" >
-                          <li class="active"><a href="#">Home</a></li>
-                          <li><a href="#">Profile</a></li>
-                          <li><a href="#">Messages</a></li>
-                          <li><a href="#">Notifications</a></li>
-                          <li><a href="#">Discussion Forums</a></li>
-                          <li><a href="#">Jobs</a></li>
-                          <li><a href="#">Settings</a></li>
-						
-                        </ul>
+                <div class="panel panel-default" id="discussions">
+                <div class="panel-heading">
+                	Discussions
                 </div>
+                <div class="number">
+                </div>
+                <div class="panel-heading">
+                	Comments
+                </div>
+                <div class="number">
+                </div>
+            </div>
                 
 
             <div class="panel panel-default" id="education">
@@ -263,6 +263,8 @@ $url = "image/bg2.jpg";
     
 
     <div class="footer">
+    	<div class="cmp_logo">
+        </div>
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>
@@ -278,11 +280,16 @@ $url = "image/bg2.jpg";
                 <td><a href="#">Create Advt.</a></td>
                 <td><a href="#">Create Pages</a></td>
                 <td></td>
-        	</tr>
+            </tr>
+            <tr>
+            	<td colspan="5">
+                    <div class="copyright">
+                        <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+                    </div>
+                </td>
+            </tr>
         </table>
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc. , all rights reserved</p>
-        </div>
+        
       </div>
  
 </body>
