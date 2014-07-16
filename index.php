@@ -643,8 +643,8 @@ require 'PHPMailer/PHPMailerAutoload.php';
             <div><img u="image" alt="amazon" src="image/company logos/14.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/15.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/16.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/17.jpg" /></div>
-            <div><img u="image" alt="amazon" src="image/company logos/18.jpg" /></div>
+            <!---- mahindra logo, adjust if found good one<div><img u="image" alt="amazon" src="image/company logos/17.jpg" /></div>---->
+
             <div><img u="image" alt="amazon" src="image/company logos/19.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/20.jpg" /></div>
             <div><img u="image" alt="amazon" src="image/company logos/21.jpg" /></div>

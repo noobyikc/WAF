@@ -60,7 +60,7 @@ $url = "image/bg2.jpg";
                     	<ul class="nav navbar-nav">
                             <li class="active"><a href="#"><img src="image/icons/home.png" style="max-height:1.6em;"/></a></li>
                             <li><a href="#about"><img src="image/icons/note2.png" style="max-height:1.6em;"/></a></li>
-                            <li><a href="#contact">Notifications</a></li>
+                            <li><a href="#contact"><img src="image/icons/notifications2.jpg" style="max-height:1.6em;"/></a></li>
                             <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
@@ -168,7 +168,7 @@ $url = "image/bg2.jpg";
            </div>
 		<!--============================================= ContentPane - 2 ============================================= --> 
 	    	<div class="contentpane2">
-                <div class="panel panel-default" id="sidetab" style=" height: 22em; width:17.08em">
+                <div class="panel panel-default" id="sidetab" style=" height: 22em; width:17.08em; margin-top:-0.4em;">
                     <ul class="nav nav-pills nav-stacked" style="font-size:1em;" >
                           <li class="active"><a href="#">Home</a></li>
                           <li><a href="#">Profile</a></li>
@@ -190,7 +190,7 @@ $url = "image/bg2.jpg";
         </div>
           <!--============================================= ContentPane - 6 ============================================= --> 
         <div class="contentpane6">
-            <div class="panel panel-default" id="ads">
+            <div class="panel panel-default" id="ads" style="margin-bottom:5em;">
                 <div class="panel-heading">Sponsored Ads</div>
                 <div class="panel-body">
                 	<div class="panel panel-default" id="spons_ad">
@@ -220,31 +220,7 @@ $url = "image/bg2.jpg";
    
 
 	
-<!--=============================================Footer============================================= -->
-    
 
-    <div class="footer" style="margin-top:auto; top:1000px;">
-		<table class="links">
-        	<tr>
-            	<td><a href="#">Sitemap</a></td>
-                <td><a href="#">Terms</a></td>
-                <td><a href="#">Privacy</a></td>
-                <td><a href="#">Jobs</a></td>
-            	<td><a href="#">Marketplace</a></td>
-                <td></td>
-            </tr>
-            <tr>
-            	<td><a href="#">Forum/Discussion</a></td>
-                <td><a href="#">Events</a></td>
-                <td><a href="#">Create Advt.</a></td>
-                <td><a href="#">Create Pages</a></td>
-                <td></td>
-        	</tr>
-        </table>
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc. , all rights reserved</p>
-        </div>
-      </div>
  
 </body>
 </html>	

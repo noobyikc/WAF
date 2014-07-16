@@ -154,6 +154,32 @@
     <script>
     	new UISearch( document.getElementById( 'sb-search' ) );
     </script>
+    
+    
+          <div class="panel panel-default" id="friends" >
+                                  <div class="panel-heading">Connections</div>                                  		
+                                          <div class="panel-body" id="pic">
+                                           <div id="myCanvasContainer" >
+                                                 <canvas width="150" height="300" id="myCanvas" style="left:20em">
+                                                 </canvas>
+                                                </div>
+                                                 
+                                                <div id="tags">
+                                                 <ul>
+                                                  <li><a href="http://www.google.com" target="_blank">Google</a></li>
+                                                  <li><a href="/fish">Fish</a></li>
+                                                  <li><a href="/chips">Chips</a></li>
+                                                  <li><a href="/salt">Salt</a></li>
+                                                  <li><a href="/vinegar">Vinegar</a></li>
+                                                 </ul>
+                                                </div>
+                                          <div class="btn-group" id="button3">
+                                  <button type="button" class="btn btn-primary">View All</button>
+                            			</div>
+                                  </div>
+                        	</div>
+                        	
+                             
 	<!--============================================= ContentPane - 1 ============================================= --> 
 		<div class="contentpane12">
             <div class="contentpane1"> 
@@ -161,7 +187,7 @@
                 <div class="panel panel-default" id="personal">
                     <div class="panel-heading">About</div>
                     <div class="panel-body">
-					<div id="pic">
+					<div id="pic1">
                     
                     </div>
                     <div>
@@ -271,7 +297,7 @@
                 </div>
             </div>
         </div>
-   	</div>
+   	
 
 	<!--============================================= ContentPane - 4 ============================================= --> 
         <div class="contentpane4">
@@ -288,7 +314,7 @@
                             <td><div class="label"><?php echo "(2010 - 2013)";?></div></td>
                         </tr>
                         <tr> 
-                            <td colspan="2" style="padding-left:1.8em"><div class="" style="text-align:justify"><?php echo "Zoomjax is the fastest platform for generating targeted ad impressions. At Zoomjax, Iâm responsible for building products that are thoughtfully designed, scalable, and easy to use for media buyers and affiliate network managers. I manage a 20-person product team of software engineers and web developers who work hard to make sure your ads consistently find your target demographic with quicksilver efficiency. If you're an engineer looking for a challenge, drop us a line. We'd love to hear from you! ";?></div></td>                            
+                            <td colspan="2" style="padding-left:1.8em"><div class="" style="text-align:justify"><?php echo "Zoomjax is the fastest platform for generating targeted ad impressions. At Zoomjax, I am responsible for building products that are thoughtfully designed, scalable, and easy to use for media buyers and affiliate network managers. I manage a 20-person product team of software engineers and web developers who work hard to make sure your ads consistently find your target demographic with quicksilver efficiency. If you're an engineer looking for a challenge, drop us a line. We'd love to hear from you! ";?></div></td>                            
                         </tr>
                         <?php //while loop close here ?>
 		        	</table>
@@ -319,13 +345,14 @@
 												 });
 												 </script>
 
-	<!------first panel ------->
+<!-------
+	<!------first panel
     <div class="panel panel-default" id="profile1">
       	<div class="panel-heading">Personal Details</div>
       	<div class="panel-body" id="profile_box">
             
                 <div class="btn-group" id="button2"> 
-                  <!-- buttons for general profile -->
+                  <!-- buttons for general profile
                   <form name="profile" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <button type="button" class="btn btn-primary">Edit</button>
                     <input type="submit" class="btn btn-primary" value="Save Changes" name="saveprofile"/>
@@ -333,10 +360,10 @@
                 </div>
            </div>
         </div>
-
+--->
             
              
-	          <div class="panel panel-default" id="profile" style="margin-bottom:150px">
+	          <div class="panel panel-default" id="personal" >
                           <div class="panel-heading" >Work Experience </div>
                           <div class="panel-body" id="profile_box">
                             <table>
@@ -371,32 +398,10 @@
                         </div>
                      </div>
                     </div>
-    
-                            <div class="panel panel-default" id="friends">
-                                  <div class="panel-heading">Connections</div>
-                                  		
-                                          <div class="panel-body" id="pic">
-                                           <div id="myCanvasContainer2">
-                                                  <canvas width="250" height="300" id="myCanvas" >
-                                                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
-                                                  </canvas>
-                                                </div>
-                                                <div id="tags">
-                                                  <ul>
-                                                    <li><a href="http://www.google.com" target="_blank">Google</a></li>
-                                                    <li><a href="/fish">Fish</a></li>
-                                                    <li><a href="/chips">Chips</a></li>
-                                                    <li><a href="/salt">Salt</a></li>
-                                                    <li><a href="/vinegar">Vinegar</a></li>
-                                                  </ul>
-                                                </div>
-                                          <div class="btn-group" id="button3">
-                                  <button type="button" class="btn btn-primary">View All</button>
-                            			</div>
-                                        </div>
-                        </div>
-                        	
-                                <div class="panel panel-default" id="friends">
+                    </div>
+                    </div>
+</div>
+   <div class="panel panel-default" id="friends">
                                           <div class="panel-heading">Discussion Forums</div>
                                           
                                           <div class="panel-body" id="pic">
@@ -404,18 +409,23 @@
                                           <div class="btn-group" id="button3">
                                           <button type="button" class="btn btn-primary">View All</button>
                                           
-                                            </div>
+                                           </div>
                                             
                                         </div>
-                                        
-                                    </div>
+                                </div>
+                                
+                                
+                      
+</div>
 
 
 	
-        <!--=============================================Footer============================================= -->
+	<!--=============================================Footer============================================= -->
     
 
-    <div class="footer" >
+    <div class="footer">
+    	<div class="cmp_logo">
+        </div>
 		<table class="links">
         	<tr>
             	<td><a href="#">Sitemap</a></td>
@@ -431,15 +441,18 @@
                 <td><a href="#">Create Advt.</a></td>
                 <td><a href="#">Create Pages</a></td>
                 <td></td>
+            </tr>
+            <tr>
+            	<td colspan="5">
+                    <div class="copyright">
+                        <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
+                    </div>
+                </td>
+            </tr>
         </table>
         
-        <div class="copyright">
-            <p>(c) 2014 World Auto Forum inc, all rights reserved</p>
-        </div>
       </div>
-    </div>
-    <!-- /.container -->
-  
-</div>
-</body>
+    </div><!-- /.container -->
+
+  </body>
 </html>
