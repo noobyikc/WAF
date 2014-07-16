@@ -173,7 +173,7 @@
 				</form>
 			</div>
 			<?php
-			$query = mysql_query('select * from jobs;') or die(mysql_error());
+			$query = mysql_query("select * from jobs;") or die(mysql_error());
 			while($rows = mysql_fetch_array($query))
 			{
 				$id = $rows['job_id'];

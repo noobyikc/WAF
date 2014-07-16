@@ -42,7 +42,8 @@
 <?php
 	if(isset($_POST['postbtn']))
 	{
-		$sql_query = mysql_query('Insert into jobs(company_name, company_website, description, email, job_title, last_date, location, stipend, tagline) Values ($company_name, $company_website, $description, $_SESSION["cookmail"], $job_title, $last_date, $location, $stipend, $tagline);') or die(mysql_error);
+		$emailid = $_SESSION['sessemail'];
+		$sql_query = mysql_query("Insert into jobs(company_name, company_website, description, email, job_title, last_date, location, stipend, tagline) Values ('$company_name', '$company_website', '$description', '$emailid', '$job_title', '$last_date', '$location', '$stipend', '$tagline');") or die(mysql_error);
 		if($sql_query)
 		{
 			echo "<script> alert('Advertisement for job has been submitted successfully.');</script>";	

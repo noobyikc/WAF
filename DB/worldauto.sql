@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2014 at 11:33 AM
+-- Generation Time: Jul 16, 2014 at 12:36 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -35,6 +35,8 @@ CREATE TABLE IF NOT EXISTS `ads` (
   `contact_phone` varchar(255) NOT NULL,
   `contact_country` varchar(255) NOT NULL,
   `audience_country` varchar(255) NOT NULL,
+  `audience_age` varchar(255) DEFAULT NULL,
+  `payment_country` varchar(255) DEFAULT NULL,
   `currency` varchar(255) NOT NULL,
   `timezone` varchar(255) NOT NULL,
   `budget` varchar(255) NOT NULL,

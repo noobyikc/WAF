@@ -28,4 +28,17 @@ if(isset($_POST['location'])){$location = $_POST['location'];}
 if(isset($_POST['stipend'])){$stipend = $_POST['stipend'];}
 if(isset($_POST['company_name'])){$company_name = $_POST['company_name'];}
 if(isset($_POST['company_website'])){$company_website = $_POST['company_website'];}
+//--------------Advertisements --------------------------//
+if(isset($_POST['title'])){$title = $_POST['title'];}
+if(isset($_POST['describe'])){$describe = $_POST['describe'];}
+if(isset($_POST['contact_name'])){$contact_name = $_POST['contact_name'];}
+if(isset($_POST['contact_email'])){$contact_email = $_POST['contact_email'];}
+if(isset($_POST['contact_phone'])){$contact_phone = $_POST['contact_phone'];}
+if(isset($_POST['contact_country'])){$contact_country = $_POST['contact_country'];}
+if(isset($_POST['audience_country'])){$audience_country = $_POST['audience_country'];}
+if(isset($_POST['audience_age'])){$audience_age = $_POST['audience_age'];}
+if(isset($_POST['payment_country'])){$payment_country = $_POST['payment_country'];}
+if(isset($_POST['currency'])){$currency = $_POST['currency'];}
+if(isset($_POST['budget'])){$budget = $_POST['budget'];}
+if(isset($_POST['timezone'])){$timezone = $_POST['timezone'];}
 ?>

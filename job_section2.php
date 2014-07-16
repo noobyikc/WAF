@@ -47,7 +47,8 @@
     <?php
 	if(isset($_POST['job_apply']))
 	{
-		$sql = mysql_query('Insert into job_applicants (job_id, applicant_email) values ($job, $_SESSION["cookmail"]);') or die(mysql_error());
+		$cookmail = $_SESSION['sessemail'];
+		$sql = mysql_query("Insert into job_applicants (job_id, applicant_email) values ('$job', '$cookmail');") or die(mysql_error());
 		if($sql)
 		{
 			echo "<script>alert('You have applied for the job successfully.');</script>";
@@ -195,7 +196,7 @@
 				</form>
 			</div>
 			<?php
-				$query = mysql_query('Select * from jobs where job_id = "$job";')or die(mysql_error());
+				$query = mysql_query("Select * from jobs where job_id = '$job';")or die(mysql_error());
 				$rows = mysql_fetch_array($query);
 			?>
 			<div class="jobs_elements">
