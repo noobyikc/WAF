@@ -4,7 +4,7 @@
 .footer{
 	position:relative;
 	bottom:0;
-  	height: 9.2em;
+  	height: 10em;
 	padding-top:2.4em;
 	width: 100%;
   	background: #000000;
@@ -30,18 +30,20 @@
 .copyright {
 	position:relative;
 	bottom:0;
-	top:1em;
+	top:1.3em;
 	left:-20em;
 	width:60%;
 	text-align:left;
 }
 
 .cmp_logo {
-	width:100px;
+	width:105px;
 	position:relative;
-	left:3em;
-	height:90px;
+	left:2.5em;
+	top:-1.4em;
+	height:105px;
 	background-image:url(../image/waf-logo.png);
+	background-size:contain;
 	float:left;
 }
 
