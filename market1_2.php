@@ -175,6 +175,13 @@
 						</div>
 					</div><br>
 					
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="input-name">Uplaod PIC  </label>
+							<input type="file" class="foo" style="margin-left:210px;margin-top:10px;">
+						</div>
+					</div><br>
+					
 					<h3>Sellers Information</h3>
 					
 					<div class="af-outer">
