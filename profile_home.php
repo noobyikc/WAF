@@ -59,8 +59,8 @@ $url = "image/bg2.jpg";
                 	<div class="navbar-collapse collapse">
                     	<ul class="nav navbar-nav">
                             <li class="active"><a href="#"><img src="image/icons/home.png" style="max-height:1.6em;"/></a></li>
-                            <li><a href="#about"><img src="image/icons/note2.png" style="max-height:1.6em;"/></a></li>
-                            <li><a href="#contact"><img src="image/icons/notifications2.jpg" style="max-height:1.6em;"/></a></li>
+                            <li><a href="#message"><img src="image/icons/note2.png" style="max-height:1.6em;"/></a></li>
+                            <li><a href="#notification"><img src="image/icons/notifications2.jpg" style="max-height:1.6em;"/></a></li>
                             <li class="Dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
 	                            <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentpane12 {
+	position:relative;
+	width:91.5%;
+	margin-left:4.5%;
+	margin-bottom:1%;
+	top:8em;
+	box-shadow:2px 2px 2px #333;
+}
+
+.contentpane1 {
+	position:relative;
+
+}
+.
+#box1 {
+	position:relative;
+	margin-top:2em;
+	width:80%;
+	height:17em;
+	display:inline-block;
+
+
+}
+.label {
+	color:#666;
+	font-size:16px;
+	padding:1em;
+	position: relative;
+	line-height:2em;
+	display:inline;
+}
