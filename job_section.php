@@ -34,8 +34,9 @@
 
 	</head>
 <?php
-	include('includes/connection.php');
-	include('includes/variables.php');
+	require('includes/connection.php');
+		require('check_login.php');
+	    require('includes/variables.php');
  
 ?>
 	
